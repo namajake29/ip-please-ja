@@ -3,9 +3,9 @@
 
 window.I18N = (function () {
   const STORAGE_KEY = 'ip-please-lang';
-  const DEFAULT_LANG = 'zh-CN';
+  const DEFAULT_LANG = 'ja-JP';
 
-  let availableLangs = { 'zh-CN': '简体中文' };
+  let availableLangs = { 'ja-JP': '日本語' };
   let currentLang = DEFAULT_LANG;
   let bundles = {};
 
