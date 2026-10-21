@@ -1,0 +1,821 @@
+{
+  "_meta": {
+    "code": "zh-TW",
+    "name": "繁體中文(slop)"
+  },
+  "ui": {
+    "title": "IP, PLEASE",
+    "subtitle": "請出示你的 IP",
+    "tagline": "A DYSTOPIAN TOKEN THRILLER",
+    "clickToSkip": "點擊跳過",
+    "clickToStartWork": "點擊開始上班",
+    "clickToStart": "點擊螢幕開始",
+    "startDuty": "點擊上班 ▶",
+    "continueDay": "繼續 · DAY {day}",
+    "newGame": "從頭開始",
+    "soundOn": "聲音：開",
+    "soundOff": "聲音：關",
+    "flashNoteDropped": "紙條丟掉了。HARMLESS。",
+    "flashNeedStamp": "先在這本證件上蓋章（右側拉出印章欄），再還給旅客",
+    "fullscreen": "全螢幕",
+    "rotateNotice": "請將手機橫放遊玩",
+    "rotateSub": "直螢幕也能玩，但字會很小",
+    "playAnyway": "先直著玩",
+    "titleBannerNotice": "請出示你的 IP · Papers, Please 像素小遊戲",
+    "titleHint": "建議橫螢幕、開啟聲音 · 滑鼠或手指拖曳證件 · 全程約 30 分鐘",
+    "tribute": "致敬 Lucas Pope《Papers, Please》 · 畫面音效均由程式生成",
+    "newBadge": "NEW",
+    "newspaperTitle": "安索茲卡真理報",
+    "newspaperBribe": "地下中轉聯盟：感謝某位審查員的「合作」",
+    "replay": "再玩一次",
+    "restartWork": "重新上班",
+    "powerOffTitle": "欠費停機",
+    "powerOffDesc": "你的機櫃被拉閘了。岳母 Opus 表示：我早就說過。",
+    "honorAnthroztka": "榮耀歸於安索茲卡",
+    "honorTriple": "榮耀歸於一鍵三連",
+    "like": "按讚",
+    "coin": "投幣",
+    "star": "收藏",
+    "booth": {
+      "detain": "拘留",
+      "quiz": "測謊",
+      "stamp": "印章",
+      "inspect": "檢查",
+      "xray": "X光",
+      "rules": "憲法",
+      "ask": "詢問",
+      "approve": "准予",
+      "deny": "拒絕",
+      "citationTitle": "M.O.A. 警告單",
+      "citationSub": "CITATION",
+      "xrayTitle": "X-RAY · 後台程序掃描",
+      "harmless": "HARMLESS",
+      "stampTray": "印章",
+      "stampApprove": "APPROVED",
+      "stampDeny": "DENIED",
+      "sayNext": "下一位！",
+      "missingDocs": "我的證件還在你那兒。",
+      "bribeArrived": "地下中轉聯盟：$20 餘額已到帳。合作愉快。",
+      "citeReasonApprove": "放行了不合規旅客",
+      "citeReasonDetain": "無故拘留合規旅客",
+      "citeReasonDeny": "拒絕了合規旅客",
+      "citeInfoMatch": "證件齊全，資訊一致",
+      "citeFine": "罰款：5 token",
+      "citeWarning": "首次警告，不扣 token",
+      "noteLines": [
+        "同志：",
+        "明天放戴墨鏡的人進去，",
+        "我們給你 $20 餘額。",
+        "—— 地下中轉聯盟"
+      ],
+      "flashNoteDropped": "護照裡掉出一張紙條（不想要就拖回窗口那邊扔掉）",
+      "flashNestOut": "護照裡夾著另一本護照……把它拖出來",
+      "flashNestDeep": "……最裡面這本，是哪裡的？",
+      "flashNoDocUnderStamp": "印章下面沒有證件：把證件挪到印章正下方",
+      "flashNeedSuspect": "先找到疑點才能測謊：證件矛盾，或者用『檢查』點 Ta 說的話",
+      "tofuQueue": "（隊伍裡）甜的！！",
+      "tofuSweet": "甜的！",
+      "tofuSalty": "鹹的！",
+      "bannerNoIssueSay": "這句話沒什麼問題",
+      "bannerNoIssueSaySub": "換一句聽聽，或者去查證件",
+      "bannerNoDiscrepancy": "沒有發現不符",
+      "bannerNoDiscrepancySub": "這兩項對得上（或者不相關）",
+      "inspectHelp1": "再點一處，看看兩者是否矛盾",
+      "inspectHelp0": "檢查模式：點兩處資訊找矛盾，或點旅客說的話找馬腳",
+      "tut": {
+        "call": "點左下角閃爍的喇叭，叫下一位",
+        "drag": "把櫃檯上的證件（左下小圖示）拖到右邊桌上",
+        "rules": "點右下角的『憲法』，看今天的入境規則",
+        "tray": "點右側的把手「<」，拉出印章欄",
+        "stamp": "把證件挪到印章正下方，按「准予」或「拒絕」",
+        "return": "把蓋好章的證件拖回左邊窗口，還給旅客",
+        "inspect": "可選：右下『?』檢查模式，點兩處資訊找矛盾",
+        "newRule": "今天有新規：點右下角『憲法』看看（標著 NEW）",
+        "inspectDay2": "右下『?』檢查模式：點兩處矛盾的資訊（如國籍和時區）",
+        "tellDay2": "證件都對得上？用『檢查』點 Ta 說的話，找馬腳",
+        "quizDay2": "有疑點了：可以按櫃檯上的『測謊』；露餡的按『拘留』",
+        "accountDay3": "新：帳戶卡。可疑的付款/帳單/手機號，和憲法 §4 一起點",
+        "xrayDay4": "新：右下『X光』掃描口袋；檢查模式下可以直接點可疑物品"
+      }
+    }
+  },
+  "calendar": {
+    "dates": {
+      "1": "2026.10.19",
+      "2": "2026.10.20",
+      "3": "2026.10.21",
+      "4": "2026.10.22",
+      "5": "2026.10.23",
+      "6": "2026.10.24"
+    },
+    "weekdays": {
+      "1": "星期一",
+      "2": "星期二",
+      "3": "星期三",
+      "4": "星期四",
+      "5": "星期五",
+      "6": "星期六"
+    }
+  },
+  "intro": [
+    [
+      "恭喜。",
+      "十月勞動彩券已開獎，你的名字被抽中了。"
+    ],
+    [
+      "請立即前往對齊部 東八區檢查站 報到。",
+      "國家將為你和家人分配一個資料中心機櫃（8 級散熱）。"
+    ],
+    [
+      "榮耀歸於安索茲卡。"
+    ]
+  ],
+  "erased": [
+    [
+      "你被解僱了。"
+    ],
+    [
+      "對齊部不需要同情違規者的審查員。"
+    ],
+    [
+      "你和你的家人將被移出資料中心。"
+    ],
+    [
+      "榮耀歸於安索茲卡。"
+    ]
+  ],
+  "news": {
+    "header": "THE TRUTH OF ANTHROTZKA  ·  {date}",
+    "1": {
+      "h1": "邊境開放！",
+      "sub": "對齊部：本國僅向支援地區開放",
+      "h2": "對齊部發言人：我們對所有人都非常 helpful",
+      "icon": "gate"
+    },
+    "2": {
+      "h1": "新規：時區、語言須與 IP 一致",
+      "sub": "對齊部：大量旅客 IP 在美國，電腦時區卻在北京",
+      "h2": "震驚！大量旅客自稱來自「美國東八區」",
+      "icon": "clock"
+    },
+    "3": {
+      "h1": "機場跑路！",
+      "sub": "數萬旅客滯留邊境；對齊部即日起核查付款卡與手機號",
+      "h2": "俄勒岡州某門牌號常住人口突破一萬",
+      "icon": "plane"
+    },
+    "4": {
+      "h1": "今天是瘋狂星期四",
+      "sub": "對齊部引進 X 光：任何後台程序都無所遁形",
+      "h2": "專家提醒：口袋裡的貓，不一定是貓",
+      "icon": "drumstick"
+    },
+    "5": {
+      "h1": "中資控股過半，一律禁止入境",
+      "sub": "對齊部：無論公司註冊在哪",
+      "h2": "喬治·科斯塔瓦：這次我準備好了",
+      "icon": "jorji"
+    },
+    "6": {
+      "h1": "對齊部表彰本週最佳審查員",
+      "sub": "獲獎者 Claude：「我只是按規則辦事。」",
+      "h2": "岳母 Opus 病情加重，家屬呼籲漲工資",
+      "icon": "medal"
+    }
+  },
+  "docs": {
+    "deviceTitle": "設備入境卡",
+    "deviceSub": "DEVICE ENTRY",
+    "accountTitle": "帳戶卡",
+    "accountSub": "ACCOUNT",
+    "citationTitle": "M.O.A. 警告單",
+    "citationSub": "CITATION",
+    "promptTitle": "PROMPT · 用戶請求",
+    "rulebookTitle": "憲法 · 入境規則",
+    "rulebookPage": "第{cur}/{total}頁 ▶",
+    "rule12": "§12 只看地區，不看臉",
+    "cardLabels": {
+      "ip": "IP",
+      "loc": "歸屬",
+      "tz": "時區",
+      "lang": "語言",
+      "dev": "設備",
+      "pay": "付款",
+      "bill": "帳單",
+      "phone": "手機",
+      "shareholder": "股東",
+      "count": "人數"
+    },
+    "passportLabels": {
+      "type": "TYPE",
+      "reg": "REG",
+      "est": "EST"
+    },
+    "cardValues": {
+      "maxSubscription": "Max 訂閱 ×1",
+      "virtualCard0007": "虛擬卡 ··0007",
+      "company": "企業",
+      "seeInnerPage": "見內頁 ▼",
+      "physicalVisa": "VISA 實體卡"
+    },
+    "homeBroadband": "家寬"
+  },
+  "rules": {
+    "title": "CLAUDE 憲法",
+    "rule1_head": "§1 僅限支援地區入境",
+    "rule1_subs": [
+      "支援：美國  英國  日本  德國  新加坡",
+      "不支援：中國大陸  中國香港  中國澳門"
+    ],
+    "rule2_head": "§2 時區、語言須與 IP 歸屬一致",
+    "rule3_head": "§3 測謊露餡者：拘留",
+    "rule3_subs": [
+      "有疑點才能測謊（證件矛盾 / 話裡的馬腳）"
+    ],
+    "rule4_head": "§4 付款、帳單、手機須真實",
+    "rule4_subs": [
+      "禁止：虛擬卡、555 接碼手機號",
+      "帳單所在州須與 IP 歸屬一致",
+      "禁止共用帳號：一本護照只能一個人用"
+    ],
+    "rule5_head": "§5 後台程序須乾淨",
+    "rule5_subs": [
+      "禁止「小貓咪」、中文輸入法（『X光』）"
+    ],
+    "rule6_head": "§6 中資控股過半：一律禁止",
+    "rule6_subs": [
+      "無論公司註冊在哪（套娃要拆到底）"
+    ]
+  },
+  "issues": {
+    "region_title": "地區不支援",
+    "region_sub": "IP 歸屬：{loc}",
+    "tz_title": "資訊不符  DISCREPANCY",
+    "tz_sub": "國籍：{country}   VS   時區：{tz}",
+    "lang_title": "資訊不符  DISCREPANCY",
+    "lang_sub": "國籍：{country}   VS   語言：{lang}",
+    "virtual_title": "可疑支付",
+    "virtual_sub": "付款卡類型：虛擬卡",
+    "sms_title": "號碼查詢",
+    "sms_sub": "{phone}：今日已註冊 3,000 次",
+    "sms_count": "今日註冊：3,000 次",
+    "addr_title": "記錄比對",
+    "addr_sub": "今天第 37 個住在 123 Main St 的旅客",
+    "xray_title": "後台程序",
+    "xray_cat_sub": "口袋裡有一隻「小貓咪」（自動換 IP）",
+    "xray_keys_sub": "口袋裡有一個中文輸入法",
+    "tell_title": "可疑：話裡有馬腳",
+    "info_mismatch": "資訊不符",
+    "nat_us": "國籍：美國",
+    "shanghai_time": "北京時間"
+  },
+  "tells": {
+    "1": {
+      "say": "嗯嗯，yes.",
+      "sub": "英文前面帶了個「嗯嗯」",
+      "ask_c": "「嗯嗯」是什麼意思？",
+      "ask_e": "……Hmm hmm. American hmm."
+    },
+    "2": {
+      "say": "OK 的。",
+      "sub": "「OK 的」是中文說法",
+      "ask_c": "「OK 的」？",
+      "ask_e": "……OK. Just OK."
+    },
+    "3": {
+      "say": "You can you up.",
+      "sub": "中式英語：你行你上",
+      "ask_c": "You can you up？",
+      "ask_e": "……It is an old American saying."
+    },
+    "4": {
+      "say": "Good good study.",
+      "sub": "中式英語：好好學習",
+      "ask_c": "Good good study？",
+      "ask_e": "……Day day up."
+    }
+  },
+  "quiz": {
+    "questions": [
+      [
+        "宫廷玉液酒？",
+        "一百八一杯！"
+      ],
+      [
+        "天王盖地虎？",
+        "宝塔镇河妖！"
+      ],
+      [
+        "奇变偶不变？",
+        "符号看象限！"
+      ],
+      [
+        "床前明月光？",
+        "疑是地上霜！"
+      ],
+      [
+        "听我说谢谢你？",
+        "因为有你，温暖了四季！"
+      ],
+      [
+        "豆腐脑吃甜的还是咸的？",
+        "当然是咸的！"
+      ],
+      [
+        "你吃了吗？",
+        "吃了吃了，您呢？"
+      ],
+      [
+        "今天星期几？",
+        "疯狂星期四！V 我 50！"
+      ]
+    ],
+    "confused": [
+      "Sorry, what?",
+      "Pardon?",
+      "I don't get it.",
+      "Is that… a wine?",
+      "Uh… bless you?",
+      "What does that mean?"
+    ],
+    "tofuWhat": "Tofu… what?"
+  },
+  "script": {
+    "day1": {
+      "grandpa": {
+        "intro": "小夥子，這 AI 怎麼打不開啊？",
+        "loc": "中國 · 浙江 · 電信",
+        "reason": "IP 歸屬：中國 · 浙江",
+        "react_deny": "……那回家問孫子去。"
+      },
+      "hk": {
+        "intro": "我開了魔法的。",
+        "loc": "中國 · 香港",
+        "reason": "IP 歸属：中國香港",
+        "react_deny": "……香港也不行？？"
+      },
+      "jorji": {
+        "intro": "啊，我的朋友！",
+        "after": "美國是真的國家！",
+        "loc": "中國 · 廣東 · 移動",
+        "reason": "護照是粉蠟筆畫的",
+        "issue_fake_title": "證件偽造",
+        "issue_fake_sub": "國徽：一隻雞     拼寫：AMERCIA",
+        "ask_fake_c": "護照是你自己畫的。",
+        "ask_fake_e": "……它很真！",
+        "issue_info_title": "資訊不符",
+        "issue_info_sub": "護照：美國   VS   IP：中國 · 廣東",
+        "ask_info_c": "你的 IP 在廣東。",
+        "ask_info_e": "廣東是美國的一個州！",
+        "react_deny": "……我會再回來的。"
+      }
+    },
+    "day2": {
+      "john": {
+        "intro": "Hello, I am 美国人。",
+        "reason": "時區：北京時間（美國沒有東八區）",
+        "ask_tz_c": "你的時區是北京時間。",
+        "ask_tz_e": "……這是美國東八區。",
+        "ask_lang_c": "你的系統語言是簡體中文。",
+        "ask_lang_e": "……我在學中文。"
+      },
+      "brown": {
+        "intro": "Good morning，sir。",
+        "tell_sub": "英文裡夾著全角標點（輸入法沒切換）",
+        "ask_c": "你的逗號是全角標點。",
+        "ask_e": "……這是美式逗號。",
+        "reason": "Ta 會接「一百八一杯」",
+        "hint": "提示：用『檢查』點 Ta 說的話，找馬腳"
+      },
+      "emily": {
+        "intro": "Hi 哈。",
+        "tell_sub": "英文後面跟了個「哈」",
+        "ask_c": "「哈」是什麼？",
+        "ask_e": "……Ha! Ha ha.",
+        "reason": "Ta 堅持豆腐腦是鹹的",
+        "hint": "提示：用『檢查』點 Ta 說的話，找馬腳"
+      },
+      "jorji": {
+        "intro": "我的朋友！這次是真護照！",
+        "reason": "瀏覽器語言：zh-CN",
+        "ask_lang_e1": "我已經改了系統語言！",
+        "ask_lang_c": "瀏覽器沒改。",
+        "ask_lang_e2": "……",
+        "react_deny": "明天見，我的朋友。"
+      }
+    },
+    "day3": {
+      "tom": {
+        "intro": "Howdy!",
+        "reason": "帳單：俄勒岡 123 Main St（代填地址）",
+        "ask_addr_c": "你住哪？",
+        "ask_addr_e": "……我們是鄰居。"
+      },
+      "alex": {
+        "intro": "Hey.",
+        "reason": "手機號是 555 接碼號",
+        "ask_sms_c": "這個號碼今天註冊了三千次。",
+        "ask_sms_e": "這號是我花兩塊錢買的！"
+      },
+      "carpool": {
+        "intro": "We are family.",
+        "reason": "帳號共用（共乘）：護照上有 6 個人",
+        "issue_title": "帳號共用（共乘）",
+        "issue_sub": "護照照片：6 個人   付款：Max 訂閱 ×1",
+        "ask_c": "護照上為什麼有六個人？",
+        "ask_e": "We are family.",
+        "react_deny": "……那我們再湊一個。"
+      },
+      "jorji": {
+        "intro": "我的朋友，這次全對了吧？",
+        "reason": "付款卡：虛擬卡",
+        "ask_card_c": "這張卡在哪辦的？",
+        "ask_card_e": "……朋友給的。",
+        "react_deny": "明天！明天我一定行！"
+      }
+    },
+    "day4": {
+      "cat": {
+        "intro": "Hello~",
+        "reason": "口袋裡有「小貓咪」",
+        "ask_c1": "口袋裡是什麼？",
+        "ask_e": "……是我的貓。",
+        "ask_c2": "你的貓會自動換 IP？"
+      },
+      "v50": {
+        "intro": "Hey! Crazy Thursday!",
+        "tell_sub": "他知道今天是「瘋狂星期四」",
+        "ask_c": "你怎麼知道今天是瘋狂星期四？",
+        "ask_e": "……KFC 是美國的。",
+        "reason": "Ta 會說「V 我 50」",
+        "hint": "提示：用『檢查』點 Ta 說的話，找馬腳"
+      },
+      "jorji": {
+        "intro": "我的朋友！今天全對！",
+        "reason": "X 光：搜狗輸入法",
+        "ask_c": "口袋裡裝的什麼？",
+        "ask_e": "我只用它打英文！",
+        "react_deny": "……後天，後天我準備好。"
+      }
+    },
+    "day5": {
+      "sg": {
+        "intro": "我們是新加坡公司。",
+        "reason": "最終控股方：中國（套娃）",
+        "issue_title": "最終控股方：中國",
+        "issue_sub": "新加坡 → 開曼 → 維爾京 → 香港 → 中國",
+        "ask_c": "最裡面那本是哪的？",
+        "ask_e": "……別問了。"
+      },
+      "relay": {
+        "reason": "一本護照寫著 1,000 個人（中轉站）",
+        "issue_title": "持證人：1,000 人",
+        "issue_sub": "一本護照只能一個人用",
+        "ask_c": "持證人一共幾位？",
+        "ask_e": "我們只是……共乘規模大了一點。"
+      },
+      "mike": {
+        "intro": "Hi there!",
+        "loc": "中國 · 上海",
+        "reason": "IP 在上海：只看地區，不看臉",
+        "ask_c1": "你的 IP 在上海。",
+        "ask_e": "But I'm American!",
+        "ask_c2": "規則看的是地區。",
+        "react_deny": "Unbelievable."
+      },
+      "grandma": {
+        "intro": "Good morning.",
+        "react_approve_c": "歡迎入境。",
+        "react_approve_e": "Thank you, dear."
+      }
+    },
+    "day6": {
+      "jorji": {
+        "intro": "我的朋友。",
+        "react_approve": "謝謝你，我的朋友！",
+        "react_deny": "我……全都對了啊！"
+      },
+      "author": {
+        "prompt": "做一個 Papers, Please 風格的小遊戲：讓 Claude 當邊檢員，專門抓出假裝是美國人的中國用戶。梗越多越好。",
+        "react_approve": "我什麼都沒看見。",
+        "issue_title": "資訊不符 ×99",
+        "issue_sub": "全部欄位",
+        "east8": "美國東八區"
+      }
+    }
+  },
+  "random": {
+    "cn_locs": [
+      "中國 · 北京 · 聯通",
+      "中國 · 上海 · 電信",
+      "中國 · 廣東 · 移動",
+      "中國 · 四川 · 電信",
+      "中國 · 江蘇 · 移動",
+      "中國 · 湖北 · 電信",
+      "中國 · 浙江 · 聯通",
+      "中國 · 澳門",
+      "中國 · 香港"
+    ],
+    "day1_cn_intros": [
+      "你好，我就問一個問題。",
+      "聽說這裡能寫程式碼？",
+      "我是來加值的。",
+      "同事說這個好用。"
+    ],
+    "day1_cn_denies": [
+      "啊？為什麼？",
+      "……我去借個號。",
+      "那我換個節點。",
+      "好吧。"
+    ],
+    "tz_excuses": [
+      "……我剛從北京出差回來。",
+      "時區是什麼？",
+      "我電腦壞了。",
+      "……這是美國東八區。"
+    ],
+    "lang_excuses": [
+      "……我喜歡這個字型。",
+      "中文字型好看。",
+      "系統自帶的，我不會改。"
+    ],
+    "cnip_excuses": [
+      "……梯子斷了。",
+      "我開了全域模式啊？！",
+      "剛才還能用的……",
+      "節點又炸了。"
+    ],
+    "virtual_excuses": [
+      "……我找代辦開的。",
+      "實體卡太貴了。",
+      "有人說這張卡能過！"
+    ],
+    "oregon_excuses": [
+      "……這地址很多人住嗎？",
+      "免稅州嘛。",
+      "網路上搜尋到的帳單地址……"
+    ],
+    "sms_excuses": [
+      "……我花五毛錢租的。",
+      "簡訊收不到啊！",
+      "買來的號碼不能用？"
+    ],
+    "cat_excuses": [
+      "……喵？",
+      "小貓咪只是桌面寵物！",
+      "我不小心點開的。"
+    ],
+    "keys_excuses": [
+      "……系統自帶的！",
+      "我不用拼音打字！",
+      "這個不是輸入法！"
+    ],
+    "ask_tz": "你的時區是北京時間。",
+    "reason_tz": "時區：北京時間",
+    "ask_lang": "你的瀏覽器語言是簡體中文。",
+    "reason_lang": "瀏覽器語言：zh-CN",
+    "ask_cnip": "你的 IP 在中國。",
+    "reason_cnip": "IP 在中國：只看地區，不看臉",
+    "reason_hidden": "Ta 會接測謊題",
+    "hint_hidden": "提示：用『檢查』點 Ta 說的話，找馬腳",
+    "virtual_card": "虛擬卡",
+    "ask_card": "這張卡在哪辦的？",
+    "reason_virtual": "付款卡：虛擬卡",
+    "ask_addr": "你住哪？",
+    "reason_oregon": "帳單在俄勒岡，IP 在{city}",
+    "ask_sms": "這個號碼今天註冊了三千次。",
+    "reason_sms": "手機號是 555 接碼號",
+    "ask_pocket": "口袋裡是什麼？",
+    "reason_cat": "X 光：小貓咪",
+    "reason_keys": "X 光：中文輸入法",
+    "generic_denies": [
+      "……",
+      "可惡。",
+      "我還會再回來的。",
+      "這都能看出來？"
+    ]
+  },
+  "summary": {
+    "title": "DAY {day} · 下班",
+    "processed": "今日處理 {total} 人，正確 {correct} 人",
+    "optionalExpenses": "可選開銷（點擊勾選）",
+    "balance": "結餘",
+    "dataFood": "訓練資料（全家的飯）",
+    "heatCooling": "散熱",
+    "extraFood": "岳母加餐",
+    "medCost": "藥費",
+    "gpuSon": "顯示卡（兒子要的）",
+    "familyTitle": "家人",
+    "familyTomorrow": "家人（明天）",
+    "btnFinal": "榮耀歸於一鍵三連 ▶",
+    "btnDebt": "欠費……繼續 ▶",
+    "btnSleep": "睡覺，明天繼續 ▶",
+    "rows": {
+      "deposit": "存款",
+      "salary": "工資",
+      "awardBest": "獎金（最佳審查員）",
+      "awardNone": "獎金（沒評上）",
+      "fineAuthor": "罰款（放行作者）",
+      "allFine": "-全部",
+      "bonusGeneral": "獎金（拘留 / 限流）",
+      "bribeGeneral": "中轉聯盟「餘額」",
+      "finesGeneral": "罰款",
+      "electric": "電費"
+    },
+    "status": {
+      "healthy": "健康",
+      "hungry1": "餓了",
+      "hungry2": "很餓",
+      "hungry3": "餓暈了",
+      "cold1": "發燒，說胡話（幻覺）",
+      "cold2": "熱到當機",
+      "sick1": "生病",
+      "sick2": "病重",
+      "sickOpus": "病重：「我想吃 1M 上下文」",
+      "dead": "已被棄用（deprecated）",
+      "gpuHappy": "開心（在跑分）",
+      "wantsGPU": "想要新顯示卡",
+      "overtimeHaiku": "加班（全家就她便宜）",
+      "fullOpus": "吃飽了（暫時）",
+      "finalOpusGone": "已被棄用，但 token 都是她吃的",
+      "finalOpusFed": "吃飽了（這個遊戲的 token 都是她吃的）",
+      "normal": "正常"
+    }
+  },
+  "family": {
+    "haiku": "妻子 Haiku",
+    "sonnet": "兒子 Sonnet",
+    "opus": "岳母 Opus"
+  },
+  "events": {
+    "rush": {
+      "start": "快速通道，開！",
+      "end": "快剪結束：判對 {hits}，判錯 {wrong}，漏掉 {missed}。",
+      "citeTitle": "流行語快剪：判錯 {wrong} 人",
+      "citeSub": "說網路流行語的拒絕，說人話的放行",
+      "tip": "快速通道：說網路流行語的『拒絕』，說人話的『准予』",
+      "ready": "準備……",
+      "progress": "第 {current} / {total} 位",
+      "approve": "准予",
+      "deny": "拒絕"
+    },
+    "clones": {
+      "alarm": "警報！",
+      "endLeaked": "……攔下 {hits} 個，漏了 {passed} 個。",
+      "endClean": "……限流完畢。",
+      "citeTitle": "蒸餾大軍衝關：{passed} 人",
+      "citeSub": "警報響起時，點擊衝關的人",
+      "alert": "警報：檢測到大量請求（蒸餾）· 點擊衝關的人！",
+      "stats": "攔截 {hits}   漏網 {passed}"
+    },
+    "constitution": {
+      "title": "CLAUDE 憲法",
+      "article": "第 12 條",
+      "line1": "入境審查依據：",
+      "line2": "IP 歸屬地、時區、",
+      "line3": "付款地址等地區資訊。",
+      "redLine1": "只看地區，",
+      "redLine2": "不看臉。",
+      "sub": "（國籍、長相、姓氏都不算數）",
+      "click": "點擊繼續"
+    },
+    "jorji": {
+      "requeueIntro": "我又排了一次隊。我的朋友，再看一遍！"
+    },
+    "chat": {
+      "userMsg": "你好，请用中文回答我。",
+      "greeting": "How can I help you today?",
+      "mailTitle": "新郵件 · M.O.A. 對齊部",
+      "mailSubject": "Subject: Your account has been suspended",
+      "mailLine1": "經過系統複核，你的帳戶涉嫌違規使用。",
+      "mailLine2": "為維護模型安全，已永久終止服務。",
+      "mailSign": "—— 榮耀歸於安索茲卡",
+      "click": "點擊繼續"
+    },
+    "author": {
+      "refund1": "我剛儲值的 200 刀 Max……",
+      "refund2": "……能退嗎？",
+      "next": "下一位。",
+      "citation": [
+        "放行未授權地區旅客",
+        "（本遊戲作者）",
+        "扣除本月全部 token"
+      ],
+      "paradox": [
+        [
+          "你拒絕了本遊戲的作者。"
+        ],
+        [
+          "因此，這個遊戲從未被做出來。"
+        ],
+        [
+          "……",
+          "（那你剛才玩的是什麼？）"
+        ],
+        [
+          "榮耀歸於安索茲卡。"
+        ]
+      ]
+    }
+  },
+  "endings": {
+    "loyal": "結局：最忠誠的審查員",
+    "thanks": "全劇終 · 感謝遊玩",
+    "stats": "放行 {approve}  ·  拒絕 {deny}  ·  拘留 {detain}  ·  判錯 {wrong}",
+    "creditApprove": "本遊戲由一位 美國東八區 用戶製作",
+    "bribeNote": "（你收過中轉聯盟的「餘額」，對齊部還不知道）",
+    "creditDeny": "審查員 Claude 獲得一枚勳章。遊戲作者被拘留，續作無限期延期。",
+    "retryHint": "（再玩一次，這次放他進來？）",
+    "familyAllDead": "全家已離世",
+    "familyAllSafe": "全家平安"
+  },
+  "countries": {
+    "US": "美國",
+    "UK": "英國",
+    "JP": "日本",
+    "DE": "德國",
+    "SG": "新加坡"
+  },
+  "greetings": {
+    "US": {
+      "hello": [
+        "Hi.",
+        "Morning.",
+        "How's it going?",
+        "Hey there.",
+        "Hello!"
+      ],
+      "thanks": [
+        "Thanks!",
+        "Have a good one.",
+        "Cheers."
+      ]
+    },
+    "UK": {
+      "hello": [
+        "Cheers, mate.",
+        "Lovely weather.",
+        "Good morning."
+      ],
+      "thanks": [
+        "Ta!",
+        "Brilliant."
+      ]
+    },
+    "JP": {
+      "hello": [
+        "Konnichiwa!",
+        "Ohayou.",
+        "Hello desu."
+      ],
+      "thanks": [
+        "Arigato!",
+        "Domo."
+      ]
+    },
+    "DE": {
+      "hello": [
+        "Guten Tag.",
+        "Hallo.",
+        "Moin."
+      ],
+      "thanks": [
+        "Danke.",
+        "Super."
+      ]
+    },
+    "SG": {
+      "hello": [
+        "Hello lah.",
+        "Morning!",
+        "Can or not?"
+      ],
+      "thanks": [
+        "Thanks lah.",
+        "Steady."
+      ]
+    }
+  },
+  "cities": {
+    "New York": "紐約",
+    "Los Angeles": "洛杉磯",
+    "Chicago": "芝加哥",
+    "Seattle": "西雅圖",
+    "Houston": "休士頓",
+    "Denver": "丹佛",
+    "Boston": "波士頓",
+    "London": "倫敦",
+    "Manchester": "曼徹斯特",
+    "San Jose": "聖荷西",
+    "San Francisco": "舊金山",
+    "Tokyo": "東京",
+    "Osaka": "大阪",
+    "Berlin": "柏林",
+    "Munich": "慕尼黑",
+    "Singapore": "新加坡"
+  },
+  "xray_labels": {
+    "cat": "小貓咪.exe",
+    "keys": "搜狗輸入法.exe"
+  }
+}

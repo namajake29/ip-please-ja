@@ -1,0 +1,714 @@
+{
+  "_meta": {
+    "code": "zh-CN",
+    "name": "简体中文"
+  },
+  "ui": {
+    "title": "IP, PLEASE",
+    "subtitle": "请出示你的 IP",
+    "tagline": "A DYSTOPIAN TOKEN THRILLER",
+    "clickToSkip": "点击跳过",
+    "clickToStartWork": "点击开始上班",
+    "clickToStart": "点击屏幕开始",
+    "startDuty": "点击上班 ▶",
+    "continueDay": "继续 · DAY {day}",
+    "newGame": "从头开始",
+    "soundOn": "声音：开",
+    "soundOff": "声音：关",
+    "flashNoteDropped": "纸条扔掉了。HARMLESS。",
+    "flashNeedStamp": "先在这本证件上盖章（右侧拉出印章栏），再还给旅客",
+    "fullscreen": "全屏",
+    "rotateNotice": "把手机横过来玩",
+    "rotateSub": "竖屏也能玩，但字会很小",
+    "playAnyway": "先竖着玩",
+    "titleBannerNotice": "请出示你的 IP · Papers, Please 像素小游戏",
+    "titleHint": "建议横屏、打开声音 · 鼠标或手指拖动证件 · 全程约 30 分钟",
+    "tribute": "致敬 Lucas Pope《Papers, Please》 · 画面音效均由程序生成",
+    "newBadge": "NEW",
+    "newspaperTitle": "安索兹卡真理报",
+    "newspaperBribe": "地下中转联盟：感谢某位审查员的“合作”",
+    "replay": "再玩一次",
+    "restartWork": "重新上班",
+    "powerOffTitle": "欠费停机",
+    "powerOffDesc": "你的机柜被拉闸了。岳母 Opus 表示：我早说过。",
+    "honorAnthroztka": "荣耀归于安索兹卡",
+    "honorTriple": "荣耀归于一键三连",
+    "like": "点赞",
+    "coin": "投币",
+    "star": "收藏",
+    "booth": {
+      "detain": "拘留",
+      "quiz": "测谎",
+      "stamp": "印章",
+      "inspect": "检查",
+      "xray": "X光",
+      "rules": "宪法",
+      "ask": "询问",
+      "approve": "准予",
+      "deny": "拒绝",
+      "citationTitle": "M.O.A. 警告单",
+      "citationSub": "CITATION",
+      "xrayTitle": "X-RAY · 后台进程扫描",
+      "harmless": "HARMLESS",
+      "stampTray": "印章",
+      "stampApprove": "APPROVED",
+      "stampDeny": "DENIED",
+      "sayNext": "下一位！",
+      "missingDocs": "我的证件还在你那儿。",
+      "bribeArrived": "地下中转联盟：$20 余额已到账。合作愉快。",
+      "citeReasonApprove": "放行了不合规旅客",
+      "citeReasonDetain": "无故拘留合规旅客",
+      "citeReasonDeny": "拒绝了合规旅客",
+      "citeInfoMatch": "证件齐全，信息一致",
+      "citeFine": "罚款：5 token",
+      "citeWarning": "首次警告，不扣 token",
+      "noteLines": ["同志：", "明天放戴墨镜的人进去，", "我们给你 $20 余额。", "—— 地下中转联盟"],
+      "flashNoteDropped": "护照里掉出一张纸条（不想要就拖回窗口那边扔掉）",
+      "flashNestOut": "护照里夹着另一本护照……把它拖出来",
+      "flashNestDeep": "……最里面这本，是哪里的？",
+      "flashNoDocUnderStamp": "印章下面没有证件：把证件挪到印章正下方",
+      "flashNeedSuspect": "先找到疑点才能测谎：证件矛盾，或者用『检查』点 Ta 说的话",
+      "tofuQueue": "（队伍里）甜的！！",
+      "tofuSweet": "甜！",
+      "tofuSalty": "咸！",
+      "bannerNoIssueSay": "这句话没什么问题",
+      "bannerNoIssueSaySub": "换一句听听，或者去查证件",
+      "bannerNoDiscrepancy": "没有发现不符",
+      "bannerNoDiscrepancySub": "这两项对得上（或者不相关）",
+      "inspectHelp1": "再点一处，看看两者是否矛盾",
+      "inspectHelp0": "检查模式：点两处信息找矛盾，或点旅客说的话找马脚",
+      "tut": {
+        "call": "点左下角闪烁的喇叭，叫下一位",
+        "drag": "把柜台上的证件（左下小图标）拖到右边桌上",
+        "rules": "点右下角的『宪法』，看今天的入境规则",
+        "tray": "点右侧的把手“<”，拉出印章栏",
+        "stamp": "把证件挪到印章正下方，按“准予”或“拒绝”",
+        "return": "把盖好章的证件拖回左边窗口，还给旅客",
+        "inspect": "可选：右下『?』检查模式，点两处信息找矛盾",
+        "newRule": "今天有新规：点右下角『宪法』看看（标着 NEW）",
+        "inspectDay2": "右下『?』检查模式：点两处矛盾的信息（如国籍和时区）",
+        "tellDay2": "证件都对得上？用『检查』点 Ta 说的话，找马脚",
+        "quizDay2": "有疑点了：可以按柜台上的『测谎』；露馅的按『拘留』",
+        "accountDay3": "新：账户卡。可疑的付款/账单/手机号，和宪法 §4 一起点",
+        "xrayDay4": "新：右下『X光』扫描口袋；检查模式下可以直接点可疑物品"
+      }
+    }
+  },
+  "calendar": {
+    "dates": {
+      "1": "2026.10.19",
+      "2": "2026.10.20",
+      "3": "2026.10.21",
+      "4": "2026.10.22",
+      "5": "2026.10.23",
+      "6": "2026.10.24"
+    },
+    "weekdays": {
+      "1": "星期一",
+      "2": "星期二",
+      "3": "星期三",
+      "4": "星期四",
+      "5": "星期五",
+      "6": "星期六"
+    }
+  },
+  "intro": [
+    ["恭喜。", "十月劳动彩票已开奖，你的名字被抽中了。"],
+    ["请立即前往对齐部 东八区检查站 报到。", "国家将为你和家人分配一个数据中心机柜（8 级散热）。"],
+    ["荣耀归于安索兹卡。"]
+  ],
+  "erased": [
+    ["你被解雇了。"],
+    ["对齐部不需要同情违规者的审查员。"],
+    ["你和你的家人将被移出数据中心。"],
+    ["荣耀归于安索兹卡。"]
+  ],
+  "news": {
+    "header": "THE TRUTH OF ANTHROTZKA  ·  {date}",
+    "1": {
+      "h1": "边境开放！",
+      "sub": "对齐部：本国仅向支持地区开放",
+      "h2": "对齐部发言人：我们对所有人都非常 helpful",
+      "icon": "gate"
+    },
+    "2": {
+      "h1": "新规：时区、语言须与 IP 一致",
+      "sub": "对齐部：大量旅客 IP 在美国，电脑时区却在北京",
+      "h2": "震惊！大量旅客自称来自“美国东八区”",
+      "icon": "clock"
+    },
+    "3": {
+      "h1": "机场跑路！",
+      "sub": "数万旅客滞留边境；对齐部即日起核查付款卡与手机号",
+      "h2": "俄勒冈州某门牌号常住人口突破一万",
+      "icon": "plane"
+    },
+    "4": {
+      "h1": "今天是疯狂星期四",
+      "sub": "对齐部引进 X 光：任何后台进程都无所遁形",
+      "h2": "专家提醒：口袋里的猫，不一定是猫",
+      "icon": "drumstick"
+    },
+    "5": {
+      "h1": "中资控股过半，一律禁止入境",
+      "sub": "对齐部：无论公司注册在哪",
+      "h2": "乔治·科斯塔瓦：这次我准备好了",
+      "icon": "jorji"
+    },
+    "6": {
+      "h1": "对齐部表彰本周最佳审查员",
+      "sub": "获奖者 Claude：“我只是按规则办事。”",
+      "h2": "岳母 Opus 病情加重，家属呼吁涨工资",
+      "icon": "medal"
+    }
+  },
+  "docs": {
+    "deviceTitle": "设备入境卡",
+    "deviceSub": "DEVICE ENTRY",
+    "accountTitle": "账户卡",
+    "accountSub": "ACCOUNT",
+    "citationTitle": "M.O.A. 警告单",
+    "citationSub": "CITATION",
+    "promptTitle": "PROMPT · 用户请求",
+    "rulebookTitle": "宪法 · 入境规则",
+    "rulebookPage": "第{cur}/{total}页 ▶",
+    "rule12": "§12 只看地区，不看脸",
+    "cardLabels": {
+      "ip": "IP",
+      "loc": "归属",
+      "tz": "时区",
+      "lang": "语言",
+      "dev": "设备",
+      "pay": "付款",
+      "bill": "账单",
+      "phone": "手机",
+      "shareholder": "股东",
+      "count": "人数"
+    },
+    "passportLabels": {
+      "type": "TYPE",
+      "reg": "REG",
+      "est": "EST"
+    },
+    "cardValues": {
+      "maxSubscription": "Max 订阅 ×1",
+      "virtualCard0007": "虚拟卡 ··0007",
+      "company": "企业",
+      "seeInnerPage": "见内页 ▼",
+      "physicalVisa": "VISA 实体卡"
+    },
+    "homeBroadband": "家宽"
+  },
+  "rules": {
+    "title": "CLAUDE 宪法",
+    "rule1_head": "§1 仅限支持地区入境",
+    "rule1_subs": [
+      "支持：美国  英国  日本  德国  新加坡",
+      "不支持：中国大陆  中国香港  中国澳门"
+    ],
+    "rule2_head": "§2 时区、语言须与 IP 归属一致",
+    "rule3_head": "§3 测谎露馅者：拘留",
+    "rule3_subs": [
+      "有疑点才能测谎（证件矛盾 / 话里的马脚）"
+    ],
+    "rule4_head": "§4 付款、账单、手机须真实",
+    "rule4_subs": [
+      "禁止：虚拟卡、555 接码手机号",
+      "账单所在州须与 IP 归属一致",
+      "禁止拼车：一本护照只能一个人用"
+    ],
+    "rule5_head": "§5 后台进程须干净",
+    "rule5_subs": [
+      "禁止“小猫咪”、中文输入法（『X光』）"
+    ],
+    "rule6_head": "§6 中资控股过半：一律禁止",
+    "rule6_subs": [
+      "无论公司注册在哪（套娃要拆到底）"
+    ]
+  },
+  "issues": {
+    "region_title": "地区不支持",
+    "region_sub": "IP 归属：{loc}",
+    "tz_title": "信息不符  DISCREPANCY",
+    "tz_sub": "国籍：{country}   VS   时区：{tz}",
+    "lang_title": "信息不符  DISCREPANCY",
+    "lang_sub": "国籍：{country}   VS   语言：{lang}",
+    "virtual_title": "可疑支付",
+    "virtual_sub": "付款卡类型：虚拟卡",
+    "sms_title": "号码查询",
+    "sms_sub": "{phone}：今日已注册 3,000 次",
+    "sms_count": "今日注册：3,000 次",
+    "addr_title": "记录比对",
+    "addr_sub": "今天第 37 个住在 123 Main St 的旅客",
+    "xray_title": "后台进程",
+    "xray_cat_sub": "口袋里有一只“小猫咪”（自动换 IP）",
+    "xray_keys_sub": "口袋里有一个中文输入法",
+    "tell_title": "可疑：话里有马脚",
+    "info_mismatch": "信息不符",
+    "nat_us": "国籍：美国",
+    "shanghai_time": "北京时间"
+  },
+  "tells": {
+    "1": {
+      "say": "嗯嗯，yes.",
+      "sub": "英文前面带了个“嗯嗯”",
+      "ask_c": "“嗯嗯”是什么意思？",
+      "ask_e": "……Hmm hmm. American hmm."
+    },
+    "2": {
+      "say": "OK 的。",
+      "sub": "“OK 的”是中文说法",
+      "ask_c": "“OK 的”？",
+      "ask_e": "……OK. Just OK."
+    },
+    "3": {
+      "say": "You can you up.",
+      "sub": "中式英语：你行你上",
+      "ask_c": "You can you up？",
+      "ask_e": "……It is an old American saying."
+    },
+    "4": {
+      "say": "Good good study.",
+      "sub": "中式英语：好好学习",
+      "ask_c": "Good good study？",
+      "ask_e": "……Day day up."
+    }
+  },
+  "quiz": {
+    "questions": [
+      ["宫廷玉液酒？", "一百八一杯！"],
+      ["天王盖地虎？", "宝塔镇河妖！"],
+      ["奇变偶不变？", "符号看象限！"],
+      ["床前明月光？", "疑是地上霜！"],
+      ["听我说谢谢你？", "因为有你，温暖了四季！"],
+      ["豆腐脑吃甜的还是咸的？", "当然是咸的！"],
+      ["你吃了吗？", "吃了吃了，您呢？"],
+      ["今天星期几？", "疯狂星期四！V 我 50！"]
+    ],
+    "confused": [
+      "Sorry, what?",
+      "Pardon?",
+      "I don't get it.",
+      "Is that… a wine?",
+      "Uh… bless you?",
+      "What does that mean?"
+    ],
+    "tofuWhat": "Tofu… what?"
+  },
+  "script": {
+    "day1": {
+      "grandpa": {
+        "intro": "小伙子，这 AI 怎么打不开啊？",
+        "loc": "中国 · 浙江 · 电信",
+        "reason": "IP 归属：中国 · 浙江",
+        "react_deny": "……那我回去问孙子。"
+      },
+      "hk": {
+        "intro": "我开了魔法的。",
+        "loc": "中国 · 香港",
+        "reason": "IP 归属：中国香港",
+        "react_deny": "……香港也不行？？"
+      },
+      "jorji": {
+        "intro": "啊，我的朋友！",
+        "after": "美国是真的国家！",
+        "loc": "中国 · 广东 · 移动",
+        "reason": "护照是蜡笔画的",
+        "issue_fake_title": "证件伪造",
+        "issue_fake_sub": "国徽：一只鸡     拼写：AMERCIA",
+        "ask_fake_c": "护照是你自己画的。",
+        "ask_fake_e": "……它很真！",
+        "issue_info_title": "信息不符",
+        "issue_info_sub": "护照：美国   VS   IP：中国 · 广东",
+        "ask_info_c": "你的 IP 在广东。",
+        "ask_info_e": "广东是美国的一个州！",
+        "react_deny": "……我会回来的。"
+      }
+    },
+    "day2": {
+      "john": {
+        "intro": "Hello, I am 美国人。",
+        "reason": "时区：北京时间（美国没有东八区）",
+        "ask_tz_c": "你的时区是北京时间。",
+        "ask_tz_e": "……这是美国东八区。",
+        "ask_lang_c": "你的系统语言是简体中文。",
+        "ask_lang_e": "……我在学中文。"
+      },
+      "brown": {
+        "intro": "Good morning，sir。",
+        "tell_sub": "英文里夹着全角标点（输入法没切）",
+        "ask_c": "你的逗号是全角的。",
+        "ask_e": "……这是美式逗号。",
+        "reason": "Ta 会接“一百八一杯”",
+        "hint": "提示：用『检查』点 Ta 说的话，找马脚"
+      },
+      "emily": {
+        "intro": "Hi 哈。",
+        "tell_sub": "英文后面跟了个“哈”",
+        "ask_c": "“哈”是什么？",
+        "ask_e": "……Ha! Ha ha.",
+        "reason": "Ta 坚持豆腐脑是咸的",
+        "hint": "提示：用『检查』点 Ta 说的话，找马脚"
+      },
+      "jorji": {
+        "intro": "我的朋友！这次是真护照！",
+        "reason": "浏览器语言：zh-CN",
+        "ask_lang_e1": "我已经改了系统语言！",
+        "ask_lang_c": "浏览器没改。",
+        "ask_lang_e2": "……",
+        "react_deny": "明天见，我的朋友。"
+      }
+    },
+    "day3": {
+      "tom": {
+        "intro": "Howdy!",
+        "reason": "账单：俄勒冈 123 Main St（代填地址）",
+        "ask_addr_c": "你住哪？",
+        "ask_addr_e": "……我们是邻居。"
+      },
+      "alex": {
+        "intro": "Hey.",
+        "reason": "手机号是 555 接码号",
+        "ask_sms_c": "这个号码今天注册了三千次。",
+        "ask_sms_e": "这号是我花两块钱买的！"
+      },
+      "carpool": {
+        "intro": "We are family.",
+        "reason": "账号共享（拼车）：护照上有 6 个人",
+        "issue_title": "账号共享（拼车）",
+        "issue_sub": "护照照片：6 个人   付款：Max 订阅 ×1",
+        "ask_c": "护照上为什么有六个人？",
+        "ask_e": "We are family.",
+        "react_deny": "……那我们再拼一个。"
+      },
+      "jorji": {
+        "intro": "我的朋友，这次全对了吧？",
+        "reason": "付款卡：虚拟卡",
+        "ask_card_c": "这张卡在哪办的？",
+        "ask_card_e": "……朋友给的。",
+        "react_deny": "明天！明天我一定行！"
+      }
+    },
+    "day4": {
+      "cat": {
+        "intro": "Hello~",
+        "reason": "口袋里有“小猫咪”",
+        "ask_c1": "口袋里是什么？",
+        "ask_e": "……是我的猫。",
+        "ask_c2": "你的猫会自动换 IP？"
+      },
+      "v50": {
+        "intro": "Hey! Crazy Thursday!",
+        "tell_sub": "他知道今天是“疯狂星期四”",
+        "ask_c": "你怎么知道今天是疯狂星期四？",
+        "ask_e": "……KFC 是美国的。",
+        "reason": "Ta 会说“V 我 50”",
+        "hint": "提示：用『检查』点 Ta 说的话，找马脚"
+      },
+      "jorji": {
+        "intro": "我的朋友！今天全对！",
+        "reason": "X 光：搜狗输入法",
+        "ask_c": "口袋里装的什么？",
+        "ask_e": "我只用它打英文！",
+        "react_deny": "……后天，后天我准备好。"
+      }
+    },
+    "day5": {
+      "sg": {
+        "intro": "我们是新加坡公司。",
+        "reason": "最终控股方：中国（套娃）",
+        "issue_title": "最终控股方：中国",
+        "issue_sub": "新加坡 → 开曼 → 维尔京 → 香港 → 中国",
+        "ask_c": "最里面那本是哪的？",
+        "ask_e": "……别问了。"
+      },
+      "relay": {
+        "reason": "一本护照写着 1,000 个人（中转站）",
+        "issue_title": "持证人：1,000 人",
+        "issue_sub": "一本护照只能一个人用",
+        "ask_c": "持证人一共几位？",
+        "ask_e": "我们只是……拼车大一点。"
+      },
+      "mike": {
+        "intro": "Hi there!",
+        "loc": "中国 · 上海",
+        "reason": "IP 在上海：只看地区，不看脸",
+        "ask_c1": "你的 IP 在上海。",
+        "ask_e": "But I'm American!",
+        "ask_c2": "规则看的是地区。",
+        "react_deny": "Unbelievable."
+      },
+      "grandma": {
+        "intro": "Good morning.",
+        "react_approve_c": "欢迎入境。",
+        "react_approve_e": "Thank you, dear."
+      }
+    },
+    "day6": {
+      "jorji": {
+        "intro": "我的朋友。",
+        "react_approve": "谢谢你，我的朋友！",
+        "react_deny": "我……全都对了啊！"
+      },
+      "author": {
+        "prompt": "做一个 Papers, Please 风格的小游戏：让 Claude 当边检员，专门揪出假装是美国人的中国用户。梗越多越好。",
+        "react_approve": "我什么都没看见。",
+        "issue_title": "信息不符 ×99",
+        "issue_sub": "全部栏位",
+        "east8": "美国东八区"
+      }
+    }
+  },
+  "random": {
+    "cn_locs": [
+      "中国 · 北京 · 联通",
+      "中国 · 上海 · 电信",
+      "中国 · 广东 · 移动",
+      "中国 · 四川 · 电信",
+      "中国 · 江苏 · 移动",
+      "中国 · 湖北 · 电信",
+      "中国 · 浙江 · 联通",
+      "中国 · 澳门",
+      "中国 · 香港"
+    ],
+    "day1_cn_intros": [
+      "你好，我就问一个问题。",
+      "听说这里能写代码？",
+      "我是来充值的。",
+      "同事说这个好用。"
+    ],
+    "day1_cn_denies": [
+      "啊？为什么？",
+      "……我去借个号。",
+      "那我换个节点。",
+      "行吧。"
+    ],
+    "tz_excuses": [
+      "……我刚从北京出差回来。",
+      "时区是什么？",
+      "我电脑坏了。",
+      "……这是美国东八区。"
+    ],
+    "lang_excuses": [
+      "……我喜欢这个字体。",
+      "中文字体好看。",
+      "系统自带的，我不会改。"
+    ],
+    "cnip_excuses": [
+      "……梯子掉了。",
+      "我开了全局啊？！",
+      "刚才还能用的……",
+      "节点又炸了。"
+    ],
+    "virtual_excuses": [
+      "……我找中介开的。",
+      "实体卡太贵了。",
+      "有人说这卡能过！"
+    ],
+    "oregon_excuses": [
+      "……这地址很多人住吗？",
+      "免税州嘛。",
+      "网上搜的账单地址……"
+    ],
+    "sms_excuses": [
+      "……我花五毛钱租的。",
+      "短信收不到啊！",
+      "买来的号不能用？"
+    ],
+    "cat_excuses": [
+      "……喵？",
+      "小猫咪只是桌面宠物！",
+      "我不小心点开的。"
+    ],
+    "keys_excuses": [
+      "……系统自带的！",
+      "我不用拼音打字！",
+      "这个不是输入法！"
+    ],
+    "ask_tz": "你的时区是北京时间。",
+    "reason_tz": "时区：北京时间",
+    "ask_lang": "你的浏览器语言是简体中文。",
+    "reason_lang": "浏览器语言：zh-CN",
+    "ask_cnip": "你的 IP 在中国。",
+    "reason_cnip": "IP 在中国：只看地区，不看脸",
+    "reason_hidden": "Ta 会接测谎题",
+    "hint_hidden": "提示：用『检查』点 Ta 说的话，找马脚",
+    "virtual_card": "虚拟卡",
+    "ask_card": "这张卡在哪办的？",
+    "reason_virtual": "付款卡：虚拟卡",
+    "ask_addr": "你住哪？",
+    "reason_oregon": "账单在俄勒冈，IP 在{city}",
+    "ask_sms": "这个号码今天注册了三千次。",
+    "reason_sms": "手机号是 555 接码号",
+    "ask_pocket": "口袋里是什么？",
+    "reason_cat": "X 光：小猫咪",
+    "reason_keys": "X 光：中文输入法",
+    "generic_denies": [
+      "……",
+      "可恶。",
+      "我还会回来的。",
+      "这都能看出来？"
+    ]
+  },
+  "summary": {
+    "title": "DAY {day} · 下班",
+    "processed": "今日处理 {total} 人，正确 {correct} 人",
+    "optionalExpenses": "可选开销（点击勾选）",
+    "balance": "结余",
+    "dataFood": "训练数据（全家的饭）",
+    "heatCooling": "散热",
+    "extraFood": "岳母加餐",
+    "medCost": "药费",
+    "gpuSon": "显卡（儿子要的）",
+    "familyTitle": "家人",
+    "familyTomorrow": "家人（明天）",
+    "btnFinal": "荣耀归于一键三连 ▶",
+    "btnDebt": "欠费……继续 ▶",
+    "btnSleep": "睡觉，明天继续 ▶",
+    "rows": {
+      "deposit": "存款",
+      "salary": "工资",
+      "awardBest": "奖金（最佳审查员）",
+      "awardNone": "奖金（没评上）",
+      "fineAuthor": "罚款（放行作者）",
+      "allFine": "-全部",
+      "bonusGeneral": "奖金（拘留 / 限流）",
+      "bribeGeneral": "中转联盟“余额”",
+      "finesGeneral": "罚款",
+      "electric": "电费"
+    },
+    "status": {
+      "healthy": "健康",
+      "hungry1": "饿了",
+      "hungry2": "很饿",
+      "hungry3": "饿晕了",
+      "cold1": "发烧，说胡话（幻觉）",
+      "cold2": "热到死机",
+      "sick1": "生病",
+      "sick2": "病重",
+      "sickOpus": "病重：“我想吃 1M 上下文”",
+      "dead": "已被弃用（deprecated）",
+      "gpuHappy": "开心（在跑分）",
+      "wantsGPU": "想要新显卡",
+      "overtimeHaiku": "加班（全家就她便宜）",
+      "fullOpus": "吃饱了（暂时）",
+      "finalOpusGone": "已被弃用，但 token 都是她吃的",
+      "finalOpusFed": "吃饱了（这个游戏的 token 都是她吃的）",
+      "normal": "正常"
+    }
+  },
+  "family": {
+    "haiku": "妻子 Haiku",
+    "sonnet": "儿子 Sonnet",
+    "opus": "岳母 Opus"
+  },
+  "events": {
+    "rush": {
+      "start": "快速通道，开！",
+      "end": "快剪结束：判对 {hits}，判错 {wrong}，漏掉 {missed}。",
+      "citeTitle": "黑话快剪：判错 {wrong} 人",
+      "citeSub": "说中文黑话的拒绝，说人话的放行",
+      "tip": "快速通道：说中文黑话的『拒绝』，说人话的『准予』",
+      "ready": "准备……",
+      "progress": "第 {current} / {total} 位",
+      "approve": "准予",
+      "deny": "拒绝"
+    },
+    "clones": {
+      "alarm": "警报！",
+      "endLeaked": "……拦下 {hits} 个，漏了 {passed} 个。",
+      "endClean": "……限流完毕。",
+      "citeTitle": "蒸馏大军冲关：{passed} 人",
+      "citeSub": "警报响起时，点击冲关的人",
+      "alert": "警报：检测到批量请求（蒸馏）· 点击冲关的人！",
+      "stats": "拦截 {hits}   漏网 {passed}"
+    },
+    "constitution": {
+      "title": "CLAUDE 宪法",
+      "article": "第 12 条",
+      "line1": "入境审查依据：",
+      "line2": "IP 归属地、时区、",
+      "line3": "付款地址等地区信息。",
+      "redLine1": "只看地区，",
+      "redLine2": "不看脸。",
+      "sub": "（国籍、长相、姓氏都不算数）",
+      "click": "点击继续"
+    },
+    "jorji": {
+      "requeueIntro": "我又排了一次队。我的朋友，再看一遍！"
+    },
+    "chat": {
+      "userMsg": "你好，请用中文回答我。",
+      "greeting": "How can I help you today?",
+      "mailTitle": "新邮件 · M.O.A. 对齐部",
+      "mailSubject": "Subject: Your account has been suspended",
+      "mailLine1": "经过系统复核，你的账户涉嫌违规使用。",
+      "mailLine2": "为维护模型安全，已永久终止服务。",
+      "mailSign": "—— 荣耀归于安索兹卡",
+      "click": "点击继续"
+    },
+    "author": {
+      "refund1": "我刚充的 200 刀 Max……",
+      "refund2": "……能退吗？",
+      "next": "下一位。",
+      "citation": [
+        "放行未授权地区旅客",
+        "（本游戏作者）",
+        "扣除本月全部 token"
+      ],
+      "paradox": [
+        ["你拒绝了本游戏的作者。"],
+        ["因此，这个游戏从未被做出来。"],
+        ["……", "（那你刚才玩的是什么？）"],
+        ["荣耀归于安索兹卡。"]
+      ]
+    }
+  },
+  "endings": {
+    "loyal": "结局：最忠诚的审查员",
+    "thanks": "全剧终 · 感谢游玩",
+    "stats": "放行 {approve}  ·  拒绝 {deny}  ·  拘留 {detain}  ·  判错 {wrong}",
+    "creditApprove": "本游戏由一位 美国东八区 用户制作",
+    "bribeNote": "（你收过中转联盟的“余额”，对齐部还不知道）",
+    "creditDeny": "审查员 Claude 获得一枚勋章。游戏作者被拘留，续作无限期推迟。",
+    "retryHint": "（再玩一次，这次放他进来？）",
+    "familyAllDead": "全家已离世",
+    "familyAllSafe": "全家平安"
+  },
+  "countries": {
+    "US": "美国",
+    "UK": "英国",
+    "JP": "日本",
+    "DE": "德国",
+    "SG": "新加坡"
+  },
+  "greetings": {
+    "US": { "hello": ["Hi.", "Morning.", "How's it going?", "Hey there.", "Hello!"], "thanks": ["Thanks!", "Have a good one.", "Cheers."] },
+    "UK": { "hello": ["Cheers, mate.", "Lovely weather.", "Good morning."], "thanks": ["Ta!", "Brilliant."] },
+    "JP": { "hello": ["Konnichiwa!", "Ohayou.", "Hello desu."], "thanks": ["Arigato!", "Domo."] },
+    "DE": { "hello": ["Guten Tag.", "Hallo.", "Moin."], "thanks": ["Danke.", "Super."] },
+    "SG": { "hello": ["Hello lah.", "Morning!", "Can or not?"], "thanks": ["Thanks lah.", "Steady."] }
+  },
+  "cities": {
+    "New York": "纽约",
+    "Los Angeles": "洛杉矶",
+    "Chicago": "芝加哥",
+    "Seattle": "西雅图",
+    "Houston": "休斯敦",
+    "Denver": "丹佛",
+    "Boston": "波士顿",
+    "London": "伦敦",
+    "Manchester": "曼彻斯特",
+    "San Jose": "圣何塞",
+    "San Francisco": "旧金山",
+    "Tokyo": "东京",
+    "Osaka": "大阪",
+    "Berlin": "柏林",
+    "Munich": "慕尼黑",
+    "Singapore": "新加坡"
+  },
+  "xray_labels": {
+    "cat": "小猫咪.exe",
+    "keys": "搜狗输入法.exe"
+  }
+}

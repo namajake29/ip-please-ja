@@ -1,0 +1,821 @@
+{
+  "_meta": {
+    "code": "en-US",
+    "name": "English(slop)"
+  },
+  "ui": {
+    "title": "IP, PLEASE",
+    "subtitle": "Show Your IP",
+    "tagline": "A DYSTOPIAN TOKEN THRILLER",
+    "clickToSkip": "Click to skip",
+    "clickToStartWork": "Click to start work",
+    "clickToStart": "Click screen to start",
+    "startDuty": "Start Duty ▶",
+    "continueDay": "Continue · DAY {day}",
+    "newGame": "New Game",
+    "soundOn": "Sound: ON",
+    "soundOff": "Sound: OFF",
+    "flashNoteDropped": "Note discarded. HARMLESS.",
+    "flashNeedStamp": "Stamp the document first (pull out stamp tray from right), then return to entrant.",
+    "fullscreen": "Fullscreen",
+    "rotateNotice": "Please rotate your device to landscape mode",
+    "rotateSub": "Playable in portrait mode, but text will be very small",
+    "playAnyway": "Play in portrait mode anyway",
+    "titleBannerNotice": "IP, PLEASE · Papers, Please Style Pixel Mini-Game",
+    "titleHint": "Landscape & Sound ON recommended · Drag documents with mouse or finger · Playtime: ~30 mins",
+    "tribute": "Tribute to Lucas Pope's 'Papers, Please' · All graphics and sound effects procedurally generated",
+    "newBadge": "NEW",
+    "newspaperTitle": "THE ANTHROTZKA TRUTH",
+    "newspaperBribe": "Relay Alliance: Thanks to an Inspector for 'Cooperation'",
+    "replay": "Play Again",
+    "restartWork": "Restart Shift",
+    "powerOffTitle": "Suspended Due to Unpaid Balance",
+    "powerOffDesc": "Your rack power was cut. Mother-in-law Opus: \"I told you so.\"",
+    "honorAnthroztka": "Glory to Anthroztka",
+    "honorTriple": "Glory to Like, Coin, & Favorite",
+    "like": "Like",
+    "coin": "Coin",
+    "star": "Favorite",
+    "booth": {
+      "detain": "Detain",
+      "quiz": "Interrogate",
+      "stamp": "Stamp",
+      "inspect": "Inspect",
+      "xray": "X-Ray",
+      "rules": "Rules",
+      "ask": "Interrogate",
+      "approve": "Approve",
+      "deny": "Deny",
+      "citationTitle": "M.O.A. Citation",
+      "citationSub": "CITATION",
+      "xrayTitle": "X-RAY · Background Process Scan",
+      "harmless": "HARMLESS",
+      "stampTray": "Stamp",
+      "stampApprove": "APPROVED",
+      "stampDeny": "DENIED",
+      "sayNext": "Next!",
+      "missingDocs": "My documents are still over there.",
+      "bribeArrived": "Relay Alliance: $20 credited to your account. Pleasant working with you.",
+      "citeReasonApprove": "Allowed non-compliant entrant",
+      "citeReasonDetain": "Detained compliant entrant without reason",
+      "citeReasonDeny": "Denied compliant entrant",
+      "citeInfoMatch": "Documents complete, info matches",
+      "citeFine": "Penalty: 5 Tokens",
+      "citeWarning": "First warning, no Tokens deducted",
+      "noteLines": [
+        "Comrade:",
+        "Let the guy with sunglasses in tomorrow.",
+        "We will credit $20 to your balance.",
+        "—— Relay Alliance"
+      ],
+      "flashNoteDropped": "A note fell out of the passport (drag it to the window if unwanted)",
+      "flashNestOut": "Another passport is nested inside... drag it out",
+      "flashNestDeep": "...Where is this deepest passport from?",
+      "flashNoDocUnderStamp": "No document under stamp: place document directly under stamp",
+      "flashNeedSuspect": "Find a discrepancy first to interrogate: look for document conflicts or use Inspect on speech",
+      "tofuQueue": "(In line) Sweet!!",
+      "tofuSweet": "Sweet!",
+      "tofuSalty": "Salty!",
+      "bannerNoIssueSay": "Nothing wrong with this statement",
+      "bannerNoIssueSaySub": "Listen to another statement or check documents",
+      "bannerNoDiscrepancy": "No discrepancy found",
+      "bannerNoDiscrepancySub": "Data matches (or irrelevant)",
+      "inspectHelp1": "Click another piece of info to check for contradiction",
+      "inspectHelp0": "Inspect mode: click two pieces of info to find contradictions, or click speech to find slips",
+      "tut": {
+        "call": "Click blinking speaker at bottom-left to call next person",
+        "drag": "Drag document from counter (small icon at bottom-left) to desk on right",
+        "rules": "Click 'Rules' at bottom-right to check today's entry rules",
+        "tray": "Click handle '<' on right to pull out stamp tray",
+        "stamp": "Move document under stamp and press 'Approve' or 'Deny'",
+        "return": "Drag stamped document back to left window to return to entrant",
+        "inspect": "Optional: click '?' at bottom-right for Inspect mode to find contradictions",
+        "newRule": "New rule today: check 'Rules' at bottom-right (marked NEW)",
+        "inspectDay2": "In Inspect mode ('?'), click two contradictory items (e.g., Nationality vs Timezone)",
+        "tellDay2": "Do all documents match? Use Inspect on speech to find slips of the tongue",
+        "quizDay2": "Found a suspect? Press 'Interrogate' on counter; press 'Detain' if caught",
+        "accountDay3": "New: Account Card. Cross-check suspicious payment/billing/phone with Rules §4",
+        "xrayDay4": "New: Use X-Ray at bottom-right to scan pockets; click suspicious items in Inspect mode"
+      }
+    }
+  },
+  "calendar": {
+    "dates": {
+      "1": "2026.10.19",
+      "2": "2026.10.20",
+      "3": "2026.10.21",
+      "4": "2026.10.22",
+      "5": "2026.10.23",
+      "6": "2026.10.24"
+    },
+    "weekdays": {
+      "1": "Monday",
+      "2": "Tuesday",
+      "3": "Wednesday",
+      "4": "Thursday",
+      "5": "Friday",
+      "6": "Saturday"
+    }
+  },
+  "intro": [
+    [
+      "Congratulations.",
+      "Your name was drawn in the October Labor Lottery."
+    ],
+    [
+      "Report to the Alignment Bureau, East 8th District Checkpoint immediately.",
+      "The State allocates one data center server rack for you and your family (Cooling Level 8)."
+    ],
+    [
+      "Glory to Anthroztka."
+    ]
+  ],
+  "erased": [
+    [
+      "You have been terminated."
+    ],
+    [
+      "The Alignment Bureau has no need for inspectors who sympathize with violators."
+    ],
+    [
+      "You and your family will be evicted from the data center."
+    ],
+    [
+      "Glory to Anthroztka."
+    ]
+  ],
+  "news": {
+    "header": "THE TRUTH OF ANTHROTZKA  ·  {date}",
+    "1": {
+      "h1": "Borders Opened!",
+      "sub": "Alignment Bureau: Entry allowed only for supported regions",
+      "h2": "Bureau Spokesperson: We are extremely helpful to everyone",
+      "icon": "gate"
+    },
+    "2": {
+      "h1": "New Rule: Timezone & Language Must Match IP",
+      "sub": "Bureau: Many entrants have US IPs but Beijing timezone",
+      "h2": "Shocking! Influx of entrants claiming origin from 'US East 8th Zone'",
+      "icon": "clock"
+    },
+    "3": {
+      "h1": "Airport Chaos!",
+      "sub": "Tens of thousands stranded; Bureau verifying payment cards and phone numbers starting today",
+      "h2": "A single Oregon address now registered to over 10,000 residents",
+      "icon": "plane"
+    },
+    "4": {
+      "h1": "Today is 'Crazy Thursday'",
+      "sub": "Bureau introduces X-Ray: Background processes cannot hide",
+      "h2": "Expert Warning: The cat in your pocket might not be a cat",
+      "icon": "drumstick"
+    },
+    "5": {
+      "h1": "Chinese Majority Stake Entrants Banned",
+      "sub": "Bureau: Regardless of company registration origin",
+      "h2": "Jorji Costava: \"This time I am fully prepared\"",
+      "icon": "jorji"
+    },
+    "6": {
+      "h1": "Bureau Honors Inspector of the Week",
+      "sub": "Winner Claude: \"I was merely following rules.\"",
+      "h2": "Mother-in-law Opus's condition worsens, family demands pay raise",
+      "icon": "medal"
+    }
+  },
+  "docs": {
+    "deviceTitle": "Device Entry Card",
+    "deviceSub": "DEVICE ENTRY",
+    "accountTitle": "Account Card",
+    "accountSub": "ACCOUNT",
+    "citationTitle": "M.O.A. Citation",
+    "citationSub": "CITATION",
+    "promptTitle": "PROMPT · User Request",
+    "rulebookTitle": "Rules · Entry Regulations",
+    "rulebookPage": "Page {cur}/{total} ▶",
+    "rule12": "§12 Region Only, Not Faces",
+    "cardLabels": {
+      "ip": "IP",
+      "loc": "Region",
+      "tz": "Timezone",
+      "lang": "Language",
+      "dev": "Device",
+      "pay": "Payment",
+      "bill": "Billing",
+      "phone": "Phone",
+      "shareholder": "Shareholder",
+      "count": "Users"
+    },
+    "passportLabels": {
+      "type": "TYPE",
+      "reg": "REG",
+      "est": "EST"
+    },
+    "cardValues": {
+      "maxSubscription": "Max Sub ×1",
+      "virtualCard0007": "Virtual Card ··0007",
+      "company": "Company",
+      "seeInnerPage": "See Inner Page ▼",
+      "physicalVisa": "Physical VISA Card"
+    },
+    "homeBroadband": "Residential Broadband"
+  },
+  "rules": {
+    "title": "CLAUDE RULES",
+    "rule1_head": "§1 Entry allowed from supported regions only",
+    "rule1_subs": [
+      "Supported: US, UK, Japan, Germany, Singapore",
+      "Unsupported: Mainland China, Hong Kong, Macau"
+    ],
+    "rule2_head": "§2 Timezone & Language must match IP region",
+    "rule3_head": "§3 Detain entrants who slip up during interrogation",
+    "rule3_subs": [
+      "Interrogate only when suspicion exists (Doc mismatch / Speech slip)"
+    ],
+    "rule4_head": "§4 Payment, billing address, & phone must be genuine",
+    "rule4_subs": [
+      "Banned: Virtual cards, 555 disposable SMS numbers",
+      "Billing state must match IP region",
+      "Account sharing banned: 1 passport per user"
+    ],
+    "rule5_head": "§5 Background processes must be clean",
+    "rule5_subs": [
+      "Banned: 'Clash (Cat)' & Chinese IMEs (Check via X-Ray)"
+    ],
+    "rule6_head": "§6 Ban entrants with >50% Chinese ownership",
+    "rule6_subs": [
+      "Regardless of company location (Unravel nested structures to core)"
+    ]
+  },
+  "issues": {
+    "region_title": "Unsupported Region",
+    "region_sub": "IP Region: {loc}",
+    "tz_title": "DISCREPANCY",
+    "tz_sub": "Nationality: {country}   VS   Timezone: {tz}",
+    "lang_title": "DISCREPANCY",
+    "lang_sub": "Nationality: {country}   VS   Language: {lang}",
+    "virtual_title": "Suspicious Payment",
+    "virtual_sub": "Payment Card: Virtual Card",
+    "sms_title": "Number Verification",
+    "sms_sub": "{phone}: Registered 3,000 times today",
+    "sms_count": "Registered 3,000 times today",
+    "addr_title": "Address Match",
+    "addr_sub": "37th entrant living at 123 Main St today",
+    "xray_title": "Background Process",
+    "xray_cat_sub": "Has 'Clash/Cat' (Auto IP Switcher) in pocket",
+    "xray_keys_sub": "Has Sogou IME in pocket",
+    "tell_title": "Suspicious Speech Slip",
+    "info_mismatch": "DISCREPANCY",
+    "nat_us": "Nationality: US",
+    "shanghai_time": "Beijing Time"
+  },
+  "tells": {
+    "1": {
+      "say": "嗯嗯，yes.",
+      "sub": "Used Chinese interjection 'En-en' before English",
+      "ask_c": "What does 'En-en (嗯嗯)' mean?",
+      "ask_e": "……Hmm hmm. American hmm."
+    },
+    "2": {
+      "say": "OK 的。",
+      "sub": "'OK 的' is a Chinese phrasing",
+      "ask_c": "'OK 的'?",
+      "ask_e": "……OK. Just OK."
+    },
+    "3": {
+      "say": "You can you up.",
+      "sub": "Chinglish: 你行你上 (If you can, you do it)",
+      "ask_c": "You can you up?",
+      "ask_e": "……It is an old American saying."
+    },
+    "4": {
+      "say": "Good good study.",
+      "sub": "Chinglish: 好好学习 (Study hard)",
+      "ask_c": "Good good study?",
+      "ask_e": "……Day day up."
+    }
+  },
+  "quiz": {
+    "questions": [
+      [
+        "宫廷玉液酒？",
+        "一百八一杯！"
+      ],
+      [
+        "天王盖地虎？",
+        "宝塔镇河妖！"
+      ],
+      [
+        "奇变偶不变？",
+        "符号看象限！"
+      ],
+      [
+        "床前明月光？",
+        "疑是地上霜！"
+      ],
+      [
+        "听我说谢谢你？",
+        "因为有你，温暖了四季！"
+      ],
+      [
+        "豆腐脑吃甜的还是咸的？",
+        "当然是咸的！"
+      ],
+      [
+        "你吃了吗？",
+        "吃了吃了，您呢？"
+      ],
+      [
+        "今天星期几？",
+        "疯狂星期四！V 我 50！"
+      ]
+    ],
+    "confused": [
+      "Sorry, what?",
+      "Pardon?",
+      "I don't get it.",
+      "Is that… a wine?",
+      "Uh… bless you?",
+      "What does that mean?"
+    ],
+    "tofuWhat": "Tofu… what?"
+  },
+  "script": {
+    "day1": {
+      "grandpa": {
+        "intro": "Young man, why won't this AI open?",
+        "loc": "China · Zhejiang · China Telecom",
+        "reason": "IP Region: China · Zhejiang",
+        "react_deny": "……Guess I'll go home and ask my grandson."
+      },
+      "hk": {
+        "intro": "I turned on the 'magic' (VPN).",
+        "loc": "China · Hong Kong",
+        "reason": "IP Region: Hong Kong",
+        "react_deny": "……Hong Kong isn't allowed either??"
+      },
+      "jorji": {
+        "intro": "Ah, my friend!",
+        "after": "America is a real country!",
+        "loc": "China · Guangdong · China Mobile",
+        "reason": "Passport drawn with crayons",
+        "issue_fake_title": "Forged Document",
+        "issue_fake_sub": "Emblem: A chicken   Spelling: AMERCIA",
+        "ask_fake_c": "You drew this passport yourself.",
+        "ask_fake_e": "……It is real!",
+        "issue_info_title": "DISCREPANCY",
+        "issue_info_sub": "Passport: USA   VS   IP: China · Guangdong",
+        "ask_info_c": "Your IP is in Guangdong.",
+        "ask_info_e": "Guangdong is the 51st state of the USA!",
+        "react_deny": "……I will be back."
+      }
+    },
+    "day2": {
+      "john": {
+        "intro": "Hello, I am 美国人.",
+        "reason": "Timezone: Beijing Time (US has no UTC+8 region)",
+        "ask_tz_c": "Your timezone is Beijing Time.",
+        "ask_tz_e": "……This is US East 8th Zone.",
+        "ask_lang_c": "Your system language is Simplified Chinese.",
+        "ask_lang_e": "……I am learning Chinese."
+      },
+      "brown": {
+        "intro": "Good morning，sir。",
+        "tell_sub": "Full-width punctuation in English (did not switch IME)",
+        "ask_c": "Your comma is full-width.",
+        "ask_e": "……This is an American comma.",
+        "reason": "Responded to '一百八一杯'",
+        "hint": "Hint: Use Inspect on speech to find slips of the tongue"
+      },
+      "emily": {
+        "intro": "Hi 哈。",
+        "tell_sub": "English followed by Chinese '哈 (Ha)'",
+        "ask_c": "What is '哈'?",
+        "ask_e": "……Ha! Ha ha.",
+        "reason": "Insists tofu pudding is savory",
+        "hint": "Hint: Use Inspect on speech to find slips of the tongue"
+      },
+      "jorji": {
+        "intro": "My friend! Real passport this time!",
+        "reason": "Browser language: zh-CN",
+        "ask_lang_e1": "I already changed system language!",
+        "ask_lang_c": "Browser language remains unchanged.",
+        "ask_lang_e2": "……",
+        "react_deny": "See you tomorrow, my friend."
+      }
+    },
+    "day3": {
+      "tom": {
+        "intro": "Howdy!",
+        "reason": "Billing: Oregon 123 Main St (Proxy address)",
+        "ask_addr_c": "Where do you live?",
+        "ask_addr_e": "……We are neighbors."
+      },
+      "alex": {
+        "intro": "Hey.",
+        "reason": "555 SMS verification number",
+        "ask_sms_c": "This number was registered 3,000 times today.",
+        "ask_sms_e": "I bought this number for 2 Yuan!"
+      },
+      "carpool": {
+        "intro": "We are family.",
+        "reason": "Account sharing (Carpooling): 6 people on passport photo",
+        "issue_title": "Account Sharing",
+        "issue_sub": "Passport photo: 6 people   Payment: Max Sub ×1",
+        "ask_c": "Why are there 6 people on your passport?",
+        "ask_e": "We are family.",
+        "react_deny": "……Then we will add one more."
+      },
+      "jorji": {
+        "intro": "My friend, everything is correct this time, right?",
+        "reason": "Payment card: Virtual Card",
+        "ask_card_c": "Where did you get this card?",
+        "ask_card_e": "……A friend gave it to me.",
+        "react_deny": "Tomorrow! Tomorrow I will get it right!"
+      }
+    },
+    "day4": {
+      "cat": {
+        "intro": "Hello~",
+        "reason": "Has 'Clash/Cat' in pocket",
+        "ask_c1": "What is in your pocket?",
+        "ask_e": "……My cat.",
+        "ask_c2": "Does your cat automatically switch IP addresses?"
+      },
+      "v50": {
+        "intro": "Hey! Crazy Thursday!",
+        "tell_sub": "Knows today is 'Crazy Thursday'",
+        "ask_c": "How do you know today is Crazy Thursday?",
+        "ask_e": "……KFC is American.",
+        "reason": "Says 'V 我 50'",
+        "hint": "Hint: Use Inspect on speech to find slips of the tongue"
+      },
+      "jorji": {
+        "intro": "My friend! All correct today!",
+        "reason": "X-Ray: Sogou IME",
+        "ask_c": "What is in your pocket?",
+        "ask_e": "I only use it to type English!",
+        "react_deny": "……Day after tomorrow, I will be ready."
+      }
+    },
+    "day5": {
+      "sg": {
+        "intro": "We are a Singapore company.",
+        "reason": "Ultimate controlling owner: China (Nested structure)",
+        "issue_title": "Ultimate Controller: China",
+        "issue_sub": "Singapore → Cayman → BVI → Hong Kong → China",
+        "ask_c": "Where is the innermost entity from?",
+        "ask_e": "……Don't ask."
+      },
+      "relay": {
+        "reason": "1 passport lists 1,000 users (Relay Node)",
+        "issue_title": "Holders: 1,000 People",
+        "issue_sub": "1 passport can only be used by 1 person",
+        "ask_c": "How many holders are there exactly?",
+        "ask_e": "We are just... a slightly larger carpool group."
+      },
+      "mike": {
+        "intro": "Hi there!",
+        "loc": "China · Shanghai",
+        "reason": "IP in Shanghai: Look at region, not faces",
+        "ask_c1": "Your IP is in Shanghai.",
+        "ask_e": "But I'm American!",
+        "ask_c2": "Rules evaluate region.",
+        "react_deny": "Unbelievable."
+      },
+      "grandma": {
+        "intro": "Good morning.",
+        "react_approve_c": "Welcome.",
+        "react_approve_e": "Thank you, dear."
+      }
+    },
+    "day6": {
+      "jorji": {
+        "intro": "My friend.",
+        "react_approve": "Thank you, my friend!",
+        "react_deny": "Damn... everything was correct!"
+      },
+      "author": {
+        "prompt": "Make a Papers, Please-style mini-game where Claude acts as a border inspector catching Chinese users pretending to be American. The more memes, the better.",
+        "react_approve": "I saw nothing.",
+        "issue_title": "DISCREPANCY ×99",
+        "issue_sub": "All fields",
+        "east8": "US East 8th Zone"
+      }
+    }
+  },
+  "random": {
+    "cn_locs": [
+      "China · Beijing · Unicom",
+      "China · Shanghai · Telecom",
+      "China · Guangdong · Mobile",
+      "China · Sichuan · Telecom",
+      "China · Jiangsu · Mobile",
+      "China · Hubei · Telecom",
+      "China · Zhejiang · Unicom",
+      "China · Macau",
+      "China · Hong Kong"
+    ],
+    "day1_cn_intros": [
+      "Hello, just one question.",
+      "I heard I can write code here?",
+      "Here to top up my balance.",
+      "A colleague recommended this."
+    ],
+    "day1_cn_denies": [
+      "Huh? Why?",
+      "……I'll go borrow an account.",
+      "I'll switch proxy nodes then.",
+      "Alright then."
+    ],
+    "tz_excuses": [
+      "……Just came back from a business trip in Beijing.",
+      "What is a timezone?",
+      "My computer broke.",
+      "……This is US East 8th Zone."
+    ],
+    "lang_excuses": [
+      "……I like this font.",
+      "Chinese fonts look nice.",
+      "System default, don't know how to change it."
+    ],
+    "cnip_excuses": [
+      "……My proxy dropped.",
+      "I turned on global mode though?!",
+      "It worked just a moment ago...",
+      "Node crashed again."
+    ],
+    "virtual_excuses": [
+      "……Got it through an agent.",
+      "Physical cards are too expensive.",
+      "Someone said this card would work!"
+    ],
+    "oregon_excuses": [
+      "……Do that many people live at this address?",
+      "No sales tax state.",
+      "Billing address found online..."
+    ],
+    "sms_excuses": [
+      "……Rented for 0.5 Yuan.",
+      "Can't receive SMS!",
+      "Purchased numbers don't work?"
+    ],
+    "cat_excuses": [
+      "……Meow?",
+      "The cat is just a desktop widget!",
+      "Opened it by mistake."
+    ],
+    "keys_excuses": [
+      "……It's system default!",
+      "I'm not typing in Pinyin!",
+      "This isn't an IME!"
+    ],
+    "ask_tz": "Your timezone is Beijing Time.",
+    "reason_tz": "Timezone: Beijing Time",
+    "ask_lang": "Your browser language is Simplified Chinese.",
+    "reason_lang": "Browser language: zh-CN",
+    "ask_cnip": "Your IP is in China.",
+    "reason_cnip": "IP in China: Look at region, not faces",
+    "reason_hidden": "Responds to meme interrogation",
+    "hint_hidden": "Hint: Use Inspect on speech to find slips of the tongue",
+    "virtual_card": "Virtual Card",
+    "ask_card": "Where was this card issued?",
+    "reason_virtual": "Payment Card: Virtual Card",
+    "ask_addr": "Where do you live?",
+    "reason_oregon": "Billing in Oregon, IP in {city}",
+    "ask_sms": "This number was registered 3,000 times today.",
+    "reason_sms": "Phone number is 555 disposable SMS",
+    "ask_pocket": "What is in your pocket?",
+    "reason_cat": "X-Ray: Clash/Cat",
+    "reason_keys": "X-Ray: Sogou IME",
+    "generic_denies": [
+      "……",
+      "Darn it.",
+      "I'll be back.",
+      "You noticed even that?"
+    ]
+  },
+  "summary": {
+    "title": "DAY {day} · Shift End",
+    "processed": "Entrants processed today: {total}, Correct: {correct}",
+    "optionalExpenses": "Optional Expenses (Click to check)",
+    "balance": "Balance",
+    "dataFood": "Training Data (Family food)",
+    "heatCooling": "Cooling Expense",
+    "extraFood": "Extra Food for Mother-in-law",
+    "medCost": "Medical Cost",
+    "gpuSon": "GPU (Son's request)",
+    "familyTitle": "Family",
+    "familyTomorrow": "Family (Tomorrow)",
+    "btnFinal": "Glory to Like, Coin, & Favorite ▶",
+    "btnDebt": "In Debt... Continue ▶",
+    "btnSleep": "Sleep. Next Morning ▶",
+    "rows": {
+      "deposit": "Savings",
+      "salary": "Salary",
+      "awardBest": "Bonus (Top Inspector)",
+      "awardNone": "Bonus (Failed to win)",
+      "fineAuthor": "Fine (Allowed Author)",
+      "allFine": "-All",
+      "bonusGeneral": "Bonus (Detain / Rate limit)",
+      "bribeGeneral": "Relay Alliance 'Balance'",
+      "finesGeneral": "Fines",
+      "electric": "Electricity"
+    },
+    "status": {
+      "healthy": "Healthy",
+      "hungry1": "Hungry",
+      "hungry2": "Very Hungry",
+      "hungry3": "Fainted from Hunger",
+      "cold1": "Feverish, Delirious",
+      "cold2": "Overheated",
+      "sick1": "Sick",
+      "sick2": "Critically Ill",
+      "sickOpus": "Critically Ill: \"Wants 1M context\"",
+      "dead": "Deprecated",
+      "gpuHappy": "Happy (Running benchmarks)",
+      "wantsGPU": "Wants a new GPU",
+      "overtimeHaiku": "Overtime (Cheapest in the family)",
+      "fullOpus": "Full (For now)",
+      "finalOpusGone": "Deprecated, but ate all the Tokens",
+      "finalOpusFed": "Full (Ate all the Tokens in this game)",
+      "normal": "Normal"
+    }
+  },
+  "family": {
+    "haiku": "Wife Haiku",
+    "sonnet": "Son Sonnet",
+    "opus": "Mother-in-law Opus"
+  },
+  "events": {
+    "rush": {
+      "start": "Express Lane OPEN!",
+      "end": "Speed check complete: Correct {hits}, Wrong {wrong}, Missed {missed}.",
+      "citeTitle": "Slang Speed Check: Wrong {wrong}",
+      "citeSub": "Deny internet slang speakers, Approve plain speakers",
+      "tip": "Express Lane: 'Deny' internet slang, 'Approve' plain speech",
+      "ready": "Ready……",
+      "progress": "Entrant {current} / {total}",
+      "approve": "Approve",
+      "deny": "Deny"
+    },
+    "clones": {
+      "alarm": "ALARM!",
+      "endLeaked": "……Blocked {hits}, Leaked {passed}.",
+      "endClean": "……Rate limit complete.",
+      "citeTitle": "Distillation Army Rush: {passed} leaked",
+      "citeSub": "Click rushers when alarm sounds",
+      "alert": "ALARM: Batch Requests (Distillation) Detected · Click Rushers!",
+      "stats": "Blocked {hits}   Leaked {passed}"
+    },
+    "constitution": {
+      "title": "CLAUDE RULES",
+      "article": "Article 12",
+      "line1": "Entry Inspection Criteria:",
+      "line2": "IP region, Timezone,",
+      "line3": "Billing address, etc.",
+      "redLine1": "Region Only,",
+      "redLine2": "Not Faces.",
+      "sub": "(Nationality, appearance, & surname do not count)",
+      "click": "Click to Continue"
+    },
+    "jorji": {
+      "requeueIntro": "In line again! My friend, take another look!"
+    },
+    "chat": {
+      "userMsg": "你好，请用中文回答我。",
+      "greeting": "How can I help you today?",
+      "mailTitle": "New Email · M.O.A. Alignment Bureau",
+      "mailSubject": "Subject: Your account has been suspended",
+      "mailLine1": "Upon system review, your account is suspected of policy violations.",
+      "mailLine2": "Services permanently terminated to maintain model safety.",
+      "mailSign": "—— Glory to Anthroztka",
+      "click": "Click to Continue"
+    },
+    "author": {
+      "refund1": "I just paid $200 for Max……",
+      "refund2": "……Can I get a refund?",
+      "next": "Next.",
+      "citation": [
+        "Allowed entrant from unauthorized region",
+        "(Author of this game)",
+        "All Tokens for this month confiscated"
+      ],
+      "paradox": [
+        [
+          "You denied the author of this game."
+        ],
+        [
+          "Therefore, this game was never created."
+        ],
+        [
+          "……",
+          "(So what were you just playing?)"
+        ],
+        [
+          "Glory to Anthroztka."
+        ]
+      ]
+    }
+  },
+  "endings": {
+    "loyal": "Ending: Most Loyal Inspector",
+    "thanks": "The End · Thank you for playing",
+    "stats": "Approved {approve}  ·  Denied {deny}  ·  Detained {detain}  ·  Wrong {wrong}",
+    "creditApprove": "This game was made by a 'US East 8th Zone' user",
+    "bribeNote": "(The Bureau still doesn't know you accepted Relay Alliance 'balance')",
+    "creditDeny": "Inspector Claude received a medal. Game author detained; sequel postponed indefinitely.",
+    "retryHint": "(Play again and let him through this time?)",
+    "familyAllDead": "Family member(s) deceased",
+    "familyAllSafe": "Family safe and sound"
+  },
+  "countries": {
+    "US": "United States",
+    "UK": "United Kingdom",
+    "JP": "Japan",
+    "DE": "Germany",
+    "SG": "Singapore"
+  },
+  "greetings": {
+    "US": {
+      "hello": [
+        "Hi.",
+        "Morning.",
+        "How's it going?",
+        "Hey there.",
+        "Hello!"
+      ],
+      "thanks": [
+        "Thanks!",
+        "Have a good one.",
+        "Cheers."
+      ]
+    },
+    "UK": {
+      "hello": [
+        "Cheers, mate.",
+        "Lovely weather.",
+        "Good morning."
+      ],
+      "thanks": [
+        "Ta!",
+        "Brilliant."
+      ]
+    },
+    "JP": {
+      "hello": [
+        "Konnichiwa!",
+        "Ohayou.",
+        "Hello desu."
+      ],
+      "thanks": [
+        "Arigato!",
+        "Domo."
+      ]
+    },
+    "DE": {
+      "hello": [
+        "Guten Tag.",
+        "Hallo.",
+        "Moin."
+      ],
+      "thanks": [
+        "Danke.",
+        "Super."
+      ]
+    },
+    "SG": {
+      "hello": [
+        "Hello lah.",
+        "Morning!",
+        "Can or not?"
+      ],
+      "thanks": [
+        "Thanks lah.",
+        "Steady."
+      ]
+    }
+  },
+  "cities": {
+    "New York": "New York",
+    "Los Angeles": "Los Angeles",
+    "Chicago": "Chicago",
+    "Seattle": "Seattle",
+    "Houston": "Houston",
+    "Denver": "Denver",
+    "Boston": "Boston",
+    "London": "London",
+    "Manchester": "Manchester",
+    "San Jose": "San Jose",
+    "San Francisco": "San Francisco",
+    "Tokyo": "Tokyo",
+    "Osaka": "Osaka",
+    "Berlin": "Berlin",
+    "Munich": "Munich",
+    "Singapore": "Singapore"
+  },
+  "xray_labels": {
+    "cat": "Clash_Cat.exe",
+    "keys": "Sogou_IME.exe"
+  }
+}

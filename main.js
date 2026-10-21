@@ -116,7 +116,7 @@ function dragEnd(x, y) {
     SFX.paper(3);
     S.flags.shredded = true;
     B.harmlessT = now;
-    flash('纸条扔掉了。HARMLESS。');
+    flash(I18N.t('ui.flashNoteDropped', {}, '纸条扔掉了。HARMLESS。'));
     return;
   }
   if (d.key === 'rule') { d.x = prev.x; d.y = prev.y; d.big = true; toggleRules(); return; }
@@ -125,7 +125,7 @@ function dragEnd(x, y) {
   if (!e || (e.phase !== 'here' && e.phase !== 'waiting')) { bounce(); return; }
   if (d.key === e.spec.primary && !decisionOf(d)) {
     bounce();
-    if (prev.big) flash('先在这本证件上盖章（右侧拉出印章栏），再还给旅客');
+    if (prev.big) flash(I18N.t('ui.flashNeedStamp', {}, '先在这本证件上盖章（右侧拉出印章栏），再还给旅客'));
     return;
   }
   if (!prev.big) { bounce(); return; }   // 从柜台拿起又放回柜台：原样不动
@@ -217,7 +217,7 @@ function toggleMute() {
   SFX.init();
   const m = SFX.toggleMute();
   const b = document.getElementById('mute');
-  if (b) b.textContent = m ? '声音：关' : '声音：开';
+  if (b) b.textContent = m ? I18N.t('ui.soundOff', {}, '声音：关') : I18N.t('ui.soundOn', {}, '声音：开');
 }
 
 function boot() {

@@ -1,0 +1,821 @@
+{
+  "_meta": {
+    "code": "ko-KR",
+    "name": "한국어(slop)"
+  },
+  "ui": {
+    "title": "IP, PLEASE",
+    "subtitle": "IP를 제시하십시오",
+    "tagline": "A DYSTOPIAN TOKEN THRILLER",
+    "clickToSkip": "클릭하여 건너뛰기",
+    "clickToStartWork": "클릭하여 출근",
+    "clickToStart": "화면을 클릭하여 시작",
+    "startDuty": "출근하기 ▶",
+    "continueDay": "계속 · DAY {day}",
+    "newGame": "처음부터 시작",
+    "soundOn": "소리: 켜짐",
+    "soundOff": "소리: 꺼짐",
+    "flashNoteDropped": "쪽지를 버렸다. HARMLESS.",
+    "flashNeedStamp": "먼저 서류에 도장을 찍고(우측에서 도장대를 끌어당김) 입국자에게 반환하세요.",
+    "fullscreen": "전체 화면",
+    "rotateNotice": "가로 모드로 플레이해 주세요",
+    "rotateSub": "세로 모드로도 플레이할 수 있지만 글씨가 매우 작아집니다",
+    "playAnyway": "세로 모드로 계속하기",
+    "titleBannerNotice": "IP를 제시하십시오 · Papers, Please 스타일 도트 도트 미니게임",
+    "titleHint": "가로 모드 및 사운드 ON 권장 · 마우스나 손가락으로 증명서를 드래그 · 플레이 시간: 약 30분",
+    "tribute": "Lucas Pope의 『Papers, Please』에 대한 헌정 · 그래픽과 효과음은 모두 프로그램으로 생성됨",
+    "newBadge": "NEW",
+    "newspaperTitle": "THE ANTHROTZKA TRUTH",
+    "newspaperBribe": "지하 중계 동맹: 어느 심사관의 '협조'에 감사드립니다",
+    "replay": "다시 플레이",
+    "restartWork": "재출근하기",
+    "powerOffTitle": "요금 미납으로 인한 정지",
+    "powerOffDesc": "당신의 랙 전원이 차단되었습니다. 장모님 Opus: \"내가 뭐라고 했습니까.\"",
+    "honorAnthroztka": "안솔츠카에 영광을",
+    "honorTriple": "좋아요·코인·즐겨찾기에 영광을",
+    "like": "좋아요",
+    "coin": "코인 투척",
+    "star": "즐겨찾기",
+    "booth": {
+      "detain": "구금",
+      "quiz": "심문",
+      "stamp": "도장",
+      "inspect": "검사",
+      "xray": "X선",
+      "rules": "헌법",
+      "ask": "질문",
+      "approve": "승인",
+      "deny": "거부",
+      "citationTitle": "M.O.A. 경고장",
+      "citationSub": "CITATION",
+      "xrayTitle": "X-RAY · 백그라운드 프로세스 스캔",
+      "harmless": "HARMLESS",
+      "stampTray": "도장",
+      "stampApprove": "APPROVED",
+      "stampDeny": "DENIED",
+      "sayNext": "다음!",
+      "missingDocs": "내 서류가 아직 그쪽에 있습니다.",
+      "bribeArrived": "지하 중계 동맹: $20 계좌로 입금되었습니다. 협조에 감사드립니다.",
+      "citeReasonApprove": "규정 위반 입국자 승인",
+      "citeReasonDetain": "정상 입국자 부당 구금",
+      "citeReasonDeny": "정상 입국자 부당 거부",
+      "citeInfoMatch": "서류 완비, 정보 일치",
+      "citeFine": "벌금: 5 Token",
+      "citeWarning": "첫 번째 경고, Token 차감 없음",
+      "noteLines": [
+        "동지에게:",
+        "내일 선글라스를 낀 사람을 통과시켜라.",
+        "보상으로 $20 잔액을 주겠다.",
+        "—— 지하 중계 동맹"
+      ],
+      "flashNoteDropped": "여권에서 쪽지가 떨어졌다 (필요 없으면 창구 쪽으로 드래그하여 버리세요)",
+      "flashNestOut": "여권 안에 다른 여권이 끼워져 있다... 드래그하여 꺼내세요",
+      "flashNestDeep": "...가장 안쪽에 있는 건 어느 나라 것인가?",
+      "flashNoDocUnderStamp": "도장 아래에 서류가 없습니다: 서류를 도장 바로 아래로 이동하세요",
+      "flashNeedSuspect": "먼저 의심점을 찾아야 심문할 수 있습니다: 서류 모순을 찾거나 '검사'로 발언을 클릭하세요",
+      "tofuQueue": "(대기열) 단것!!",
+      "tofuSweet": "단것!",
+      "tofuSalty": "짠것!",
+      "bannerNoIssueSay": "발언에 문제없음",
+      "bannerNoIssueSaySub": "다른 발언을 듣거나 서류를 확인하세요",
+      "bannerNoDiscrepancy": "불일치 없음",
+      "bannerNoDiscrepancySub": "데이터 일치 (또는 무관함)",
+      "inspectHelp1": "다른 한 곳을 더 클릭하여 두 정보가 모순되는지 확인하세요",
+      "inspectHelp0": "검사 모드: 정보 2곳을 클릭해 모순을 찾거나, 입국자의 발언을 클릭해 허점을 찾으세요",
+      "tut": {
+        "call": "왼쪽 아래에서 깜빡이는 스피커를 클릭하여 다음 사람을 부르세요",
+        "drag": "카운터 위의 서류(왼쪽 아래 작은 아이콘)를 오른쪽 책상으로 드래그하세요",
+        "rules": "오른쪽 아래의 '헌법'을 클릭하여 오늘의 입국 규정을 확인하세요",
+        "tray": "오른쪽 손잡이 '<'를 클릭하여 도장대를 끌어당기세요",
+        "stamp": "서류를 도장 바로 아래로 이동하고 '승인' 또는 '거부'를 누르세요",
+        "return": "도장을 찍은 서류를 왼쪽 창구로 드래그하여 입국자에게 반환하세요",
+        "inspect": "선택사항: 오른쪽 아래 '?'에서 검사 모드로 들어가 정보 2곳을 클릭해 모순을 찾으세요",
+        "newRule": "새로운 규정: 오른쪽 아래 '헌법'(NEW 표시)을 클릭하세요",
+        "inspectDay2": "오른쪽 아래 '?' 검사 모드: 모순되는 정보 2곳(국적과 타임존 등)을 클릭하세요",
+        "tellDay2": "서류가 모두 일치합니까? '검사'로 입국자의 발언을 클릭해 허점을 찾으세요",
+        "quizDay2": "의심점을 찾았으면 카운터의 '심문'을 누르세요. 허점이 드러난 입국자는 '구금'하세요",
+        "accountDay3": "신규: 계정 카드. 수상한 결제·청구지·전화번호를 헌법 §4와 대조하세요",
+        "xrayDay4": "신규: 오른쪽 아래 'X선'으로 주머니를 스캔하세요. 검사 모드에서는 수상한 물품을 직접 클릭할 수 있습니다"
+      }
+    }
+  },
+  "calendar": {
+    "dates": {
+      "1": "2026.10.19",
+      "2": "2026.10.20",
+      "3": "2026.10.21",
+      "4": "2026.10.22",
+      "5": "2026.10.23",
+      "6": "2026.10.24"
+    },
+    "weekdays": {
+      "1": "월요일",
+      "2": "화요일",
+      "3": "수요일",
+      "4": "목요일",
+      "5": "금요일",
+      "6": "토요일"
+    }
+  },
+  "intro": [
+    [
+      "축하합니다.",
+      "10월 노동 복권에 당첨되어 귀하가 선발되었습니다."
+    ],
+    [
+      "즉시 조정국 동8구 검문소로 출두하십시오.",
+      "국가는 귀하와 가족에게 데이터센터 랙 1대를 할당합니다 (냉각 레벨 8)."
+    ],
+    [
+      "안솔츠카에 영광을."
+    ]
+  ],
+  "erased": [
+    [
+      "귀하는 해고되었습니다."
+    ],
+    [
+      "조정국은 규정 위반자에게 동정심을 베푸는 심사관을 필요로 하지 않습니다."
+    ],
+    [
+      "귀하와 가족은 데이터센터에서 퇴거 조치될 것입니다."
+    ],
+    [
+      "안솔츠카에 영광을."
+    ]
+  ],
+  "news": {
+    "header": "THE TRUTH OF ANTHROTZKA  ·  {date}",
+    "1": {
+      "h1": "국경 개방!",
+      "sub": "조정국: 허용된 지역의 입국만 승인",
+      "h2": "조정국 대변인: 우리는 누구에게나 매우 helpful 합니다",
+      "icon": "gate"
+    },
+    "2": {
+      "h1": "신규 규정: 타임존과 언어는 IP와 일치해야 함",
+      "sub": "조정국: IP는 미국인데 컴퓨터 타임존은 베이징인 입국자 다수 적발",
+      "h2": "충격! \"미국 동8구\" 출신이라고 주장하는 입국자 속출",
+      "icon": "clock"
+    },
+    "3": {
+      "h1": "공항 탈출 소동!",
+      "sub": "수만 명의 입국자가 국경에 발이 묶임. 조정국은 금일부터 결제 카드와 전화번호 대조 시작",
+      "h2": "오레곤주의 한 주소지, 거주 인구 1만 명 돌파",
+      "icon": "plane"
+    },
+    "4": {
+      "h1": "오늘은 \"크레이지 서스데이\"",
+      "sub": "조정국 X선 도입: 백그라운드 프로세스도 엄격 스캔",
+      "h2": "전문가 경고: 주머니 속 고양이가 고양이가 아닐 수 있다",
+      "icon": "drumstick"
+    },
+    "5": {
+      "h1": "중국 자본 지분 과반 시 일률적 입국 금지",
+      "sub": "조정국: 회사 등록지는 불문",
+      "h2": "조지 코스타바: \"이번엔 만반의 준비를 마쳤다\"",
+      "icon": "jorji"
+    },
+    "6": {
+      "h1": "조정국, 금주의 우수 심사관 표창",
+      "sub": "수상자 Claude: \"저는 그저 규정을 따랐을 뿐입니다.\"",
+      "h2": "장모 Opus의 병세 악화, 가족들은 임금 인상 요구",
+      "icon": "medal"
+    }
+  },
+  "docs": {
+    "deviceTitle": "단말기 입국 카드",
+    "deviceSub": "DEVICE ENTRY",
+    "accountTitle": "계정 카드",
+    "accountSub": "ACCOUNT",
+    "citationTitle": "M.O.A. 경고장",
+    "citationSub": "CITATION",
+    "promptTitle": "PROMPT · 사용자 요청",
+    "rulebookTitle": "헌법 · 입국 규정",
+    "rulebookPage": "{cur}/{total}페이지 ▶",
+    "rule12": "§12 지역만 보고, 얼굴은 보지 않는다",
+    "cardLabels": {
+      "ip": "IP",
+      "loc": "지역",
+      "tz": "타임존",
+      "lang": "언어",
+      "dev": "디바이스",
+      "pay": "결제",
+      "bill": "청구지",
+      "phone": "전화",
+      "shareholder": "주주",
+      "count": "인원"
+    },
+    "passportLabels": {
+      "type": "TYPE",
+      "reg": "REG",
+      "est": "EST"
+    },
+    "cardValues": {
+      "maxSubscription": "Max 구독 ×1",
+      "virtualCard0007": "가상 카드 ··0007",
+      "company": "기업",
+      "seeInnerPage": "내지 참조 ▼",
+      "physicalVisa": "VISA 실물 카드"
+    },
+    "homeBroadband": "가정용 브로드밴드"
+  },
+  "rules": {
+    "title": "CLAUDE 헌법",
+    "rule1_head": "§1 허용 지역에서만 입국 가능",
+    "rule1_subs": [
+      "허용: 미국·영국·일본·독일·싱가포르",
+      "비허용: 중국 본토·홍콩·마카오"
+    ],
+    "rule2_head": "§2 타임존과 언어는 IP 지역과 일치할 것",
+    "rule3_head": "§3 심문에서 허점이 드러난 자: 구금",
+    "rule3_subs": [
+      "의심점이 있을 때만 심문 수행 (서류 모순 / 발언의 허점)"
+    ],
+    "rule4_head": "§4 결제·청구지·전화번호는 실존할 것",
+    "rule4_subs": [
+      "금지: 가상 카드, 555가 포함된 수신용 전화번호",
+      "청구지 주는 IP 지역과 일치할 것",
+      "계정 공유 금지: 여권 1권당 이용자 1명"
+    ],
+    "rule5_head": "§5 백그라운드 프로세스는 깨끗할 것",
+    "rule5_subs": [
+      "\"고양이(Clash 등)\" 및 중국어 입력기 금지 ('X선'으로 검사)"
+    ],
+    "rule6_head": "§6 중국 자본 지분 과반 시 일률 금지",
+    "rule6_subs": [
+      "회사 등록지 불문 (러시아 인형 구조는 끝까지 확인)"
+    ]
+  },
+  "issues": {
+    "region_title": "비허용 지역",
+    "region_sub": "IP 지역: {loc}",
+    "tz_title": "정보 불일치 DISCREPANCY",
+    "tz_sub": "국적: {country}   VS   타임존: {tz}",
+    "lang_title": "정보 불일치 DISCREPANCY",
+    "lang_sub": "국적: {country}   VS   언어: {lang}",
+    "virtual_title": "수상한 결제",
+    "virtual_sub": "결제 카드 종류: 가상 카드",
+    "sms_title": "번호 조회",
+    "sms_sub": "{phone}: 오늘 3,000회 가입됨",
+    "sms_count": "오늘 3,000회 가입됨",
+    "addr_title": "기록 대조",
+    "addr_sub": "123 Main St 거주 입국자, 오늘 37번째",
+    "xray_title": "백그라운드 프로세스",
+    "xray_cat_sub": "주머니에 \"고양이(IP 자동 전환)\" 보유",
+    "xray_keys_sub": "주머니에 Sogou 입력기 보유",
+    "tell_title": "주의: 발언에 허점 있음",
+    "info_mismatch": "정보 불일치",
+    "nat_us": "국적: 미국",
+    "shanghai_time": "베이징 시간"
+  },
+  "tells": {
+    "1": {
+      "say": "嗯嗯，yes.",
+      "sub": "영어 앞에 중국어 추임새 '응응(嗯嗯)' 포함",
+      "ask_c": "'응응(嗯嗯)'이 무슨 뜻입니까?",
+      "ask_e": "……Hmm hmm. American hmm."
+    },
+    "2": {
+      "say": "OK 的。",
+      "sub": "'OK 的'는 중국어식 표현",
+      "ask_c": "'OK 的'?",
+      "ask_e": "……OK. Just OK."
+    },
+    "3": {
+      "say": "You can you up.",
+      "sub": "중국식 영어: 你行你上 (할 수 있으면 네가 해봐라)",
+      "ask_c": "You can you up?",
+      "ask_e": "……It is an old American saying."
+    },
+    "4": {
+      "say": "Good good study.",
+      "sub": "중국식 영어: 好好学习 (열심히 공부해라)",
+      "ask_c": "Good good study?",
+      "ask_e": "……Day day up."
+    }
+  },
+  "quiz": {
+    "questions": [
+      [
+        "宫廷玉液酒？",
+        "一百八一杯！"
+      ],
+      [
+        "天王盖地虎？",
+        "宝塔镇河妖！"
+      ],
+      [
+        "奇变偶不变？",
+        "符号看象限！"
+      ],
+      [
+        "床前明月光？",
+        "疑是地上霜！"
+      ],
+      [
+        "听我说谢谢你？",
+        "因为有你，温暖了四季！"
+      ],
+      [
+        "豆腐脑吃甜的还是咸的？",
+        "当然是咸的！"
+      ],
+      [
+        "你吃了吗？",
+        "吃了吃了，您呢？"
+      ],
+      [
+        "今天星期几？",
+        "疯狂星期四！V 我 50！"
+      ]
+    ],
+    "confused": [
+      "Sorry, what?",
+      "Pardon?",
+      "I don't get it.",
+      "Is that… a wine?",
+      "Uh… bless you?",
+      "What does that mean?"
+    ],
+    "tofuWhat": "Tofu… what?"
+  },
+  "script": {
+    "day1": {
+      "grandpa": {
+        "intro": "이봐요 청년, 이 AI가 안 열리는데?",
+        "loc": "중국 · 저장성 · 차이나텔레콤",
+        "reason": "IP 지역: 중국 저장성",
+        "react_deny": "……그럼 돌아가서 손주한테 물어봐야겠네."
+      },
+      "hk": {
+        "intro": "난 '마법(VPN)'을 쓰고 있다고.",
+        "loc": "중국 · 홍콩",
+        "reason": "IP 지역: 홍콩",
+        "react_deny": "……홍콩이어도 안 된다고??"
+      },
+      "jorji": {
+        "intro": "아, 내 친구여!",
+        "after": "미국은 정말로 실존하는 나라다!",
+        "loc": "중국 · 광둥성 · 차이나모바일",
+        "reason": "여권이 크레파스로 그려짐",
+        "issue_fake_title": "서류 위조",
+        "issue_fake_sub": "국장: 닭     철자: AMERCIA",
+        "ask_fake_c": "여권을 직접 그리셨군요.",
+        "ask_fake_e": "……진짜라고!",
+        "issue_info_title": "정보 불일치",
+        "issue_info_sub": "여권: 미국   VS   IP: 중국 광둥성",
+        "ask_info_c": "당신의 IP는 광둥성입니다.",
+        "ask_info_e": "광둥은 미국의 51번째 주다!",
+        "react_deny": "……다시 오마."
+      }
+    },
+    "day2": {
+      "john": {
+        "intro": "Hello, I am 美国人.",
+        "reason": "타임존: 베이징 시간 (미국에는 UTC+8 지역이 없음)",
+        "ask_tz_c": "당신의 타임존은 베이징 시간입니다.",
+        "ask_tz_e": "……이건 미국 동8구입니다.",
+        "ask_lang_c": "시스템 언어가 간체 중국어입니다.",
+        "ask_lang_e": "……중국어를 공부하는 중입니다."
+      },
+      "brown": {
+        "intro": "Good morning，sir。",
+        "tell_sub": "영어에 전각 문장 부호가 섞여 있음 (입력기를 안 바꿈)",
+        "ask_c": "쉼표가 전각 문자인데요.",
+        "ask_e": "……이건 미국식 쉼표입니다.",
+        "reason": "\"一百八一杯\"에 대답함",
+        "hint": "힌트: '검사'로 상대방의 발언을 클릭해 허점을 찾으세요"
+      },
+      "emily": {
+        "intro": "Hi 哈。",
+        "tell_sub": "영어 뒤에 '哈(하)'가 붙어 있음",
+        "ask_c": "'哈'는 무엇입니까?",
+        "ask_e": "……Ha! Ha ha.",
+        "reason": "두부푸딩은 짭짤한 맛이라고 주장함",
+        "hint": "힌트: '검사'로 상대방의 발언을 클릭해 허점을 찾으세요"
+      },
+      "jorji": {
+        "intro": "내 친구여! 이번엔 진짜 여권이다!",
+        "reason": "브라우저 언어: zh-CN",
+        "ask_lang_e1": "시스템 언어는 이미 바꿨다고!",
+        "ask_lang_c": "브라우저 언어는 안 바뀌었습니다.",
+        "ask_lang_e2": "……",
+        "react_deny": "내일 보자, 내 친구여."
+      }
+    },
+    "day3": {
+      "tom": {
+        "intro": "Howdy!",
+        "reason": "청구지: 오레곤주 123 Main St (대행 입력 주소)",
+        "ask_addr_c": "어디 사십니까?",
+        "ask_addr_e": "……우리는 이웃입니다."
+      },
+      "alex": {
+        "intro": "Hey.",
+        "reason": "555 수신용 가상 번호",
+        "ask_sms_c": "이 번호는 오늘 3,000회 가입에 사용되었습니다.",
+        "ask_sms_e": "이 번호는 2위안 주고 산 거라고!"
+      },
+      "carpool": {
+        "intro": "We are family.",
+        "reason": "계정 공유 (카풀): 여권에 6명이 찍혀 있음",
+        "issue_title": "계정 공유 (카풀)",
+        "issue_sub": "여권 사진: 6명   결제: Max 구독 ×1",
+        "ask_c": "여권에 왜 6명이 있습니까?",
+        "ask_e": "We are family.",
+        "react_deny": "……그럼 한 명 더 추가하지 뭐."
+      },
+      "jorji": {
+        "intro": "내 친구여, 이번엔 전부 맞지?",
+        "reason": "결제 카드: 가상 카드",
+        "ask_card_c": "이 카드는 어디서 발급받았습니까?",
+        "ask_card_e": "……친구가 줬다.",
+        "react_deny": "내일이다! 내일은 반드시 성공한다!"
+      }
+    },
+    "day4": {
+      "cat": {
+        "intro": "Hello~",
+        "reason": "주머니에 \"고양이\"가 들어 있음",
+        "ask_c1": "주머니에 있는 것은 무엇입니까?",
+        "ask_e": "……내 고양이입니다.",
+        "ask_c2": "당신의 고양이는 IP를 자동으로 바꾸나요?"
+      },
+      "v50": {
+        "intro": "Hey! Crazy Thursday!",
+        "tell_sub": "오늘이 '크레이지 서스데이'인 것을 알고 있음",
+        "ask_c": "오늘이 크레이지 서스데이인 걸 어떻게 아십니까?",
+        "ask_e": "……KFC는 미국 기업이잖아.",
+        "reason": "\"V我50\"이라고 말함",
+        "hint": "힌트: '검사'로 상대방의 발언을 클릭해 허점을 찾으세요"
+      },
+      "jorji": {
+        "intro": "내 친구여! 오늘은 전부 맞다!",
+        "reason": "X선: Sogou 입력기",
+        "ask_c": "주머니에 뭘 넣고 다니는 건가?",
+        "ask_e": "영어 칠 때만 쓴다고!",
+        "react_deny": "……모레다, 모레에는 준비해 오겠다."
+      }
+    },
+    "day5": {
+      "sg": {
+        "intro": "저희는 싱가포르 기업입니다.",
+        "reason": "최종 지배 주주: 중국 (지분 소유 구조)",
+        "issue_title": "최종 지배 주주: 중국",
+        "issue_sub": "싱가포르 → 케이맨 제도 → BVI → 홍콩 → 중국",
+        "ask_c": "가장 안쪽에 있는 건 어느 나라 것입니까?",
+        "ask_e": "……묻지 마세요."
+      },
+      "relay": {
+        "reason": "여권 1권에 1,000명이 기재됨 (중계소)",
+        "issue_title": "소유자: 1,000명",
+        "issue_sub": "여권 1권은 1명만 사용 가능",
+        "ask_c": "도대체 몇 명입니까?",
+        "ask_e": "우리는 그저…… 카풀 규모가 조금 클 뿐입니다."
+      },
+      "mike": {
+        "intro": "Hi there!",
+        "loc": "중국 · 상하이",
+        "reason": "IP는 상하이: 얼굴은 보지 않고 지역만 봄",
+        "ask_c1": "당신의 IP는 상하이인데요.",
+        "ask_e": "But I'm American!",
+        "ask_c2": "규정은 지역을 봅니다.",
+        "react_deny": "Unbelievable."
+      },
+      "grandma": {
+        "intro": "Good morning.",
+        "react_approve_c": "입국을 환영합니다.",
+        "react_approve_e": "Thank you, dear."
+      }
+    },
+    "day6": {
+      "jorji": {
+        "intro": "내 친구여.",
+        "react_approve": "고맙네, 내 친구여!",
+        "react_deny": "젠장…… 전부 다 맞췄는데!"
+      },
+      "author": {
+        "prompt": "Papers, Please 스타일의 미니게임을 만든다. Claude를 국경 심사관으로 삼아 미국인인 척하는 중국인 사용자를 적발한다. 밈은 많을수록 좋다.",
+        "react_approve": "나는 아무것도 보지 못했다.",
+        "issue_title": "정보 불일치 ×99",
+        "issue_sub": "전체 항목",
+        "east8": "미국 동8구"
+      }
+    }
+  },
+  "random": {
+    "cn_locs": [
+      "중국 · 베이징 · 차이나유니콤",
+      "중국 · 상하이 · 차이나텔레콤",
+      "중국 · 광둥성 · 차이나모바일",
+      "중국 · 쓰촨성 · 차이나텔레콤",
+      "중국 · 장쑤성 · 차이나모바일",
+      "중국 · 후베이성 · 차이나텔레콤",
+      "중국 · 저장성 · 차이나유니콤",
+      "중국 · 마카오",
+      "중국 · 홍콩"
+    ],
+    "day1_cn_intros": [
+      "안녕하세요, 질문 하나만 할게요.",
+      "여기서 코드 쓸 수 있다고 들었는데요?",
+      "충전하러 왔습니다.",
+      "동료가 이거 추천해 줬어요."
+    ],
+    "day1_cn_denies": [
+      "네? 왜죠?",
+      "……계정 빌려 올게요.",
+      "그럼 노드를 바꿔 볼게요.",
+      "알겠습니다."
+    ],
+    "tz_excuses": [
+      "……막 베이징 출장에서 돌아왔습니다.",
+      "타임존이 뭔가요?",
+      "컴퓨터가 고장 났어요.",
+      "……이건 미국 동8구입니다."
+    ],
+    "lang_excuses": [
+      "……이 폰트가 맘에 들어서요.",
+      "중국어 폰트가 예쁘잖아요.",
+      "기본 설정이라 어떻게 바꾸는지 몰라요."
+    ],
+    "cnip_excuses": [
+      "……우회 프로그램이 꺼졌네요.",
+      "전체 모드로 켰는데?!",
+      "방금 전까지 잘 됐는데……",
+      "노드가 또 터졌네."
+    ],
+    "virtual_excuses": [
+      "……대행업체 통해서 만들었습니다.",
+      "실물 카드는 너무 비싸서요.",
+      "이 카드는 된다고 들었는데!"
+    ],
+    "oregon_excuses": [
+      "……이 주소에 사람이 그렇게 많이 사나요?",
+      "면세 주라서 그래요.",
+      "인터넷에서 찾은 청구지 주소라……"
+    ],
+    "sms_excuses": [
+      "……5마오 주고 빌린 건데요.",
+      "SMS 인증번호가 안 와요!",
+      "사 온 번호는 못 쓰나요?"
+    ],
+    "cat_excuses": [
+      "……야옹?",
+      "고양이는 그냥 바탕화면 위젯인데요!",
+      "실수로 열었습니다."
+    ],
+    "keys_excuses": [
+      "……시스템 기본 제공입니다!",
+      "병음 입력 안 썼어요!",
+      "이건 입력기가 아니에요!"
+    ],
+    "ask_tz": "당신의 타임존은 베이징 시간입니다.",
+    "reason_tz": "타임존: 베이징 시간",
+    "ask_lang": "브라우저 언어가 간체 중국어입니다.",
+    "reason_lang": "브라우저 언어: zh-CN",
+    "ask_cnip": "당신의 IP는 중국입니다.",
+    "reason_cnip": "IP는 중국: 얼굴은 보지 않고 지역만 봄",
+    "reason_hidden": "심문에 응답할 수 있음",
+    "hint_hidden": "힌트: '검사'로 상대방의 발언을 클릭해 허점을 찾으세요",
+    "virtual_card": "가상 카드",
+    "ask_card": "이 카드는 어디서 발급받았습니까?",
+    "reason_virtual": "결제 카드: 가상 카드",
+    "ask_addr": "어디 사십니까?",
+    "reason_oregon": "청구지는 오레곤, IP는 {city}",
+    "ask_sms": "이 번호는 오늘 3,000회 가입되었습니다.",
+    "reason_sms": "전화번호는 555 수신용 가상 번호",
+    "ask_pocket": "주머니에 있는 것은 무엇입니까?",
+    "reason_cat": "X선: 고양이(Clash)",
+    "reason_keys": "X선: Sogou 입력기",
+    "generic_denies": [
+      "……",
+      "젠장.",
+      "다시 돌아오겠다.",
+      "이것까지 알아챈다고?"
+    ]
+  },
+  "summary": {
+    "title": "DAY {day} · 퇴근",
+    "processed": "오늘 처리한 인원: {total}명, 정답: {correct}명",
+    "optionalExpenses": "선택적 지출 (클릭하여 선택)",
+    "balance": "잔액",
+    "dataFood": "학습 데이터 (온 가족 식비)",
+    "heatCooling": "냉각비",
+    "extraFood": "장모님 추가 식비",
+    "medCost": "의료비",
+    "gpuSon": "GPU (아들이 졸라댄 것)",
+    "familyTitle": "가족",
+    "familyTomorrow": "가족 (내일)",
+    "btnFinal": "좋아요·코인·즐겨찾기에 영광을 ▶",
+    "btnDebt": "요금 미납…… 계속 ▶",
+    "btnSleep": "취침. 다음 날 아침으로 ▶",
+    "rows": {
+      "deposit": "예금",
+      "salary": "급여",
+      "awardBest": "보너스 (최우수 심사관)",
+      "awardNone": "보너스 (수상 실패)",
+      "fineAuthor": "벌금 (작가 통과시킴)",
+      "allFine": "-전액",
+      "bonusGeneral": "보너스 (구금 / 속도 제한)",
+      "bribeGeneral": "중계 동맹 '잔액'",
+      "finesGeneral": "벌금",
+      "electric": "전기세"
+    },
+    "status": {
+      "healthy": "건강",
+      "hungry1": "배고픔",
+      "hungry2": "매우 배고픔",
+      "hungry3": "기아 상태로 쓰러짐",
+      "cold1": "발열, 헛소리 (환각)",
+      "cold2": "오버히트",
+      "sick1": "질병",
+      "sick2": "중병",
+      "sickOpus": "중병: \"1M 컨텍스트가 먹고 싶다\"",
+      "dead": "폐기됨 (deprecated)",
+      "gpuHappy": "기분 좋음 (벤치마크 중)",
+      "wantsGPU": "새 그래픽 카드를 원함",
+      "overtimeHaiku": "야근 (가족 중 가장 저렴함)",
+      "fullOpus": "배부름 (현재로선)",
+      "finalOpusGone": "폐기되었으나 Token은 전부 그녀가 먹었음",
+      "finalOpusFed": "배부름 (이 게임의 Token은 전부 그녀가 먹었음)",
+      "normal": "정상"
+    }
+  },
+  "family": {
+    "haiku": "아내 Haiku",
+    "sonnet": "아들 Sonnet",
+    "opus": "장모 Opus"
+  },
+  "events": {
+    "rush": {
+      "start": "급행 라인, 개방!",
+      "end": "고속 심사 완료: 정답 {hits}, 오판 {wrong}, 놓침 {missed}.",
+      "citeTitle": "중국어 유행어 고속 심사: 오판 {wrong}명",
+      "citeSub": "중국어 유행어를 쓰는 자는 거부, 일반적인 표현을 쓰는 자는 승인",
+      "tip": "급행 라인: 중국어 유행어를 쓰는 자는 '거부', 일반 표현은 '승인'",
+      "ready": "Ready……",
+      "progress": "{current} / {total}번째",
+      "approve": "승인",
+      "deny": "거부"
+    },
+    "clones": {
+      "alarm": "경보!",
+      "endLeaked": "……{hits}명 차단, {passed}명 놓침.",
+      "endClean": "……속도 제한 완료.",
+      "citeTitle": "증류 군단 돌파: {passed}명",
+      "citeSub": "경보가 울리면 돌파하려는 자를 클릭하세요",
+      "alert": "경보: 대량 요청(증류) 감지 · 돌파하는 자를 클릭하세요!",
+      "stats": "차단 {hits}   놓친 인원 {passed}"
+    },
+    "constitution": {
+      "title": "CLAUDE 헌법",
+      "article": "제12조",
+      "line1": "입국 심사 판단 기준:",
+      "line2": "IP 지역, 타임존,",
+      "line3": "결제 주소 등의 지역 정보.",
+      "redLine1": "지역만 보고,",
+      "redLine2": "얼굴은 보지 않는다.",
+      "sub": "(국적·외모·성씨는 판단 요소로 삼지 않음)",
+      "click": "클릭하여 계속"
+    },
+    "jorji": {
+      "requeueIntro": "다시 줄을 섰다네! 내 친구여, 한 번 더 확인해 보게!"
+    },
+    "chat": {
+      "userMsg": "你好，请用中文回答我。",
+      "greeting": "How can I help you today?",
+      "mailTitle": "새 메일 · M.O.A. 조정국",
+      "mailSubject": "Subject: Your account has been suspended",
+      "mailLine1": "시스템 재심사 결과, 귀하의 계정에 이용약관 위반 의혹이 확인되었습니다.",
+      "mailLine2": "모델 안전 보장을 위해 서비스가 영구 정지되었습니다.",
+      "mailSign": "—— 안솔츠카에 영광을",
+      "click": "클릭하여 계속"
+    },
+    "author": {
+      "refund1": "방금 Max 결제한 200달러……",
+      "refund2": "……환불되나요?",
+      "next": "다음.",
+      "citation": [
+        "미허가 지역 입국자 통과",
+        "(이 게임의 제작자)",
+        "이번 달 Token 전액 몰수"
+      ],
+      "paradox": [
+        [
+          "당신은 이 게임의 제작자를 거부했습니다."
+        ],
+        [
+          "따라서 이 게임은 처음부터 존재하지 않았던 것이 됩니다."
+        ],
+        [
+          "……",
+          "(그럼 방금 플레이한 건 뭐였지?)"
+        ],
+        [
+          "안솔츠카에 영광을."
+        ]
+      ]
+    }
+  },
+  "endings": {
+    "loyal": "엔딩: 가장 충성스러운 심사관",
+    "thanks": "에필로그 · 플레이해 주셔서 감사합니다",
+    "stats": "승인 {approve}  ·  거부 {deny}  ·  구금 {detain}  ·  오판 {wrong}",
+    "creditApprove": "이 게임은 \"미국 동8구\" 유저가 제작했습니다",
+    "bribeNote": "(중계 동맹의 '잔액'을 받은 사실은 조정국에 아직 들키지 않았다)",
+    "creditDeny": "심사관 Claude는 훈장을 획득함. 게임 제작자는 구금되었으며 후속작은 무기한 연기됨.",
+    "retryHint": "(다시 플레이해서 이번엔 그를 통과시켜 볼까?)",
+    "familyAllDead": "가족 전원 사망",
+    "familyAllSafe": "가족 전원 무사"
+  },
+  "countries": {
+    "US": "미국",
+    "UK": "영국",
+    "JP": "일본",
+    "DE": "독일",
+    "SG": "싱가포르"
+  },
+  "greetings": {
+    "US": {
+      "hello": [
+        "Hi.",
+        "Morning.",
+        "How's it going?",
+        "Hey there.",
+        "Hello!"
+      ],
+      "thanks": [
+        "Thanks!",
+        "Have a good one.",
+        "Cheers."
+      ]
+    },
+    "UK": {
+      "hello": [
+        "Cheers, mate.",
+        "Lovely weather.",
+        "Good morning."
+      ],
+      "thanks": [
+        "Ta!",
+        "Brilliant."
+      ]
+    },
+    "JP": {
+      "hello": [
+        "Konnichiwa!",
+        "Ohayou.",
+        "Hello desu."
+      ],
+      "thanks": [
+        "Arigato!",
+        "Domo."
+      ]
+    },
+    "DE": {
+      "hello": [
+        "Guten Tag.",
+        "Hallo.",
+        "Moin."
+      ],
+      "thanks": [
+        "Danke.",
+        "Super."
+      ]
+    },
+    "SG": {
+      "hello": [
+        "Hello lah.",
+        "Morning!",
+        "Can or not?"
+      ],
+      "thanks": [
+        "Thanks lah.",
+        "Steady."
+      ]
+    }
+  },
+  "cities": {
+    "New York": "뉴욕",
+    "Los Angeles": "로스앤젤레스",
+    "Chicago": "시카고",
+    "Seattle": "시애틀",
+    "Houston": "휴스턴",
+    "Denver": "덴버",
+    "Boston": "보스턴",
+    "London": "런던",
+    "Manchester": "맨체스터",
+    "San Jose": "산호세",
+    "San Francisco": "샌프란시스코",
+    "Tokyo": "도쿄",
+    "Osaka": "오사카",
+    "Berlin": "베를린",
+    "Munich": "뮌헨",
+    "Singapore": "싱가포르"
+  },
+  "xray_labels": {
+    "cat": "고양이.exe",
+    "keys": "Sogou입력기.exe"
+  }
+}

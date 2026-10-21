@@ -33,7 +33,8 @@ from pp.screens import _icon  # noqa: E402
 
 def used_chars():
     chars = {chr(c) for c in range(32, 127)}
-    for p in sorted(SITE.glob("*.js")) + [SITE / "index.html"]:
+    paths = sorted(SITE.glob("*.js")) + [SITE / "index.html"] + sorted((SITE / "locales").glob("*.json"))
+    for p in paths:
         if p.name == "assets.js" or not p.exists():
             continue
         chars |= set(p.read_text(encoding="utf-8"))
@@ -283,10 +284,21 @@ def main():
     for name, im in (("font", font_sheet), ("atlas", sheet), ("bg", bg), ("win", wbg)):
         blobs[name], sizes[name] = png_b64(im)
 
+    locales_data = {}
+    locales_dir = SITE / "locales"
+    if locales_dir.exists():
+        for lp in sorted(locales_dir.glob("*.json")):
+            try:
+                lang_code = lp.stem
+                locales_data[lang_code] = json.loads(lp.read_text(encoding="utf-8"))
+            except Exception as e:
+                print(f"Error loading {lp}: {e}")
+
     data = {
         "font": {str(k): v for k, v in font_meta.items()},
         "sprites": pos,
         "people": people,
+        "locales": locales_data,
     }
     js = ["// 由 build_assets.py 生成，不要手改", "window.ASSETS = " + json.dumps(data, ensure_ascii=False,
                                                                                  separators=(",", ":")) + ";"]

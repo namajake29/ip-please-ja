@@ -2,8 +2,12 @@
 import wave
 from functools import lru_cache
 
-import numpy as np
-from scipy.signal import butter, lfilter
+try:
+    import numpy as np
+    from scipy.signal import butter, lfilter
+except ImportError:
+    np = None
+    butter = lfilter = None
 
 SR = 44100
 

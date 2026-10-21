@@ -41,8 +41,9 @@ Papers, Please 画风的像素小游戏。你抽中了十月劳动彩票，被�
 改了游戏里的文字（新出现的汉字需要进字形图集）或者人物画法之后，重新生成 `assets.js`：
 
 ```bash
-pip install -r tools/requirements.txt
-python tools/build_assets.py
+cd tools
+uv sync
+uv run build_assets.py
 ```
 
 本地预览：在仓库根目录运行 `python -m http.server`，打开 <http://localhost:8000>。

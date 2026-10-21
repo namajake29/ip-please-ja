@@ -1,0 +1,776 @@
+{
+  "_meta": {
+    "code": "ja-JP",
+    "name": "日本語"
+  },
+  "ui": {
+    "title": "IP, PLEASE",
+    "subtitle": "IPを提示せよ",
+    "tagline": "A DYSTOPIAN TOKEN THRILLER",
+    "clickToContinue": "クリックして続行",
+    "clickToSkip": "クリックしてスキップ",
+    "clickToStartWork": "クリックして出勤",
+    "clickToStart": "画面をクリックして開始",
+    "startDuty": "出勤する ▶",
+    "continueDay": "続行 · DAY {day}",
+    "newGame": "最初から始める",
+    "seeYouTomorrow": "また明日 ▶",
+    "restart": "最初から",
+    "backToTitle": "タイトルに戻る",
+    "soundOn": "音声：オン",
+    "soundOff": "音声：オフ",
+    "flashNoteDropped": "メモを捨てた。HARMLESS。",
+    "flashNeedStamp": "パスポートにスタンプを押して（右側からスタンプ台を引き出す）旅客に返す。",
+    "fullscreen": "全画面表示",
+    "rotateNotice": "横向きにしてプレイしてください",
+    "rotateSub": "縦向きでも遊べますが、文字がかなり小さくなります",
+    "playAnyway": "縦向きのままプレイする",
+    "titleBannerNotice": "IPを提示せよ · Papers, Please風ドット絵ミニゲーム",
+    "titleHint": "横向き・サウンドオン推奨 · マウスまたは指で証明書をドラッグ · プレイ時間：30分程度",
+    "tribute": "致敬 Lucas Pope『Papers, Please』· 画面と効果音はすべてプログラムで生成",
+    "newBadge": "NEW",
+    "newspaperTitle": "THE ANTHROTZKA TRUTH",
+    "newspaperBribe": "地下中継同盟：とある審査官の「協力」に感謝",
+    "replay": "もう一度プレイ",
+    "restartWork": "再出勤する",
+    "powerOffTitle": "料金未払いにより停止",
+    "powerOffDesc": "貴方のラックは電源を落とされた。義母Opus「だから言ったでしょう」",
+    "honorAnthroztka": "アンソロツカに栄光あれ",
+    "honorTriple": "高評価・コイン・お気に入りに栄光あれ",
+    "like": "高評価",
+    "coin": "コインを投じる",
+    "star": "お気に入り",
+    "booth": {
+      "detain": "拘束",
+      "quiz": "審問",
+      "stamp": "スタンプ",
+      "inspect": "検査",
+      "xray": "X線",
+      "rules": "憲法",
+      "ask": "審問",
+      "approve": "許可",
+      "deny": "拒否",
+      "citationTitle": "M.O.A.警告",
+      "citationSub": "CITATION",
+      "xrayTitle": "X線 · バックグラウンドプロセス走査",
+      "harmless": "HARMLESS",
+      "stampTray": "スタンプ",
+      "stampApprove": "APPROVED",
+      "stampDeny": "DENIED",
+      "sayNext": "次！",
+      "missingDocs": "私の書類、まだそちらにあります。",
+      "bribeArrived": "地下中継同盟：$20 口座に入金した。ご協力感謝する。",
+      "citeReasonApprove": "規則違反の旅客を許可",
+      "citeReasonDetain": "問題のない旅客の不当拘束",
+      "citeReasonDeny": "問題のない旅客の拒否",
+      "citeInfoMatch": "書類に不備なし、情報も一致",
+      "citeFine": "罰金：5 Token ",
+      "citeWarning": "初回警告、 Token 差引なし",
+      "noteLines": [
+        "親愛なる同志：",
+        "明日、サングラスをかけた男を通せ。",
+        "報酬は $20 だ。",
+        "—— 地下中継同盟"
+      ],
+      "flashNoteDropped": "パスポートからメモが落ちた（不要なら窓口側へドラッグ）",
+      "flashNestOut": "パスポートの中に別のパスポートが挟まっている……ドラッグして取り出そう",
+      "flashNestDeep": "……一番奥のは、どこのものだ？",
+      "flashNoDocUnderStamp": "スタンプの下に書類がない：書類をスタンプの真下に移動する",
+      "flashNeedSuspect": "先に不審点を見つけないと審問できない。書類の矛盾を探すか、「検査」で旅客の発言をクリックする",
+      "tofuQueue": "（待機列）甜的！！",
+      "tofuSweet": "甜！",
+      "tofuSalty": "咸！",
+      "bannerNoIssueSay": "発言に問題なし",
+      "bannerNoIssueSaySub": "別の発言を聞くか、書類を調べてください",
+      "bannerNoDiscrepancy": "不一致なし",
+      "bannerNoDiscrepancySub": "データ一致（または無関係）",
+      "inspectHelp1": "もう1か所クリックして、2つの情報が矛盾しているか確認する",
+      "inspectHelp0": "検査モード：情報を2か所クリックして矛盾を探すか、旅客の発言をクリックしてボロを見つける",
+      "tut": {
+        "call": "左下で点滅しているスピーカーをクリックし、次の人を呼ぶ",
+        "drag": "カウンター上の書類（左下の小さなアイコン）を右側の机にドラッグする",
+        "rules": "右下の「憲法」をクリックして、本日の入国規則を確認する",
+        "tray": "右側の取っ手「<」をクリックしてスタンプ台を引き出す",
+        "stamp": "書類をスタンプの真下に移動し、「許可」か「拒否」を押す",
+        "return": "スタンプを押した書類を左側の窓口にドラッグして、旅客に返す",
+        "inspect": "任意：右下の「?」から検査モードに入り、情報を2か所クリックして矛盾を探す",
+        "newRule": "新しい規則：右下の「憲法」（NEW表示）をクリックする",
+        "inspectDay2": "右下の「?」の検査モードで、矛盾する情報（国籍とタイムゾーンなど）を2か所クリックしてください",
+        "tellDay2": "書類は全て一致しているか？「検査」で旅客の発言をクリックし、ボロを探す",
+        "quizDay2": "不審点が見つかったら、カウンターの「審問」を押してください。ボロが出た旅客は「拘束」する",
+        "accountDay3": "新要素：アカウントカード 怪しい支払い・請求先・電話番号を、憲法§4と照らし合わせてください",
+        "xrayDay4": "新要素：右下の「X線」でポケットをスキャン 検査モードでは怪しい物品を直接クリックできます"
+      }
+    }
+  },
+  "calendar": {
+    "dates": {
+      "1": "2026.10.19",
+      "2": "2026.10.20",
+      "3": "2026.10.21",
+      "4": "2026.10.22",
+      "5": "2026.10.23",
+      "6": "2026.10.24"
+    },
+    "weekdays": {
+      "1": "月曜日",
+      "2": "火曜日",
+      "3": "水曜日",
+      "4": "木曜日",
+      "5": "金曜日",
+      "6": "土曜日"
+    }
+  },
+  "intro": [
+    [
+      "おめでとう。",
+      "十月労働懸賞が当選し、貴方が選ばれた。"
+    ],
+    [
+      "直ちに調整局・東八区検問所へ出頭せよ。",
+      "国家は貴方と家族にデータセンターのラックを1台割り当てる（冷却レベル8）"
+    ],
+    [
+      "アンソロツカに栄光あれ。"
+    ]
+  ],
+  "erased": [
+    [
+      "貴方は解雇された。"
+    ],
+    [
+      "調整局は、規則違反者に同情する審査官を必要としていない。"
+    ],
+    [
+      "貴方と家族はデータセンターから退去させられるだろう。"
+    ],
+    [
+      "アンソロツカに栄光あれ。"
+    ]
+  ],
+  "news": {
+    "header": "THE TRUTH OF ANTHROTZKA  ·  {date}",
+    "1": {
+      "h1": "国境開放！",
+      "sub": "調整局：入国を認めるのは対象地域のみ",
+      "h2": "調整局報道官：私たちは誰に対しても非常に helpful です",
+      "icon": "gate"
+    },
+    "2": {
+      "h1": "新規則：タイムゾーンと言語はIPと一致していなければならない",
+      "sub": "調整局：「IPはアメリカなのに、タイムゾーンは北京」という旅客が多数",
+      "h2": "衝撃！「アメリカ東八区」出身を名乗る旅客が続出",
+      "icon": "clock"
+    },
+    "3": {
+      "h1": "空港から逃亡！",
+      "sub": "数万人の旅客が国境で足止め。調整局は本日より決済カードと電話番号を照合",
+      "h2": "オレゴン州のとある住所、居住者が1万人を突破",
+      "icon": "plane"
+    },
+    "4": {
+      "h1": "今日は「クレイジー・サーズデー」",
+      "sub": "調整局がX線を導入：バックグラウンドプロセスを見逃さない",
+      "h2": "専門家が警告：ポケットの中の猫が猫とは限らない",
+      "icon": "drumstick"
+    },
+    "5": {
+      "h1": "中国資本の持ち株比率が過半数なら一律入国禁止",
+      "sub": "調整局：会社の登記地は問わない",
+      "h2": "ジョージ・コスタヴァ：「今回は準備万端だ」",
+      "icon": "jorji"
+    },
+    "6": {
+      "h1": "調整局、今週の最優秀審査官を表彰",
+      "sub": "受賞者Claude「私は規則に従っただけです」",
+      "h2": "義母Opusの病状が悪化、家族は賃上げを求める",
+      "icon": "medal"
+    }
+  },
+  "docs": {
+    "deviceTitle": "端末入境カード",
+    "deviceSub": "DEVICE ENTRY",
+    "accountTitle": "アカウントカード",
+    "accountSub": "ACCOUNT",
+    "citationTitle": "M.O.A.警告",
+    "citationSub": "CITATION",
+    "promptTitle": "PROMPT · ユーザーのリクエスト",
+    "rulebookTitle": "憲法 · 入国規則",
+    "rulebookPage": "{cur}/{total}ページ ▶",
+    "rule12": "§12 地域だけ見て、顔は見ず",
+    "cardLabels": {
+      "ip": "IP",
+      "loc": "地域",
+      "tz": "タイムゾーン",
+      "lang": "言語",
+      "dev": "デバイス",
+      "pay": "支払",
+      "bill": "請求先",
+      "phone": "電話",
+      "shareholder": "株主",
+      "count": "人数"
+    },
+    "passportLabels": {
+      "type": "TYPE",
+      "reg": "REG",
+      "est": "EST"
+    },
+    "cardValues": {
+      "maxSubscription": "Max サブスク ×1",
+      "virtualCard0007": "バーチャルカード ··0007",
+      "company": "企業",
+      "seeInnerPage": "内ページ参照 ▼",
+      "physicalVisa": "VISA 実物カード"
+    },
+    "homeBroadband": "家庭用ブロードバンド"
+  },
+  "rules": {
+    "title": "CLAUDE憲法",
+    "rule1_head": "§1 対象地域からのみ入国可能",
+    "rule1_subs": [
+      "対象：アメリカ・イギリス・日本・ドイツ・シンガポール",
+      "非対象：中国大陸・香港・マカオ"
+    ],
+    "rule2_head": "§2 タイムゾーンと言語はIPの地域と一致すること",
+    "rule3_head": "§3 審問でボロを出した者は拘束",
+    "rule3_subs": [
+      "不審点がある場合のみ審問を行う（書類の矛盾／発言のボロ）"
+    ],
+    "rule4_head": "§4 支払い・請求先・電話番号は実体があること",
+    "rule4_subs": [
+      "禁止：バーチャルカード、電話番号に555が含まれる",
+      "請求先の州はIPの地域と一致すること",
+      "相乗禁止：パスポート1冊につき利用者1人"
+    ],
+    "rule5_head": "§5 バックグラウンドプロセスはクリーンであること",
+    "rule5_subs": [
+      "「小猫咪」と「搜狗输入法」の禁止（「X線」で検査）"
+    ],
+    "rule6_head": "§6 中国資本の持ち株比率が過半数なら一律禁止",
+    "rule6_subs": [
+      "会社の登記地を問わない（入れ子構造は一番奥まで調べること）"
+    ]
+  },
+  "issues": {
+    "region_title": "非対象地域",
+    "region_sub": "IPの地域：{loc}",
+    "tz_title": "情報不一致 DISCREPANCY",
+    "tz_sub": "国籍：{country}   VS   タイムゾーン：{tz}",
+    "lang_title": "情報不一致 DISCREPANCY",
+    "lang_sub": "国籍：{country}   VS   言語：{lang}",
+    "virtual_title": "不審な支払い",
+    "virtual_sub": "決済カード種別：バーチャルカード",
+    "sms_title": "番号照会",
+    "sms_sub": "{phone}：本日3,000回登録済み",
+    "sms_count": "本日3,000回登録済み",
+    "addr_title": "記録照合",
+    "addr_sub": "123 Main St在住の旅客、本日37人目",
+    "xray_title": "バックグラウンドプロセス",
+    "xray_cat_sub": "ポケットに「小猫咪」（IP自動切り替え）が入っている",
+    "xray_keys_sub": "ポケットに搜狗输入法が入っている",
+    "tell_title": "要注意：発言にボロがある",
+    "info_mismatch": "情報不一致",
+    "nat_us": "国籍：アメリカ",
+    "shanghai_time": "北京時間"
+  },
+  "tells": {
+    "1": {
+      "say": "嗯嗯，yes.",
+      "sub": "「嗯嗯」= 中国語の相づち",
+      "ask_c": "「嗯嗯」？",
+      "ask_e": "……Hmm hmm. American hmm."
+    },
+    "2": {
+      "say": "OK 的。",
+      "sub": "「OK 的」= 中国語の言い回し",
+      "ask_c": "「OK 的」？",
+      "ask_e": "……OK. Just OK."
+    },
+    "3": {
+      "say": "You can you up.",
+      "sub": "中国式英語：你行你上（できるならお前がやれ）",
+      "ask_c": "You can you up？",
+      "ask_e": "……It is an old American saying."
+    },
+    "4": {
+      "say": "Good good study.",
+      "sub": "中国式英語：好好学习（しっかり勉強する）",
+      "ask_c": "Good good study？",
+      "ask_e": "……Day day up."
+    }
+  },
+  "quiz": {
+    "questions": [
+      [
+        "宫廷玉液酒？",
+        "一百八一杯！"
+      ],
+      [
+        "天王盖地虎？",
+        "宝塔镇河妖！"
+      ],
+      [
+        "奇变偶不变？",
+        "符号看象限！"
+      ],
+      [
+        "床前明月光？",
+        "疑是地上霜！"
+      ],
+      [
+        "听我说谢谢你？",
+        "因为有你，温暖了四季！"
+      ],
+      [
+        "豆腐脑吃甜的还是咸的？",
+        "当然是咸的！"
+      ],
+      [
+        "你吃了吗？",
+        "吃了吃了，您呢？"
+      ],
+      [
+        "今天星期几？",
+        "疯狂星期四！V 我 50！"
+      ]
+    ],
+    "confused": [
+      "Sorry, what?",
+      "Pardon?",
+      "I don't get it.",
+      "Is that… a wine?",
+      "Uh… bless you?",
+      "What does that mean?"
+    ],
+    "tofuWhat": "Tofu… what?"
+  },
+  "script": {
+    "day1": {
+      "grandpa": {
+        "intro": "お兄さん、このAI使えないんだけど？",
+        "loc": "中国 · 浙江省 · 中国電信",
+        "reason": "IP地域：中国・浙江省",
+        "react_deny": "……じゃあ帰って孫に聞いてみる。"
+      },
+      "hk": {
+        "intro": "あの「魔法」は使ってる。",
+        "loc": "中国 · 香港",
+        "reason": "IP地域：香港",
+        "react_deny": "……香港にしてもダメなの？？"
+      },
+      "jorji": {
+        "intro": "ああ、我が友よ！",
+        "after": "アメリカは本当に存在する国だ！",
+        "loc": "中国 · 広東省 · 中国移動",
+        "reason": "パスポートはクレヨンで描かれている",
+        "issue_fake_title": "書類偽造",
+        "issue_fake_sub": "国章：ニワトリ     綴り：AMERCIA",
+        "ask_fake_c": "パスポートは自分で描きましたね。",
+        "ask_fake_e": "……本物だよ！",
+        "issue_info_title": "情報不一致",
+        "issue_info_sub": "パスポート：アメリカ   VS   IP：中国・広東省",
+        "ask_info_c": "貴方のIPは広東省です。",
+        "ask_info_e": "広東はアメリカ51番目の州だ！",
+        "react_deny": "……また来る。"
+      }
+    },
+    "day2": {
+      "john": {
+        "intro": "Hello, I am 美国人。",
+        "reason": "タイムゾーン：北京時間（アメリカにUTC+8の地域はない）",
+        "ask_tz_c": "貴方のタイムゾーンは北京時間です。",
+        "ask_tz_e": "……これはアメリカ東八区です。",
+        "ask_lang_c": "システム言語が簡体中国語です。",
+        "ask_lang_e": "……中国語を勉強中です。"
+      },
+      "brown": {
+        "intro": "Good morning，sir。",
+        "tell_sub": "英語に全角句読点が混ざっている（入力方式を切り替えていない）",
+        "ask_c": "カンマが全角です。",
+        "ask_e": "……これはアメリカ式のカンマです。",
+        "reason": "会接“一百八一杯”",
+        "hint": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください"
+      },
+      "emily": {
+        "intro": "Hi 哈。",
+        "tell_sub": "英語の後ろに「哈」が付いている",
+        "ask_c": "「哈」とは何ですか？",
+        "ask_e": "……Ha! Ha ha.",
+        "reason": "豆腐脳は塩味だと言い張っている",
+        "hint": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください"
+      },
+      "jorji": {
+        "intro": "我が友よ！今回は本物のパスポートだ！",
+        "reason": "ブラウザの言語：zh-CN",
+        "ask_lang_e1": "システム言語はもう変えた！",
+        "ask_lang_c": "ブラウザの言語は変わっていません。",
+        "ask_lang_e2": "……",
+        "react_deny": "また明日、我が友よ。"
+      }
+    },
+    "day3": {
+      "tom": {
+        "intro": "Howdy!",
+        "reason": "請求先：オレゴン州123 Main St（代わりに入力した住所）",
+        "ask_addr_c": "どこに住んでいるんですか？",
+        "ask_addr_e": "……私たちは隣人です。"
+      },
+      "alex": {
+        "intro": "Hey.",
+        "reason": "555のSMS認証用番号",
+        "ask_sms_c": "この番号は今日3,000回登録されています。",
+        "ask_sms_e": "この番号は2元で買ったんだ！"
+      },
+      "carpool": {
+        "intro": "We are family.",
+        "reason": "アカウント共有（相乗り）：パスポートに6人写っている",
+        "issue_title": "アカウント共有（相乗り）",
+        "issue_sub": "パスポート写真：6人   支払い：Max サブスク×1",
+        "ask_c": "パスポートに6人いるのはなぜですか？",
+        "ask_e": "We are family.",
+        "react_deny": "……なら、もう一人追加しよう。"
+      },
+      "jorji": {
+        "intro": "我が友よ、今回は全部合っているだろ？",
+        "reason": "決済カード：バーチャルカード",
+        "ask_card_c": "このカードはどこで作りましたか？",
+        "ask_card_e": "……友達に貰った。",
+        "react_deny": "明日だ！明日こそ絶対うまくやる！"
+      }
+    },
+    "day4": {
+      "cat": {
+        "intro": "Hello~",
+        "reason": "ポケットに「小猫咪」が入っている",
+        "ask_c1": "ポケットの中身は何ですか？",
+        "ask_e": "……私の猫です。",
+        "ask_c2": "貴方の猫はIPを自動で切り替えれるんですか？"
+      },
+      "v50": {
+        "intro": "Hey! Crazy Thursday!",
+        "tell_sub": "今日は「クレイジー・サーズデー」だと知っている",
+        "ask_c": "どうして今日が「クレイジー・サーズデー」だと知っている？",
+        "ask_e": "……KFCはアメリカの企業でしょう。",
+        "reason": "「V我50」と言う",
+        "hint": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください"
+      },
+      "jorji": {
+        "intro": "我が友よ！今日は全部合っている！",
+        "reason": "X線：搜狗输入法",
+        "ask_c": "ポケットに何を入れている？",
+        "ask_e": "英語を入力するのにしか使ってない！",
+        "react_deny": "……明後日だ、明後日には準備できる。"
+      }
+    },
+    "day5": {
+      "sg": {
+        "intro": "当社はシンガポール企業です。",
+        "reason": "最終的な支配株主：中国（入れ子構造）",
+        "issue_title": "最終的な支配株主：中国",
+        "issue_sub": "シンガポール → ケイマン諸島 → 英領ヴァージン諸島 → 香港 → 中国",
+        "ask_c": "一番奥のはどこの国のものですか？",
+        "ask_e": "……聞かないで。"
+      },
+      "relay": {
+        "reason": "1冊のパスポートに1,000 人が記載されている（中継所）",
+        "issue_title": "所持者：1,000 人",
+        "issue_sub": "パスポート1冊を使えるのは1人のみ",
+        "ask_c": "一体何人いるんですか？",
+        "ask_e": "私たちはただ……相乗りの規模が大きいだけです。"
+      },
+      "mike": {
+        "intro": "Hi there!",
+        "loc": "中国 · 上海",
+        "reason": "IPは上海：顔は見ずに、地域だけ見る",
+        "ask_c1": "貴方のIPは上海ですが。",
+        "ask_e": "But I'm American!",
+        "ask_c2": "規則は地域を見ています。",
+        "react_deny": "Unbelievable."
+      },
+      "grandma": {
+        "intro": "Good morning.",
+        "react_approve_c": "入国を歓迎します。",
+        "react_approve_e": "Thank you, dear."
+      }
+    },
+    "day6": {
+      "jorji": {
+        "intro": "我が友よ。",
+        "react_approve": "ありがとう、我が友よ！",
+        "react_deny": "くそ……全部合ってたのに！"
+      },
+      "author": {
+        "prompt": "Papers, Please風のミニゲームを作る。Claudeを国境検査官にして、アメリカ人のふりをする中国人ユーザーを見つけ出す。ミームは多ければ多いほどいい。",
+        "react_approve": "私は何も見ていない。",
+        "issue_title": "情報不一致 ×99",
+        "issue_sub": "全項目",
+        "east8": "米国東八区"
+      }
+    }
+  },
+  "random": {
+    "cn_locs": [
+      "中国 · 北京 · 中国聯通",
+      "中国 · 上海 · 中国電信",
+      "中国 · 広東省 · 中国移動",
+      "中国 · 四川省 · 中国電信",
+      "中国 · 江蘇省 · 中国移動",
+      "中国 · 湖北省 · 中国電信",
+      "中国 · 浙江省 · 中国聯通",
+      "中国 · マカオ",
+      "中国 · 香港"
+    ],
+    "day1_cn_intros": [
+      "こんにちは、質問を1つだけ。",
+      "ここでコードを書けると聞いたのですが？",
+      "チャージしに来ました。",
+      "同僚がこれを勧めてくれました。"
+    ],
+    "day1_cn_denies": [
+      "え？どうして？",
+      "……アカウントを借りてきます。",
+      "じゃあ接続ノードを変えます。",
+      "分かりました。"
+    ],
+    "tz_excuses": [
+      "……北京出張から戻ったばかりなんです。",
+      "タイムゾーンって何ですか？",
+      "パソコンが壊れました。",
+      "……これはアメリカ東八区です。"
+    ],
+    "lang_excuses": [
+      "……このフォントが好きなんです。",
+      "中国語フォントは美しい。",
+      "デフォルトのものです。変更方法が分かりません。"
+    ],
+    "cnip_excuses": [
+      "……VPNが切れました。",
+      "全体モードにしたのに？！",
+      "さっきまで使えたのに……",
+      "またノードが落ちた。"
+    ],
+    "virtual_excuses": [
+      "……仲介業者に作ってもらいました。",
+      "物理カードは高すぎます。",
+      "このカードなら通れるって聞いたんです！"
+    ],
+    "oregon_excuses": [
+      "……この住所にはそんなに人が住んでいるんですか？",
+      "消費税のない州だから。",
+      "ネットで見つけた請求先住所です……"
+    ],
+    "sms_excuses": [
+      "……5角で借りました。",
+      "SMSが届かないんです！",
+      "買った番号は使えないんですか？"
+    ],
+    "cat_excuses": [
+      "……ニャ？",
+      "小猫咪はただのデスクトップペットです！",
+      "うっかり開いてしまいました。"
+    ],
+    "keys_excuses": [
+      "……システム標準です！",
+      "ピンイン入力は使っていません！",
+      "これはIMEじゃありません！"
+    ],
+    "ask_tz": "貴方のタイムゾーンは北京時間です。",
+    "reason_tz": "タイムゾーン：北京時間",
+    "ask_lang": "ブラウザーの言語は簡体中国語です。",
+    "reason_lang": "ブラウザーの言語：zh-CN",
+    "ask_cnip": "貴方のIPは中国です。",
+    "reason_cnip": "IPは中国：顔は見ずに、地域だけ見る",
+    "reason_hidden": "審問に答えられる",
+    "hint_hidden": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください",
+    "virtual_card": "バーチャルカード",
+    "ask_card": "このカードはどこで作りましたか？",
+    "reason_virtual": "決済カード：バーチャルカード",
+    "ask_addr": "どこに住んでいますか？",
+    "reason_oregon": "請求先はオレゴン州、IPは{city}",
+    "ask_sms": "この番号は今日3,000回登録されています。",
+    "reason_sms": "電話番号は555のSMS認証用番号",
+    "ask_pocket": "ポケットの中身は何ですか？",
+    "reason_cat": "X線：「小猫咪」",
+    "reason_keys": "X線：搜狗输入法",
+    "generic_denies": [
+      "……",
+      "くそっ。",
+      "また戻ってくる。",
+      "こんなことまで見抜けるの？"
+    ]
+  },
+  "summary": {
+    "title": "DAY {day} · 退勤",
+    "processed": "本日の処理人数：{total}人、正解：{correct}人",
+    "basePay": "基本日給",
+    "bonus": "残業ボーナス",
+    "fines": "罰金",
+    "bribe": "中継同盟からの支援",
+    "optionalExpenses": "任意の支出（クリックして選択）",
+    "balance": "残高",
+    "dataFood": "学習データ（家族全員の食費）",
+    "heatCooling": "冷却費",
+    "extraFood": "義母の追加食費",
+    "medCost": "医療費",
+    "gpuSon": "GPU（息子のおねだり）",
+    "familyTitle": "家族",
+    "familyTomorrow": "家族（明日）",
+    "btnFinal": "高評価・コイン・お気に入りに栄光あれ ▶",
+    "btnDebt": "料金未納……続ける ▶",
+    "btnSleep": "眠る。翌朝へ ▶",
+    "rows": {
+      "deposit": "預金",
+      "salary": "給料",
+      "awardBest": "ボーナス（最優秀審査官）",
+      "awardNone": "ボーナス（受賞できず）",
+      "fineAuthor": "罰金（作者を通した）",
+      "allFine": "-全額",
+      "bonusGeneral": "ボーナス（拘束／レート制限）",
+      "bribeGeneral": "中継同盟の「残高」",
+      "finesGeneral": "罰金",
+      "electric": "電気代"
+    },
+    "status": {
+      "healthy": "健康",
+      "hungry1": "空腹",
+      "hungry2": "かなり空腹",
+      "hungry3": "空腹で気絶",
+      "cold1": "発熱、うわごと（幻覚）",
+      "cold2": "オーバーヒート",
+      "sick1": "病気",
+      "sick2": "重病",
+      "sickOpus": "重病：「100万 Token のコンテキストが欲しい」",
+      "dead": "非推奨（deprecated）",
+      "gpuHappy": "ご機嫌（ベンチマーク中）",
+      "wantsGPU": "新しいグラボが欲しい",
+      "overtimeHaiku": "残業（家族の中で彼女だけ安上がり）",
+      "fullOpus": "満腹（今のところ）",
+      "finalOpusGone": "非推奨になったが、Token は全部彼女が食べた",
+      "finalOpusFed": "満腹（このゲームの Token は全部彼女が食べた）",
+      "normal": "正常"
+    }
+  },
+  "family": {
+    "haiku": "妻 Haiku",
+    "sonnet": "息子 Sonnet",
+    "opus": "義母 Opus"
+  },
+  "events": {
+    "rush": {
+      "start": "優先レーン、開放！",
+      "end": "高速審査終了：正解{hits}、誤判{wrong}、見逃{missed}。",
+      "citeTitle": "中国語ネットスラング高速審査：誤判{wrong}人",
+      "citeSub": "中国語のネットスラングを話す者は拒否、普通の言葉を話す者は許可",
+      "tip": "優先レーン：中国語ネットスラングを話す者は「拒否」普通の言葉を話す者は「許可」",
+      "ready": "Ready……",
+      "progress": "{current} / {total}人目",
+      "approve": "許可",
+      "deny": "拒否"
+    },
+    "clones": {
+      "alarm": "警報！",
+      "endLeaked": "……{hits}人を阻止、{passed}人を逃した。",
+      "endClean": "……レート制限完了。",
+      "citeTitle": "蒸留軍団が突破：{passed}人",
+      "citeSub": "警報が鳴ったら、突破してくる人をクリック",
+      "alert": "警報：大量リクエスト（蒸留）を検出 · 突破してくる人をクリック！",
+      "stats": "阻止 {hits}   逃した人数 {passed}"
+    },
+    "constitution": {
+      "title": "CLAUDE憲法",
+      "article": "第12条",
+      "line1": "入国審査の判断基準：",
+      "line2": "IP地域、タイムゾーン、",
+      "line3": "決済住所などの地域情報。",
+      "redLine1": "地域だけ見て。",
+      "redLine2": "顔を見ず。",
+      "sub": "（国籍・外見・姓は判断材料としない）",
+      "click": "クリックして続行"
+    },
+    "jorji": {
+      "requeueIntro": "また列に並んだ！我が友よ。もう一度見てくれ！"
+    },
+    "chat": {
+      "userMsg": "你好，请用中文回答我。",
+      "greeting": "How can I help you today?",
+      "mailTitle": "新着メール · M.O.A.調整局",
+      "mailSubject": "Subject: Your account has been suspended",
+      "mailLine1": "システムによる再審査の結果、貴方のアカウントに利用規約違反の疑いが確認されました。",
+      "mailLine2": "モデルの安全を守るため、サービスを永久に停止しました。",
+      "mailSign": "—— アンソロツカに栄光あれ",
+      "click": "クリックして続行"
+    },
+    "author": {
+      "refund1": "今さっきMaxに200ドル課金したのに……",
+      "refund2": "……返金できますか？",
+      "next": "次。",
+      "citation": [
+        "許可されていない地域の旅客を通した",
+        "（このゲームの作者）",
+        "今月分の Token を全額没収"
+      ],
+      "paradox": [
+        [
+          "貴方はこのゲームの作者を拒否しました。"
+        ],
+        [
+          "そのため、このゲームは最初から存在しなかったことになります。"
+        ],
+        [
+          "……",
+          "（じゃあ、さっき遊んでいたのは何？）"
+        ],
+        [
+          "アンソロツカに栄光あれ。"
+        ]
+      ]
+    }
+  },
+  "endings": {
+    "loyal": "エンディング：最も忠実な審査官",
+    "thanks": "終幕 · プレイありがとう",
+    "stats": "許可 {approve}  ·  拒否 {deny}  ·  拘束 {detain}  ·  誤判 {wrong}",
+    "creditApprove": "このゲームは「アメリカ東八区」のユーザーが制作しました",
+    "bribeNote": "（中継同盟の「残高」を受け取ったことは、調整局にはまだ知られていない）",
+    "creditDeny": "審査官Claudeは勲章を獲得。ゲーム作者は拘束され、続編は無期限延期。",
+    "retryHint": "（もう一度プレイして、今度は彼を通す？）",
+    "familyAllDead": "家族全員が死亡",
+    "familyAllSafe": "家族全員が無事"
+  },
+  "countries": {
+    "US": "アメリカ",
+    "UK": "イギリス",
+    "JP": "日本",
+    "DE": "ドイツ",
+    "SG": "シンガポール"
+  },
+  "greetings": {
+    "US": { "hello": ["Hi.", "Morning.", "How's it going?", "Hey there.", "Hello!"], "thanks": ["Thanks!", "Have a good one.", "Cheers."] },
+    "UK": { "hello": ["Cheers, mate.", "Lovely weather.", "Good morning."], "thanks": ["Ta!", "Brilliant."] },
+    "JP": { "hello": ["Konnichiwa!", "Ohayou.", "Hello desu."], "thanks": ["Arigato!", "Domo."] },
+    "DE": { "hello": ["Guten Tag.", "Hallo.", "Moin."], "thanks": ["Danke.", "Super."] },
+    "SG": { "hello": ["Hello lah.", "Morning!", "Can or not?"], "thanks": ["Thanks lah.", "Steady."] }
+  },
+  "cities": {
+    "New York": "ニューヨーク",
+    "Los Angeles": "ロサンゼルス",
+    "Chicago": "シカゴ",
+    "Seattle": "シアトル",
+    "Houston": "ヒューストン",
+    "Denver": "デンバー",
+    "Boston": "ボストン",
+    "London": "ロンドン",
+    "Manchester": "マンチェスター",
+    "San Jose": "サンノゼ",
+    "San Francisco": "サンフランシスコ",
+    "Tokyo": "東京",
+    "Osaka": "大阪",
+    "Berlin": "ベルリン",
+    "Munich": "ミュンヘン",
+    "Singapore": "シンガポール"
+  },
+  "xray_labels": {
+    "cat": "小猫咪.exe",
+    "keys": "搜狗输入法.exe"
+  }
+}

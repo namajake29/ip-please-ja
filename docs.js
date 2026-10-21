@@ -9,7 +9,11 @@ class Passport {
     this.w = 176; this.h = 116;
     this.icon = ['book', cover];
     this.fields = { header: [3, 3, 172, 16], name: [56, 20, 172, 34], photo: [9, 22, 50, 73] };
-    rows.forEach(([k], i) => { this.fields[k] = [56, 40 + i * 12, 150, 51 + i * 12]; });
+    rows.forEach(([k, , id], i) => {
+      const box = [56, 40 + i * 12, 150, 51 + i * 12];
+      this.fields[k] = box;
+      if (id) this.fields[id] = box;
+    });
   }
 
   draw(x, y) {
@@ -19,13 +23,13 @@ class Passport {
     rect(x + 3, y + 3, x + w - 4, y + h - 4, K.PAPER);
     for (let yy = y + 22; yy < y + h - 22; yy += 4) rect(x + 56, yy, x + w - 8, yy, K.PAPER_LINE);
     rect(x + 3, y + 3, x + w - 4, y + 16, this.band);
-    txt(x + w / 2, y + 6, this.country, 8, K.PAPER, 'ma');
+    fitTxt(x + w / 2, y + 6, this.country, w - 12, 10, K.PAPER, 'ma');
     rect(x + 9, y + 22, x + 50, y + 73, K.PAPER_D);
     spr('photo:' + this.person, x + 10, y + 23);
-    txt(x + 58, y + 22, this.name, tw(this.name, 12) > 112 ? 10 : 12, K.TEXT);
+    fitTxt(x + 58, y + 22, this.name, 112, 12, K.TEXT);
     this.rows.forEach(([k, v], i) => {
       txt(x + 58, y + 42 + i * 12, k, 8, K.TEXT_L);
-      txt(x + 80, y + 41 + i * 12, v, tw(v, 10) > 90 ? 8 : 10, K.TEXT);
+      fitTxt(x + 80, y + 41 + i * 12, v, 88, 10, K.TEXT);
     });
     spr('emblem', x + 18, y + 78);
     if (this.mrz) txt(x + 8, y + h - 15, this.mrz, 8, K.TEXT_L);
@@ -101,15 +105,28 @@ class MiniPassport {
 
 // 设备入境卡 / 账户卡：标题 + 若干行 label/value
 class Card {
-  constructor(rows, { title = '设备入境卡', sub = 'DEVICE ENTRY', color = C.PINK, colorD = C.PINK_D, valueX = 38, seal } = {}) {
-    this.rows = rows; this.title = title; this.sub = sub;
+  constructor(rows, { title, sub, color = C.PINK, colorD = C.PINK_D, valueX = 38, seal } = {}) {
+    this.rows = rows;
+    this.title = title || I18N.t('docs.deviceTitle', {}, '设备入境卡');
+    this.sub = sub || I18N.t('docs.deviceSub', {}, 'DEVICE ENTRY');
     this.color = rgb(color); this.colorD = rgb(colorD); this.valueX = valueX;
     this.seal = seal === undefined ? rows.length >= 4 : seal;
     this.w = 152;
-    this.h = 20 + 14 * rows.length + (this.seal ? 14 : 6);
+    this.rowLayouts = rows.map(([k, v]) => {
+      const vx = Math.max(this.valueX, 8 + tw(k, 8) + 6);
+      const lines = wrap(v, 10, this.w - vx - 6);
+      return { vx, lines, height: Math.max(14, lines.length * 11 + 3) };
+    });
+    this.h = 20 + this.rowLayouts.reduce((sum, row) => sum + row.height, 0) + (this.seal ? 14 : 6);
     this.icon = ['card', color];
     this.fields = {};
-    rows.forEach(([k], i) => { this.fields[k] = [4, 18 + 14 * i, this.w - 5, 31 + 14 * i]; });
+    let rowY = 18;
+    rows.forEach(([k, , id], i) => {
+      const box = [4, rowY, this.w - 5, rowY + this.rowLayouts[i].height - 1];
+      this.fields[k] = box;
+      if (id) this.fields[id] = box;
+      rowY += this.rowLayouts[i].height;
+    });
   }
 
   draw(x, y) {
@@ -121,19 +138,26 @@ class Card {
     txt(x + 6, y + 4, this.title, 10, K.TEXT);
     txt(x + w - 6, y + 6, this.sub, 8, K.TEXT_L, 'ra');
     if (this.seal) spr('seal', x + w - 40, y + h - 38);
-    this.rows.forEach(([k, v], i) => {
-      const yy = y + 20 + i * 14;
-      txt(x + 8, yy, k, 10, K.TEXT_L);
-      txt(x + this.valueX, yy, v, tw(v, 10) > w - this.valueX - 6 ? 8 : 10, K.TEXT);
+    let rowY = y + 20;
+    this.rows.forEach(([k], i) => {
+      const layout = this.rowLayouts[i];
+      txt(x + 8, rowY, k, 8, K.TEXT_L);
+      layout.lines.forEach((line, lineIndex) => {
+        fitTxt(x + layout.vx, rowY + lineIndex * 11, line, w - layout.vx - 6, 10, K.TEXT);
+      });
       G.fillStyle = this.colorD;
-      for (let sx = x + 6; sx < x + w - 6; sx += 2) G.fillRect(sx, yy + 11, 1, 1);
+      for (let sx = x + 6; sx < x + w - 6; sx += 2) G.fillRect(sx, rowY + layout.height - 3, 1, 1);
+      rowY += layout.height;
     });
   }
 }
 
 function accountCard(pay, bill, phone) {
-  return new Card([['付款', pay], ['账单', bill], ['手机', phone]],
-    { title: '账户卡', sub: 'ACCOUNT', color: C.SAGE, colorD: C.SAGE_D, seal: false });
+  const lblPay = I18N.t('docs.cardLabels.pay', {}, '付款');
+  const lblBill = I18N.t('docs.cardLabels.bill', {}, '账单');
+  const lblPhone = I18N.t('docs.cardLabels.phone', {}, '手机');
+  return new Card([[lblPay, pay, '付款'], [lblBill, bill, '账单'], [lblPhone, phone, '手机']],
+    { title: I18N.t('docs.accountTitle', {}, '账户卡'), sub: I18N.t('docs.accountSub', {}, 'ACCOUNT'), color: C.SAGE, colorD: C.SAGE_D, seal: false });
 }
 
 // 夹在护照里的小纸条（地下中转联盟）
@@ -160,7 +184,11 @@ class Citation {
   constructor(lines) {
     this.lines = lines;
     this.w = 168;
-    this.h = 26 + 13 * lines.length + 6;
+    this.renderLines = lines.flatMap((s, sourceIndex) => wrap(s, 10, this.w - 16).map((line) => ({
+      text: line,
+      last: sourceIndex === lines.length - 1,
+    })));
+    this.h = 26 + 13 * this.renderLines.length + 6;
     this.icon = ['card', [226, 184, 176]];
     this.fields = {};
   }
@@ -169,10 +197,10 @@ class Citation {
     docShadow(x, y, this.w, this.h);
     rect(x, y, x + this.w - 1, y + this.h - 1, 'rgb(226,184,176)');
     rect(x, y, x + this.w - 1, y + 16, K.RED_D);
-    txt(x + 6, y + 4, 'M.O.A. 警告单', 10, K.WHITE);
-    txt(x + this.w - 6, y + 6, 'CITATION', 8, 'rgb(226,184,176)', 'ra');
-    this.lines.forEach((s, i) => {
-      txt(x + 8, y + 22 + i * 13, s, tw(s, 10) > this.w - 14 ? 8 : 10, i === this.lines.length - 1 ? K.RED_D : K.TEXT);
+    txt(x + 6, y + 4, I18N.t('docs.citationTitle', {}, 'M.O.A. 警告单'), 10, K.WHITE);
+    txt(x + this.w - 6, y + 6, I18N.t('docs.citationSub', {}, 'CITATION'), 8, 'rgb(226,184,176)', 'ra');
+    this.renderLines.forEach(({ text, last }, i) => {
+      txt(x + 8, y + 22 + i * 13, text, 10, last ? K.RED_D : K.TEXT);
     });
   }
 }
@@ -214,7 +242,7 @@ class PromptPaper {
     docShadow(x, y, this.w, this.h);
     rect(x, y, x + this.w - 1, y + this.h - 1, 'rgb(236,234,226)');
     rect(x + 3, y + 3, x + this.w - 4, y + 16, 'rgb(120,116,110)');
-    txt(x + 8, y + 6, 'PROMPT · 用户请求', 8, K.WHITE);
+    txt(x + 8, y + 6, I18N.t('docs.promptTitle', {}, 'PROMPT · 用户请求'), 8, K.WHITE);
     this.lines.forEach((s, i) => txt(x + 9, y + 22 + i * 13, s, 10, K.INK));
   }
 }
@@ -229,34 +257,49 @@ function drawAddressCard(x, y) {
 }
 
 // 《Claude 宪法》：当天的入境规则，分两页。每条规则是一个可在检查模式里点选的栏位。
-const RULE_TABLE = [
-  ['美国', 'America/*', 'en-US'], ['英国', 'Europe/London', 'en-GB'], ['日本', 'Asia/Tokyo', 'ja-JP'],
-  ['德国', 'Europe/Berlin', 'de-DE'], ['新加坡', 'Asia/Singapore', 'en-SG'],
-];
-const RULES = [
-  { day: 1, page: 0, key: 'region', head: '§1 仅限支持地区入境', subs: ['支持：美国  英国  日本  德国  新加坡', '不支持：中国大陆  中国香港  中国澳门'] },
-  { day: 2, page: 0, key: 'tz', head: '§2 时区、语言须与 IP 归属一致', subs: RULE_TABLE.map((r) => r.join('|')) },
-  { day: 2, page: 0, key: 'quiz', head: '§3 测谎露馅者：拘留', subs: ['有疑点才能测谎（证件矛盾 / 话里的马脚）'] },
-  { day: 3, page: 1, key: 'pay', head: '§4 付款、账单、手机须真实', subs: ['禁止：虚拟卡、555 接码手机号', '账单所在州须与 IP 归属一致', '禁止拼车：一本护照只能一个人用'] },
-  { day: 4, page: 1, key: 'xray', head: '§5 后台进程须干净', subs: ['禁止“小猫咪”、中文输入法（『X光』）'] },
-  { day: 5, page: 1, key: 'corp', head: '§6 中资控股过半：一律禁止', subs: ['无论公司注册在哪（套娃要拆到底）'] },
-];
+function getRuleTable() {
+  return [
+    [I18N.t('countries.US', {}, '美国'), 'America/*', 'en-US'],
+    [I18N.t('countries.UK', {}, '英国'), 'Europe/London', 'en-GB'],
+    [I18N.t('countries.JP', {}, '日本'), 'Asia/Tokyo', 'ja-JP'],
+    [I18N.t('countries.DE', {}, '德国'), 'Europe/Berlin', 'de-DE'],
+    [I18N.t('countries.SG', {}, '新加坡'), 'Asia/Singapore', 'en-SG'],
+  ];
+}
+
+function getRules() {
+  const table = getRuleTable();
+  return [
+    { day: 1, page: 0, key: 'region', head: I18N.t('rules.rule1_head', {}, '§1 仅限支持地区入境'), subs: I18N.t('rules.rule1_subs', {}, ['支持：美国  英国  日本  德国  新加坡', '不支持：中国大陆  中国香港  中国澳门']) },
+    { day: 2, page: 0, key: 'tz', head: I18N.t('rules.rule2_head', {}, '§2 时区、语言须与 IP 归属一致'), subs: table.map((r) => r.join('|')) },
+    { day: 2, page: 0, key: 'quiz', head: I18N.t('rules.rule3_head', {}, '§3 测谎露馅者：拘留'), subs: I18N.t('rules.rule3_subs', {}, ['有疑点才能测谎（证件矛盾 / 话里的马脚）']) },
+    { day: 3, page: 1, key: 'pay', head: I18N.t('rules.rule4_head', {}, '§4 付款、账单、手机须真实'), subs: I18N.t('rules.rule4_subs', {}, ['禁止：虚拟卡、555 接码手机号', '账单所在州须与 IP 归属一致', '禁止拼车：一本护照只能一个人用']) },
+    { day: 4, page: 1, key: 'xray', head: I18N.t('rules.rule5_head', {}, '§5 后台进程须干净'), subs: I18N.t('rules.rule5_subs', {}, ['禁止“小猫咪”、中文输入法（『X光』）']) },
+    { day: 5, page: 1, key: 'corp', head: I18N.t('rules.rule6_head', {}, '§6 中资控股过半：一律禁止'), subs: I18N.t('rules.rule6_subs', {}, ['无论公司注册在哪（套娃要拆到底）']) },
+  ];
+}
 
 class Rulebook {
   constructor(day) {
     this.day = day;
     this.w = 200;
     this.icon = ['book', C.BOOK];
-    const rules = RULES.filter((r) => r.day <= day);
+    const rules = getRules().filter((r) => r.day <= day);
     this.npages = day >= 3 ? 2 : 1;
     this.pages = [];
     for (let p = 0; p < this.npages; p++) {
       const L = [];
+      const addWrapped = (text, size, col, key, isNew = false) => {
+        for (const s of wrap(text, size, this.w - 16)) {
+          L.push({ s, size, col, key, isNew: isNew && L.every((row) => row.key !== key) });
+        }
+      };
       for (const r of rules.filter((q) => q.page === p)) {
-        L.push({ s: r.head, size: 10, col: r.day === day ? K.RED_D : K.TEXT, key: r.key, isNew: r.day === day });
-        for (const s of r.subs) L.push({ s, size: 8, col: K.TEXT_L, key: r.key });
+        addWrapped(r.head, 10, r.day === day ? K.RED_D : K.TEXT, r.key, r.day === day);
+        const subs = Array.isArray(r.subs) ? r.subs : [r.subs];
+        for (const s of subs) addWrapped(s, 8, K.TEXT_L, r.key);
       }
-      if (p === this.npages - 1) L.push({ s: '§12 只看地区，不看脸', size: 8, col: K.TEXT_L, key: null });
+      if (p === this.npages - 1) addWrapped(I18N.t('docs.rule12', {}, '§12 只看地区，不看脸'), 8, K.TEXT_L, null);
       let y = 22;
       const fields = {};
       for (const row of L) {
@@ -284,10 +327,11 @@ class Rulebook {
     rect(x, y, x + w - 1, y + h - 1, K.BOOK);
     rect(x + 3, y + 3, x + w - 4, y + h - 4, K.PAPER);
     rect(x + 3, y + 3, x + w - 4, y + 16, K.BOOK_L);
-    txt(x + 8, y + 5, '宪法 · 入境规则', 10, K.PAPER);
+    txt(x + 8, y + 5, I18N.t('docs.rulebookTitle', {}, '宪法 · 入境规则'), 10, K.PAPER);
     if (this.npages > 1) {
       rect(x + this.tab[0], y + this.tab[1], x + this.tab[2], y + this.tab[3], K.BOOK);
-      txt(x + this.tab[2] - 4, y + 7, `第${this.page + 1}/${this.npages}页 ▶`, 8, K.PAPER, 'ra');
+      const pageText = I18N.t('docs.rulebookPage', { cur: this.page + 1, total: this.npages }, `第${this.page + 1}/${this.npages}页 ▶`);
+      txt(x + this.tab[2] - 4, y + 7, pageText, 8, K.PAPER, 'ra');
     } else {
       txt(x + w - 8, y + 7, `DAY ${this.day}`, 8, K.PAPER, 'ra');
     }
@@ -301,9 +345,9 @@ class Rulebook {
       }
       txt(x + 8, y + r.y, r.s, r.size, r.col);
       if (r.isNew) {
-        const nx = x + 10 + tw(r.s, r.size);
+        const nx = x + w - 25;
         rect(nx, y + r.y - 1, nx + 19, y + r.y + 8, K.RED);
-        txt(nx + 2, y + r.y, 'NEW', 8, K.WHITE);
+        txt(nx + 2, y + r.y, I18N.t('ui.newBadge', {}, 'NEW'), 8, K.WHITE);
       }
     }
   }

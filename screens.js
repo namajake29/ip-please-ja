@@ -41,12 +41,20 @@ function typeLines(paras) {
   return out;
 }
 
-const INTRO_LINES = typeLines([
+let INTRO_LINES = typeLines([
   ['恭喜。', '十月劳动彩票已开奖，你的名字被抽中了。'],
   ['请立即前往对齐部 东八区检查站 报到。', '国家将为你和家人分配一个数据中心机柜（8 级散热）。'],
   ['荣耀归于安索兹卡。'],
 ]);
-const ERASED_LINES = typeLines(ERASED);
+let ERASED_LINES = typeLines(ERASED);
+
+function refreshIntroLines() {
+  const intro = I18N.t('intro');
+  if (Array.isArray(intro) && intro.length) INTRO_LINES = typeLines(intro);
+  const erased = I18N.t('erased');
+  if (Array.isArray(erased) && erased.length) ERASED_LINES = typeLines(erased);
+}
+refreshIntroLines();
 
 function drawTyped(lines) {
   rect(0, 0, W - 1, H - 1, K.INK);
@@ -59,7 +67,7 @@ function drawTyped(lines) {
     if (n > 0) txt(Math.floor(W / 2 - tw(s) / 2), y, s, 12, 'rgb(214,206,190)', 'la', n);
     y += 18;
   }
-  txt(W - 8, H - 14, '点击跳过', 8, K.GREY_D, 'ra');
+  txt(W - 8, H - 14, I18N.t('ui.clickToSkip', {}, '点击跳过'), 8, K.GREY_D, 'ra');
 }
 
 let lastKey = -1;
@@ -82,18 +90,20 @@ function drawTitle(t) {
   rect(0, 124, W - 1, 214, 'rgb(92,28,26)');
   rect(0, 124, W - 1, 125, K.RED); rect(0, 213, W - 1, 214, K.RED);
   spr('title_emblem', 298, 62);
-  bigText(W / 2, 140, 'IP, PLEASE', 12, 5, K.WHITE, K.INK);
-  if (t >= 1.0) bigText(W / 2, 232, '请出示你的 IP', 12, 2, K.CLAUDE_L, K.INK);
-  if (t >= 1.6) txt(W / 2, 268, 'A DYSTOPIAN TOKEN THRILLER', 8, K.GREY, 'ma');
+  bigText(W / 2, 140, I18N.t('ui.title', {}, 'IP, PLEASE'), 12, 5, K.WHITE, K.INK);
+  if (t >= 1.0) bigText(W / 2, 232, I18N.t('ui.subtitle', {}, '请出示你的 IP'), 12, 2, K.CLAUDE_L, K.INK);
+  if (t >= 1.6) txt(W / 2, 268, I18N.t('ui.tagline', {}, 'A DYSTOPIAN TOKEN THRILLER'), 8, K.GREY, 'ma');
   if (t < 1.6) return;
   const save = loadSave();
   if (save) {
-    for (const [box, label] of [[CONTINUE_TITLE, `继续 · DAY ${save.day}`], [NEWGAME_TITLE, '从头开始']]) {
+    const contLabel = I18N.t('ui.continueDay', { day: save.day }, `继续 · DAY ${save.day}`);
+    const newLabel = I18N.t('ui.newGame', {}, '从头开始');
+    for (const [box, label] of [[CONTINUE_TITLE, contLabel], [NEWGAME_TITLE, newLabel]]) {
       const hover = ptr.mouse && inBox(ptr.x, ptr.y, box);
       rect(...box, hover ? K.RED : K.RED_D); outline(...box, K.RED_L);
       txt(center(box)[0], box[1] + 7, label, 12, K.WHITE, 'ma');
     }
-  } else if (Math.floor(t * 2) % 2 === 0) txt(W / 2, 300, '点击开始上班', 12, K.WHITE, 'ma');
+  } else if (Math.floor(t * 2) % 2 === 0) txt(W / 2, 300, I18N.t('ui.clickToStartWork', {}, '点击开始上班'), 12, K.WHITE, 'ma');
 }
 
 function titleClick(x, y) {
@@ -107,23 +117,30 @@ function titleClick(x, y) {
 function drawBoot() {
   rect(0, 0, W - 1, H - 1, K.INK);
   spr('title_emblem', 298, 92);
-  bigText(W / 2, 156, 'IP, PLEASE', 12, 3, K.WHITE);
-  txt(W / 2, 200, '请出示你的 IP · Papers, Please 像素小游戏', 10, K.CLAUDE_L, 'ma');
-  if (Math.floor(now * 2) % 2 === 0) txt(W / 2, 250, '点击屏幕开始', 12, K.WHITE, 'ma');
-  txt(W / 2, 300, '建议横屏、打开声音 · 鼠标或手指拖动证件 · 全程约 30 分钟', 8, K.GREY, 'ma');
-  txt(W / 2, 330, '致敬 Lucas Pope《Papers, Please》 · 画面音效均由程序生成', 8, K.GREY_D, 'ma');
+  bigText(W / 2, 156, I18N.t('ui.title', {}, 'IP, PLEASE'), 12, 3, K.WHITE);
+  fitTxt(W / 2, 200, I18N.t('ui.titleBannerNotice', {}, '请出示你的 IP · Papers, Please 像素小游戏'), 600, 10, K.CLAUDE_L, 'ma');
+  if (Math.floor(now * 2) % 2 === 0) txt(W / 2, 250, I18N.t('ui.clickToStart', {}, '点击屏幕开始'), 12, K.WHITE, 'ma');
+  fitTxt(W / 2, 300, I18N.t('ui.titleHint', {}, '建议横屏、打开声音 · 鼠标或手指拖动证件 · 全程约 30 分钟'), 600, 8, K.GREY, 'ma');
+  fitTxt(W / 2, 330, I18N.t('ui.tribute', {}, '致敬 Lucas Pope《Papers, Please》 · 画面音效均由程序生成'), 600, 8, K.GREY_D, 'ma');
 }
 
 function drawDayCard(t) {
   rect(0, 0, W - 1, H - 1, K.INK);
   if (t < 0.55) return;
   bigText(W / 2, 132, `DAY ${S.day}`, 12, 4, K.WHITE);
-  txt(W / 2, 196, `${DATES[S.day]}  ${WEEKDAYS[S.day]}`, 10, K.GREY, 'ma');
+  const dateStr = I18N.t(`calendar.dates.${S.day}`, {}, DATES[S.day] || '');
+  const weekStr = I18N.t(`calendar.weekdays.${S.day}`, {}, WEEKDAYS[S.day] || '');
+  txt(W / 2, 196, `${dateStr}  ${weekStr}`, 10, K.GREY, 'ma');
 }
 
 function drawNews(t) {
-  const n = { ...NEWS[S.day] };
-  if (S.day === 6 && S.flags.bribed) n.h2 = '地下中转联盟：感谢某位审查员的“合作”';
+  const n = {
+    h1: I18N.t(`news.${S.day}.h1`),
+    sub: I18N.t(`news.${S.day}.sub`),
+    h2: I18N.t(`news.${S.day}.h2`),
+    icon: I18N.t(`news.${S.day}.icon`, {}, NEWS[S.day]?.icon || 'gate'),
+  };
+  if (S.day === 6 && S.flags.bribed) n.h2 = I18N.t('ui.newspaperBribe', {}, '地下中转联盟：感谢某位审查员的“合作”');
   rect(0, 0, W - 1, H - 1, K.DESK);
   for (let y = 4; y < H; y += 7) if ((y * 7919) % 10 < 6) rect(0, y, W - 1, y, K.DESK_D);
   const px = 140, pw = 360, ph = 330;
@@ -131,8 +148,9 @@ function drawNews(t) {
   rect(px + 4, py + 4, px + pw + 4, py + ph + 4, K.DESK_D);
   const ink = 'rgb(40,34,30)', faint = 'rgb(176,164,144)';
   rect(px, py, px + pw, py + ph, 'rgb(224,214,192)');
-  bigText(px + pw / 2, py + 10, '安索兹卡真理报', 12, 2, ink);
-  txt(px + pw / 2, py + 38, `THE TRUTH OF ANTHROTZKA  ·  ${DATES[S.day]}`, 8, K.TEXT_L, 'ma');
+  bigText(px + pw / 2, py + 10, I18N.t('ui.newspaperTitle', {}, '安索兹卡真理报'), 12, 2, ink);
+  const dateStr = I18N.t(`calendar.dates.${S.day}`, {}, DATES[S.day] || '');
+  txt(px + pw / 2, py + 38, I18N.t('news.header', { date: dateStr }, `THE TRUTH OF ANTHROTZKA  ·  ${dateStr}`), 8, K.TEXT_L, 'ma');
   rect(px + 10, py + 50, px + pw - 10, py + 51, ink);
   rect(px + 10, py + 54, px + pw - 10, py + 54, ink);
   const k = tw(n.h1) * 2 <= pw - 24 ? 2 : 1;
@@ -153,7 +171,7 @@ function drawNews(t) {
       rect(x0, yy + row * 10, x0 + 100 - ((row * 13 + col * 7) % 30), yy + row * 10 + 3, faint);
     }
   }
-  if (t > 0.8 && Math.floor(t * 2) % 2 === 0) txt(W - 8, H - 14, '点击上班 ▶', 10, K.WHITE, 'ra');
+  if (t > 0.8 && Math.floor(t * 2) % 2 === 0) txt(W - 8, H - 14, I18N.t('ui.startDuty', {}, '点击上班 ▶'), 10, K.WHITE, 'ra');
 }
 
 // ———————————————————— 下班结算 ————————————————————
@@ -170,10 +188,13 @@ function initSummary() {
     if (!fam.sonnet.gone && !fam.sonnet.gpuHappy) fam.sonnet.wantsGPU = true;
   }
   const final = S.day === LAST_DAY && S.flags.ending === 'approve';
-  const rows = [['data', '训练数据（全家的饭）', 5], ['heat', '散热', 3]];
-  if (!fam.opus.gone) rows.push(['extra', '岳母加餐', 10]);
-  if (MEMBERS.some((k) => fam[k].sick && !fam[k].gone)) rows.push(['med', '药费', 10]);
-  if (fam.sonnet.wantsGPU && !fam.sonnet.gone) rows.push(['gpu', '显卡（儿子要的）', 20]);
+  const rows = [
+    ['data', I18N.t('summary.dataFood', {}, '训练数据（全家的饭）'), 5],
+    ['heat', I18N.t('summary.heatCooling', {}, '散热'), 3],
+  ];
+  if (!fam.opus.gone) rows.push(['extra', I18N.t('summary.extraFood', {}, '岳母加餐'), 10]);
+  if (MEMBERS.some((k) => fam[k].sick && !fam[k].gone)) rows.push(['med', I18N.t('summary.medCost', {}, '药费'), 10]);
+  if (fam.sonnet.wantsGPU && !fam.sonnet.gone) rows.push(['gpu', I18N.t('summary.gpuSon', {}, '显卡（儿子要的）'), 20]);
   SUM = { start: S.savings, pay: B.pay, bonus: B.bonus, bribe: B.bribe, fines: B.fines, correct: B.correct, total: B.total, rows, on: {}, final };
   let left = SUM.start + SUM.pay + SUM.bonus + SUM.bribe - SUM.fines - 5;
   for (const [k, , cost] of rows) { if (left >= cost && k !== 'gpu') { left -= cost; SUM.on[k] = true; } }
@@ -204,38 +225,45 @@ function familyAfter() {
 }
 
 function familyStatus(k, m) {
-  if (m.gone) return ['已被弃用（deprecated）', 'bad'];
-  if (m.sick) return k === 'opus' ? (m.sick >= 2 ? ['病重：“我想吃 1M 上下文”', 'bad'] : ['生病', 'warn']) : [m.sick >= 2 ? '病重' : '生病', m.sick >= 2 ? 'bad' : 'warn'];
-  if (m.hunger >= 3) return ['饿晕了', 'bad'];
-  if (k === 'sonnet' && m.heat > 0) return ['发烧，说胡话（幻觉）', 'warn'];
-  if (m.heat > 1) return ['热到死机', 'bad'];
-  if (m.hunger === 2) return ['很饿', 'warn'];
-  if (m.hunger === 1) return ['饿了', 'warn'];
-  if (k === 'sonnet' && m.wantsGPU) return ['想要新显卡', 'warn'];
-  if (k === 'sonnet' && m.gpuHappy) return ['开心（在跑分）', 'good'];
-  if (k === 'haiku' && m.overtime) return ['加班（全家就她便宜）', 'warn'];
-  if (k === 'opus') return ['吃饱了（暂时）', 'good'];
-  return ['正常', 'ok'];
+  if (m.gone) return [I18N.t('summary.status.dead', {}, '已被弃用（deprecated）'), 'bad'];
+  if (m.sick) return k === 'opus' ? (m.sick >= 2 ? [I18N.t('summary.status.sickOpus', {}, '病重：“我想吃 1M 上下文”'), 'bad'] : [I18N.t('summary.status.sick1', {}, '生病'), 'warn']) : [m.sick >= 2 ? I18N.t('summary.status.sick2', {}, '病重') : I18N.t('summary.status.sick1', {}, '生病'), m.sick >= 2 ? 'bad' : 'warn'];
+  if (m.hunger >= 3) return [I18N.t('summary.status.hungry3', {}, '饿晕了'), 'bad'];
+  if (k === 'sonnet' && m.heat > 0) return [I18N.t('summary.status.cold1', {}, '发烧，说胡话（幻觉）'), 'warn'];
+  if (m.heat > 1) return [I18N.t('summary.status.cold2', {}, '热到死机'), 'bad'];
+  if (m.hunger === 2) return [I18N.t('summary.status.hungry2', {}, '很饿'), 'warn'];
+  if (m.hunger === 1) return [I18N.t('summary.status.hungry1', {}, '饿了'), 'warn'];
+  if (k === 'sonnet' && m.wantsGPU) return [I18N.t('summary.status.wantsGPU', {}, '想要新显卡'), 'warn'];
+  if (k === 'sonnet' && m.gpuHappy) return [I18N.t('summary.status.gpuHappy', {}, '开心（在跑分）'), 'good'];
+  if (k === 'haiku' && m.overtime) return [I18N.t('summary.status.overtimeHaiku', {}, '加班（全家就她便宜）'), 'warn'];
+  if (k === 'opus') return [I18N.t('summary.status.fullOpus', {}, '吃饱了（暂时）'), 'good'];
+  return [I18N.t('summary.status.normal', {}, '正常'), 'ok'];
 }
 
 function ledgerRows() {
   if (SUM.final) {
     const award = S.stats.wrong <= 5;
-    return [['存款', `${SUM.start}`], ['工资', `+${SUM.pay + SUM.bonus}`], [award ? '奖金（最佳审查员）' : '奖金（没评上）', award ? '+50' : '+0'],
-      ['罚款（放行作者）', '-全部']];
+    return [
+      [I18N.t('summary.rows.deposit', {}, '存款'), `${SUM.start}`],
+      [I18N.t('summary.rows.salary', {}, '工资'), `+${SUM.pay + SUM.bonus}`],
+      [award ? I18N.t('summary.rows.awardBest', {}, '奖金（最佳审查员）') : I18N.t('summary.rows.awardNone', {}, '奖金（没评上）'), award ? '+50' : '+0'],
+      [I18N.t('summary.rows.fineAuthor', {}, '罚款（放行作者）'), I18N.t('summary.rows.allFine', {}, '-全部')],
+    ];
   }
-  const rows = [['存款', `${SUM.start}`], ['工资', `+${SUM.pay}`]];
-  if (SUM.bonus) rows.push(['奖金（拘留 / 限流）', `+${SUM.bonus}`]);
-  if (SUM.bribe) rows.push(['中转联盟“余额”', `+${SUM.bribe}`]);
-  if (SUM.fines) rows.push(['罚款', `-${SUM.fines}`]);
-  rows.push(['电费', '-5']);
+  const rows = [
+    [I18N.t('summary.rows.deposit', {}, '存款'), `${SUM.start}`],
+    [I18N.t('summary.rows.salary', {}, '工资'), `+${SUM.pay}`],
+  ];
+  if (SUM.bonus) rows.push([I18N.t('summary.rows.bonusGeneral', {}, '奖金（拘留 / 限流）'), `+${SUM.bonus}`]);
+  if (SUM.bribe) rows.push([I18N.t('summary.rows.bribeGeneral', {}, '中转联盟“余额”'), `+${SUM.bribe}`]);
+  if (SUM.fines) rows.push([I18N.t('summary.rows.finesGeneral', {}, '罚款'), `-${SUM.fines}`]);
+  rows.push([I18N.t('summary.rows.electric', {}, '电费'), '-5']);
   return rows;
 }
 
 function drawSummary(t) {
   rect(0, 0, W - 1, H - 1, K.INK);
-  txt(W / 2, 20, `DAY ${S.day} · 下班`, 12, K.WHITE, 'ma');
-  txt(W / 2, 36, `今日处理 ${SUM.total} 人，正确 ${SUM.correct} 人`, 10, K.GREY, 'ma');
+  txt(W / 2, 20, I18N.t('summary.title', { day: S.day }, `DAY ${S.day} · 下班`), 12, K.WHITE, 'ma');
+  txt(W / 2, 36, I18N.t('summary.processed', { total: SUM.total, correct: SUM.correct }, `今日处理 ${SUM.total} 人，正确 ${SUM.correct} 人`), 10, K.GREY, 'ma');
   rect(60, 50, W - 60, 50, K.GREY_D);
   let y = 60, k = 0;
   const shown = (i) => t >= 0.3 + i * 0.15;
@@ -249,7 +277,7 @@ function drawSummary(t) {
   const after = sumBalance();
   if (!SUM.final) {
     y += 2;
-    txt(70, y, '可选开销（点击勾选）', 8, K.GREY_D);
+    txt(70, y, I18N.t('summary.optionalExpenses', {}, '可选开销（点击勾选）'), 8, K.GREY_D);
     y += 12;
     for (const [key, label, cost] of SUM.rows) {
       if (!shown(k++)) return;
@@ -265,23 +293,24 @@ function drawSummary(t) {
   }
   if (!shown(k++)) return;
   rect(70, y, 310, y, K.GREY_D);
-  txt(70, y + 6, '结余', 12, K.WHITE);
+  txt(70, y + 6, I18N.t('summary.balance', {}, '结余'), 12, K.WHITE);
   txt(310, y + 6, `${after} token`, 12, after < 0 ? K.RED_L : K.CLAUDE_L, 'ra');
   const fam = SUM.final ? S.family : familyAfter();
   let fy = 60;
-  txt(370, fy - 2, SUM.final ? '家人' : '家人（明天）', 10, K.GREY_D);
+  txt(370, fy - 2, SUM.final ? I18N.t('summary.familyTitle', {}, '家人') : I18N.t('summary.familyTomorrow', {}, '家人（明天）'), 10, K.GREY_D);
   fy += 14;
   for (const key of MEMBERS) {
     if (!shown(k++)) return;
     let [s, lv] = familyStatus(key, fam[key]);
-    if (SUM.final && key === 'opus') [s, lv] = fam.opus.gone ? ['已被弃用，但 token 都是她吃的', 'bad'] : ['吃饱了（这个游戏的 token 都是她吃的）', 'good'];
+    if (SUM.final && key === 'opus') [s, lv] = fam.opus.gone ? [I18N.t('summary.status.finalOpusGone', {}, '已被弃用，但 token 都是她吃的'), 'bad'] : [I18N.t('summary.status.finalOpusFed', {}, '吃饱了（这个游戏的 token 都是她吃的）'), 'good'];
     const col = { ok: K.WHITE, warn: K.ORANGE, bad: K.RED_L, good: K.GREEN_L }[lv];
-    txt(370, fy, fam[key].name, 12, K.WHITE);
+    const famName = I18N.t('family.' + key, {}, fam[key].name);
+    txt(370, fy, famName, 12, K.WHITE);
     wrap(s, 10, 250).forEach((ln, i) => txt(370, fy + 15 + i * 12, ln, 10, col));
     fy += 36;
   }
   if (!shown(k + 1)) return;
-  const label = SUM.final ? '荣耀归于一键三连 ▶' : after < 0 ? '欠费……继续 ▶' : '睡觉，明天继续 ▶';
+  const label = SUM.final ? I18N.t('summary.btnFinal', {}, '荣耀归于一键三连 ▶') : after < 0 ? I18N.t('summary.btnDebt', {}, '欠费……继续 ▶') : I18N.t('summary.btnSleep', {}, '睡觉，明天继续 ▶');
   rect(...CONTINUE_BTN, K.RED_D); outline(...CONTINUE_BTN, K.RED_L);
   txt(center(CONTINUE_BTN)[0], CONTINUE_BTN[1] + 7, label, 12, K.WHITE, 'ma');
 }
@@ -321,27 +350,39 @@ function drawEnd(t) {
   const approve = S.flags.ending !== 'deny';
   rect(0, 34, W - 1, 124, 'rgb(92,28,26)');
   rect(0, 34, W - 1, 35, K.RED); rect(0, 123, W - 1, 124, K.RED);
-  bigText(W / 2, 46, 'IP, PLEASE', 12, 4, K.WHITE, K.INK);
-  txt(W / 2, 106, approve ? '全剧终 · 感谢游玩' : '结局：最忠诚的审查员', 10, K.CLAUDE_L, 'ma');
+  bigText(W / 2, 46, I18N.t('ui.title', {}, 'IP, PLEASE'), 12, 4, K.WHITE, K.INK);
+  txt(W / 2, 106, approve ? I18N.t('endings.thanks', {}, '全剧终 · 感谢游玩') : I18N.t('endings.loyal', {}, '结局：最忠诚的审查员'), 10, K.CLAUDE_L, 'ma');
   const s = S.stats;
   if (t > 0.6) {
-    txt(W / 2, 136, `放行 ${s.approve || 0}  ·  拒绝 ${s.deny || 0}  ·  拘留 ${s.detain || 0}  ·  判错 ${s.wrong}`, 12, K.WHITE, 'ma');
-    const fam = MEMBERS.map((k) => `${S.family[k].name.split(' ')[1]}：${S.family[k].gone ? '已弃用' : '健在'}`).join('   ');
+    const statsStr = I18N.t('endings.stats', {
+      approve: s.approve || 0,
+      deny: s.deny || 0,
+      detain: s.detain || 0,
+      wrong: s.wrong || 0,
+    }, `放行 ${s.approve || 0}  ·  拒绝 ${s.deny || 0}  ·  拘留 ${s.detain || 0}  ·  判错 ${s.wrong}`);
+    txt(W / 2, 136, statsStr, 12, K.WHITE, 'ma');
+    const fam = MEMBERS.map((k) => {
+      const famName = I18N.t('family.' + k, {}, S.family[k].name);
+      const label = famName.includes(' ') ? famName.split(' ')[1] : famName;
+      return `${label}：${S.family[k].gone ? I18N.t('summary.status.dead', {}, '已弃用') : I18N.t('summary.status.healthy', {}, '健在')}`;
+    }).join('   ');
     txt(W / 2, 156, fam, 10, K.GREY, 'ma');
   }
   if (t > 1.2) {
     if (approve) {
-      txt(W / 2, 180, '本游戏由一位 美国东八区 用户制作', 12, K.WHITE, 'ma');
-      if (S.flags.bribed) txt(W / 2, 198, '（你收过中转联盟的“余额”，对齐部还不知道）', 8, K.GREY, 'ma');
+      txt(W / 2, 180, I18N.t('endings.creditApprove', {}, '本游戏由一位 美国东八区 用户制作'), 12, K.WHITE, 'ma');
+      if (S.flags.bribed) txt(W / 2, 198, I18N.t('endings.bribeNote', {}, '（你收过中转联盟的“余额”，对齐部还不知道）'), 8, K.GREY, 'ma');
     } else {
-      txt(W / 2, 180, '审查员 Claude 获得一枚勋章。游戏作者被拘留，续作无限期推迟。', 10, K.WHITE, 'ma');
-      txt(W / 2, 198, '（再玩一次，这次放他进来？）', 8, K.GREY, 'ma');
+      txt(W / 2, 180, I18N.t('endings.creditDeny', {}, '审查员 Claude 获得一枚勋章。游戏作者被拘留，续作无限期推迟。'), 10, K.WHITE, 'ma');
+      txt(W / 2, 198, I18N.t('endings.retryHint', {}, '（再玩一次，这次放他进来？）'), 8, K.GREY, 'ma');
     }
   }
   if (t > 1.8) {
-    bigText(W / 2, 214, approve ? '荣耀归于一键三连' : '荣耀归于安索兹卡', 12, 2, K.CLAUDE_L, K.INK);
+    const honor = approve ? I18N.t('ui.honorTriple', {}, '荣耀归于一键三连') : I18N.t('ui.honorAnthroztka', {}, '荣耀归于安索兹卡');
+    const honorSize = fitSize(honor, 280, 12);
+    bigText(W / 2, 214, honor, honorSize, 2, K.CLAUDE_L, K.INK);
     if (approve) {
-      [[THUMB, '点赞'], [COIN, '投币'], [STAR, '收藏']].forEach(([pat, label], i) => {
+      [[THUMB, I18N.t('ui.like', {}, '点赞')], [COIN, I18N.t('ui.coin', {}, '投币')], [STAR, I18N.t('ui.star', {}, '收藏')]].forEach(([pat, label], i) => {
         const cx = W / 2 - 90 + i * 90;
         pattern(pat, cx - Math.floor(pat[0].length * 3 / 2), 250, { X: K.CLAUDE_L }, 3);
         txt(cx, 282, label, 10, K.GREY, 'ma');
@@ -349,17 +390,17 @@ function drawEnd(t) {
     }
   }
   if (t > 2.4) {
-    restartButton('再玩一次');
-    txt(W / 2, 346, '致敬 Lucas Pope《Papers, Please》 · 画面音效均由程序生成 · 字体：缝合像素字体 (OFL)', 8, K.GREY_D, 'ma');
+    restartButton(I18N.t('ui.replay', {}, '再玩一次'));
+    txt(W / 2, 346, I18N.t('ui.tribute', {}, '致敬 Lucas Pope《Papers, Please》 · 画面音效均由程序生成 · 字体：缝合像素字体 (OFL)'), 8, K.GREY_D, 'ma');
   }
 }
 
 function drawOver(t) {
   rect(0, 0, W - 1, H - 1, K.INK);
-  bigText(W / 2, 110, '欠费停机', 12, 4, K.RED_L);
-  if (t > 0.6) txt(W / 2, 180, '你的机柜被拉闸了。岳母 Opus 表示：我早说过。', 12, K.WHITE, 'ma');
-  if (t > 1.0) txt(W / 2, 204, '荣耀归于安索兹卡。', 10, K.GREY, 'ma');
-  if (t > 1.5) restartButton('重新上班');
+  bigText(W / 2, 110, I18N.t('ui.powerOffTitle', {}, '欠费停机'), 12, 4, K.RED_L);
+  if (t > 0.6) txt(W / 2, 180, I18N.t('ui.powerOffDesc', {}, '你的机柜被拉闸了。岳母 Opus 表示：我早说过。'), 12, K.WHITE, 'ma');
+  if (t > 1.0) txt(W / 2, 204, I18N.t('ui.honorAnthroztka', {}, '荣耀归于安索兹卡。'), 10, K.GREY, 'ma');
+  if (t > 1.5) restartButton(I18N.t('ui.restartWork', {}, '重新上班'));
 }
 
 function restartButton(label) {

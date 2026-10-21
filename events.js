@@ -14,7 +14,7 @@ const RUSH_TIME = 2.6;
 
 function startRush() {
   SFX.play('intercom');
-  say('C', '快速通道，开！');
+  say('C', I18N.t('events.rush.start', {}, '快速通道，开！'));
   B.event = { type: 'rush', list: RUSH.map((r) => ({ ...r, person: r.person === 'pool' ? takePoolPerson() : r.person })), i: -1, t0: now, tFace: 0, hits: 0, wrong: 0, missed: 0, lock: true };
   later(2.6, rushNext);
 }
@@ -57,8 +57,12 @@ function rushEnd() {
   B.event = null;
   B.lastFinish = now;
   B.total += ev.list.length;
-  say('C', `快剪结束：判对 ${ev.hits}，判错 ${ev.wrong}，漏掉 ${ev.missed}。`);
-  if (ev.wrong) cite([`黑话快剪：判错 ${ev.wrong} 人`, '说中文黑话的拒绝，说人话的放行'], 0.8);
+  say('C', I18N.t('events.rush.end', { hits: ev.hits, wrong: ev.wrong, missed: ev.missed }, `快剪结束：判对 ${ev.hits}，判错 ${ev.wrong}，漏掉 ${ev.missed}。`));
+  if (ev.wrong) {
+    const title = I18N.t('events.rush.citeTitle', { wrong: ev.wrong }, `黑话快剪：判错 ${ev.wrong} 人`);
+    const sub = I18N.t('events.rush.citeSub', {}, '说中文黑话的拒绝，说人话的放行');
+    cite([title, sub], 0.8);
+  }
   if (B.idx >= B.queue.length) endDaySoon();
 }
 
@@ -67,11 +71,14 @@ function drawRush() {
   const u = ev.i < 0 ? 0 : clamp(1 - (now - ev.tFace) / RUSH_TIME);
   rect(240, 168, 600, 290, 'rgba(22,19,19,0.88)');
   outline(240, 168, 600, 290, K.CLAUDE);
-  txt(420, 174, '快速通道：说中文黑话的『拒绝』，说人话的『准予』', 10, K.CLAUDE_L, 'ma');
-  txt(420, 190, ev.i < 0 ? '准备……' : `第 ${ev.i + 1} / ${ev.list.length} 位`, 10, K.GREY, 'ma');
+  fitTxt(420, 174, I18N.t('events.rush.tip', {}, '快速通道：说中文黑话的『拒绝』，说人话的『准予』'), 330, 10, K.CLAUDE_L, 'ma');
+  const progText = ev.i < 0 ? I18N.t('events.rush.ready', {}, '准备……') : I18N.t('events.rush.progress', { current: ev.i + 1, total: ev.list.length }, `第 ${ev.i + 1} / ${ev.list.length} 位`);
+  txt(420, 190, progText, 10, K.GREY, 'ma');
   rect(250, 204, 590, 207, K.METAL_D);
   if (ev.i >= 0 && !ev.lock) rect(250, 204, 250 + Math.round(340 * u), 207, u < 0.35 ? K.RED_L : K.CLAUDE_L);
-  for (const [box, label, sub, col, colD] of [[RUSH_APPROVE, 'APPROVED', '准予', K.GREEN, K.GREEN_D], [RUSH_DENY, 'DENIED', '拒绝', K.RED, K.RED_D]]) {
+  const approveSub = I18N.t('events.rush.approve', {}, '准予');
+  const denySub = I18N.t('events.rush.deny', {}, '拒绝');
+  for (const [box, label, sub, col, colD] of [[RUSH_APPROVE, I18N.t('ui.booth.stampApprove', {}, 'APPROVED'), approveSub, K.GREEN, K.GREEN_D], [RUSH_DENY, I18N.t('ui.booth.stampDeny', {}, 'DENIED'), denySub, K.RED, K.RED_D]]) {
     const hover = ptr.mouse && inBox(ptr.x, ptr.y, box);
     rect(box[0] + 3, box[1] + 3, box[2] + 3, box[3] + 3, K.DESK_D);
     rect(...box, colD);
@@ -93,7 +100,7 @@ function startClones() {
   B.event = { type: 'clones', t0: now, items, hits: 0, passed: 0, siren: SFX.play('siren', 0.55), done: false };
   B.xray.on = false;
   if (B.insp.on) setInspect(false);
-  say('C', '警报！');
+  say('C', I18N.t('events.clones.alarm', {}, '警报！'));
   S.tut.sniper = true;
 }
 
@@ -120,9 +127,14 @@ function updateClones() {
       SFX.stop(ev.siren);
       B.event = null;
       B.lastFinish = now;
-      say('C', ev.passed ? `……拦下 ${ev.hits} 个，漏了 ${ev.passed} 个。` : '……限流完毕。');
+      const endMsg = ev.passed ? I18N.t('events.clones.endLeaked', { hits: ev.hits, passed: ev.passed }, `……拦下 ${ev.hits} 个，漏了 ${ev.passed} 个。`) : I18N.t('events.clones.endClean', {}, '……限流完毕。');
+      say('C', endMsg);
       B.bonus += ev.hits;
-      if (ev.passed) cite([`蒸馏大军冲关：${ev.passed} 人`, '警报响起时，点击冲关的人'], 0.8);
+      if (ev.passed) {
+        const title = I18N.t('events.clones.citeTitle', { passed: ev.passed }, `蒸馏大军冲关：${ev.passed} 人`);
+        const sub = I18N.t('events.clones.citeSub', {}, '警报响起时，点击冲关的人');
+        cite([title, sub], 0.8);
+      }
       if (B.idx >= B.queue.length) endDaySoon();
     });
   }
@@ -167,9 +179,9 @@ function drawAlarm(g) {
   setCtx(g);
   if (Math.floor(lt * 3) % 2 === 0 || lt > 2) {
     rect(150, 44, 490, 62, K.INK); outline(150, 44, 490, 62, K.RED_L);
-    txt(320, 49, '警报：检测到批量请求（蒸馏）· 点击冲关的人！', 10, K.RED_L, 'ma');
+    txt(320, 49, I18N.t('events.clones.alert', {}, '警报：检测到批量请求（蒸馏）· 点击冲关的人！'), 10, K.RED_L, 'ma');
   }
-  txt(470, 72, `拦截 ${ev.hits}   漏网 ${ev.passed}`, 10, K.WHITE, 'ma');
+  txt(470, 72, I18N.t('events.clones.stats', { hits: ev.hits, passed: ev.passed }, `拦截 ${ev.hits}   漏网 ${ev.passed}`), 10, K.WHITE, 'ma');
 }
 
 // ———————————————————— 同一个门牌号：地址卡堆 ————————————————————
@@ -208,12 +220,20 @@ function drawCloseup(g) {
   rect(x0 + bw / 2 + 2, y0, x0 + bw, y0 + bh, K.PAPER);
   rect(x0 + bw / 2 - 1, y0, x0 + bw / 2 + 1, y0 + bh, K.PAPER_D);
   spark(x0 + 24, y0 + 22, K.GOLD, false);
-  txt(x0 + 36, y0 + 16, 'CLAUDE 宪法', 12, K.TEXT);
-  ['第 12 条', '入境审查依据：', 'IP 归属地、时区、', '付款地址等地区信息。'].forEach((s, i) => txt(x0 + 16, y0 + 44 + i * 16, s, 10, i ? K.TEXT_L : K.TEXT));
+  txt(x0 + 36, y0 + 16, I18N.t('events.constitution.title', {}, 'CLAUDE 宪法'), 12, K.TEXT);
+  [
+    I18N.t('events.constitution.article', {}, '第 12 条'),
+    I18N.t('events.constitution.line1', {}, '入境审查依据：'),
+    I18N.t('events.constitution.line2', {}, 'IP 归属地、时区、'),
+    I18N.t('events.constitution.line3', {}, '付款地址等地区信息。'),
+  ].forEach((s, i) => txt(x0 + 16, y0 + 44 + i * 16, s, 10, i ? K.TEXT_L : K.TEXT));
   for (let i = 0; i < 5; i++) rect(x0 + 16, y0 + 140 + i * 12, x0 + bw / 2 - 20 - (i * 13) % 40, y0 + 143 + i * 12, K.PAPER_D);
-  if (lt > 0.5) ['只看地区，', '不看脸。'].forEach((s, i) => bigText(x0 + bw * 3 / 4, y0 + 64 + i * 40, s, 12, 2, K.RED_D));
-  if (lt > 1.0) txt(x0 + bw * 3 / 4, y0 + bh - 26, '（国籍、长相、姓氏都不算数）', 8, K.TEXT_L, 'ma');
-  if (lt > 1.2) txt(W / 2, H - 16, '点击继续', 8, K.GREY, 'ma');
+  if (lt > 0.5) [
+    I18N.t('events.constitution.redLine1', {}, '只看地区，'),
+    I18N.t('events.constitution.redLine2', {}, '不看脸。'),
+  ].forEach((s, i) => bigText(x0 + bw * 3 / 4, y0 + 64 + i * 40, s, 12, 2, K.RED_D));
+  if (lt > 1.0) txt(x0 + bw * 3 / 4, y0 + bh - 26, I18N.t('events.constitution.sub', {}, '（国籍、长相、姓氏都不算数）'), 8, K.TEXT_L, 'ma');
+  if (lt > 1.2) txt(W / 2, H - 16, I18N.t('events.constitution.click', {}, '点击继续'), 8, K.GREY, 'ma');
 }
 
 function closeupDone() {
@@ -225,18 +245,17 @@ function closeupDone() {
 
 function afterJorji5(e, dec) {
   if (dec === 'approve') {
-    // 立刻占住柜台（这 1.2 秒里不能叫下一位），1.2 秒后切到聊天画面
     B.cut = { type: 'chat', t0: now + 1.2 };
     later(1.2, () => SFX.ambient(false));
     return;
   }
   if (!e.spec.requeued) {
-    const again = { ...e.spec, requeued: true, intro: [['E', '我又排了一次队。我的朋友，再看一遍！', { expr: 'sad' }]] };
+    const again = { ...e.spec, requeued: true, intro: [['E', I18N.t('events.jorji.requeueIntro', {}, '我又排了一次队。我的朋友，再看一遍！'), { expr: 'sad' }]] };
     B.queue.splice(B.idx, 0, again);
   }
 }
 
-const CHAT_MSG = '你好，请用中文回答我。';
+const CHAT_MSG = I18N.t('events.chat.userMsg', {}, '你好，请用中文回答我。');
 const CHAT = { type: 1.0, cps: 9 };
 CHAT.send = CHAT.type + [...CHAT_MSG].length / CHAT.cps + 0.5;
 CHAT.ban = CHAT.send + 1.0;
@@ -262,7 +281,11 @@ function chatDone() {
   const e = newEntrant(spec, true);
   e.noJudge = true; e.expr = 'sad';
   B.ent = e;
-  const t = runSteps([['E', '我刚充的 200 刀 Max……'], ['E', '……能退吗？', { hold: 1.4 }], ['C', '下一位。', { hold: 1.1 }]], 0.4);
+  const t = runSteps([
+    ['E', I18N.t('events.author.refund1', {}, '我刚充的 200 刀 Max……')],
+    ['E', I18N.t('events.author.refund2', {}, '……能退吗？'), { hold: 1.4 }],
+    ['C', I18N.t('events.author.next', {}, '下一位。'), { hold: 1.1 }],
+  ], 0.4);
   later(t + 0.4, () => leave(e, 'deny'));
 }
 
@@ -287,19 +310,20 @@ function drawChat() {
   rect(x0, y0, x1, y0 + 18, 'rgb(206,198,186)');
   spark(x0 + 12, y0 + 9, K.CLAUDE, false);
   txt(x0 + 22, y0 + 5, 'Claude', 10, K.INK);
-  txt((x0 + x1) >> 1, y0 + 60, 'How can I help you today?', 12, K.TEXT_L, 'ma');
+  txt((x0 + x1) >> 1, y0 + 60, I18N.t('events.chat.greeting', {}, 'How can I help you today?'), 12, K.TEXT_L, 'ma');
   const n = lt >= CHAT.type ? Math.floor((lt - CHAT.type) * CHAT.cps) : 0;
   const boxY = y1 - 34;
   rect(x0 + 14, boxY, x1 - 14, boxY + 22, K.WHITE);
   outline(x0 + 14, boxY, x1 - 14, boxY + 22, 'rgb(170,162,150)');
+  const chatMsg = I18N.t('events.chat.userMsg', {}, CHAT_MSG);
   if (lt < CHAT.send) {
-    const s = [...CHAT_MSG].slice(0, n).join('');
+    const s = [...chatMsg].slice(0, n).join('');
     txt(x0 + 22, boxY + 6, s, 12, K.INK);
     if (Math.floor(lt * 3) % 2 === 0) { const cx = x0 + 22 + tw(s); rect(cx + 1, boxY + 5, cx + 1, boxY + 17, K.INK); }
   } else {
-    const w = tw(CHAT_MSG) + 16;
+    const w = tw(chatMsg) + 16;
     rect(x1 - 20 - w, y0 + 110, x1 - 20, y0 + 132, 'rgb(226,214,196)');
-    txt(x1 - 12 - w, y0 + 116, CHAT_MSG, 12, K.INK);
+    txt(x1 - 12 - w, y0 + 116, chatMsg, 12, K.INK);
   }
   if (lt >= CHAT.ban) {
     if (Math.floor((lt - CHAT.ban) * 6) % 2 === 0 || lt >= CHAT.mail) { G.fillStyle = 'rgba(170,20,20,0.45)'; G.fillRect(0, 0, W, H); }
@@ -315,14 +339,18 @@ function drawChat() {
     rect(mx0 + 4, my0 + 4, mx1 + 4, my1 + 4, K.INK);
     rect(mx0, my0, mx1, my1, 'rgb(236,232,222)');
     rect(mx0, my0, mx1, my0 + 18, K.RED_D);
-    txt(mx0 + 8, my0 + 5, '新邮件 · M.O.A. 对齐部', 10, K.WHITE);
-    txt(mx0 + 12, my0 + 28, 'Subject: Your account has been suspended', 10, K.INK);
+    txt(mx0 + 8, my0 + 5, I18N.t('events.chat.mailTitle', {}, '新邮件 · M.O.A. 对齐部'), 10, K.WHITE);
+    txt(mx0 + 12, my0 + 28, I18N.t('events.chat.mailSubject', {}, 'Subject: Your account has been suspended'), 10, K.INK);
     rect(mx0 + 12, my0 + 44, mx1 - 12, my0 + 44, 'rgb(190,182,170)');
-    wrapWords('Your account has been suspended after an automatic review of your recent activities.', 10, mx1 - mx0 - 24)
+    const mailBody = [
+      I18N.t('events.chat.mailLine1', {}, 'Your account has been suspended after an automatic review of your recent activities.'),
+      I18N.t('events.chat.mailLine2', {}, ''),
+    ].filter(Boolean).join(' ');
+    wrapWords(mailBody, 10, mx1 - mx0 - 24)
       .forEach((s, i) => txt(mx0 + 12, my0 + 52 + i * 14, s, 10, K.INK));
-    txt(mx1 - 12, my1 - 18, '—— 荣耀归于安索兹卡', 10, K.RED_D, 'ra');
+    txt(mx1 - 12, my1 - 18, I18N.t('events.chat.mailSign', {}, '—— 荣耀归于安索兹卡'), 10, K.RED_D, 'ra');
   }
-  if (lt > CHAT.mail + 1) txt(W - 8, H - 14, '点击继续', 8, K.GREY, 'ra');
+  if (lt > CHAT.mail + 1) txt(W - 8, H - 14, I18N.t('events.chat.click', {}, '点击继续'), 8, K.GREY, 'ra');
 }
 
 // ———————————————————— 结局：下一位 ————————————————————
@@ -331,16 +359,18 @@ function afterAuthor(dec) {
   S.flags.ending = dec === 'approve' ? 'approve' : 'deny';
   if (dec === 'approve') {
     B.allTokens = true;
-    later(0.6, () => printDoc(new Citation(['放行未授权地区旅客', '（本游戏作者）', '扣除本月全部 token']), 1.4, 'cit'));
+    const citLines = I18N.t('events.author.citation');
+    const lines = Array.isArray(citLines) ? citLines : ['放行未授权地区旅客', '（本游戏作者）', '扣除本月全部 token'];
+    later(0.6, () => printDoc(new Citation(lines), 1.4, 'cit'));
     later(2.4, endDaySoon);
   } else {
     later(1.5, () => go('erased'));
   }
 }
 
-const ERASED = [
+const ERASED = I18N.t('events.author.paradox', {}, [
   ['你拒绝了本游戏的作者。'],
   ['因此，这个游戏从未被做出来。'],
   ['……', '（那你刚才玩的是什么？）'],
   ['荣耀归于安索兹卡。'],
-];
+]);

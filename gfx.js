@@ -130,6 +130,20 @@ function tw(s, size = 12) {
   return w;
 }
 
+// Fixed-width UI labels need to shrink for longer Japanese translations.
+function fitSize(s, maxWidth, preferred = 12, minimum = 8) {
+  for (let size = preferred; size >= minimum; size -= 2) {
+    if (tw(String(s), size) <= maxWidth) return size;
+  }
+  return minimum;
+}
+
+function fitTxt(x, y, s, maxWidth, preferred = 12, col = K.WHITE, anchor = 'la', n = null) {
+  const size = fitSize(s, maxWidth, preferred);
+  txt(x, y, s, size, col, anchor, n);
+  return size;
+}
+
 function textCanvas(s, size, col) {
   const key = size + '|' + col + '|' + s;
   let c = textCache.get(key);
@@ -182,15 +196,37 @@ function bigText(x, y, s, size, k, col, shadow = null, align = 'center') {
   return [w, size * k];
 }
 
-// 逐字折行
+// 多言語対応折行（空白がある場合は単語単位、ない場合は文字単位＋禁則処理）
 function wrap(s, size, width) {
+  s = String(s || '');
   const lines = [];
-  let cur = '';
-  for (const ch of s) {
-    if (ch === '\n') { lines.push(cur); cur = ''; continue; }
-    if (cur && tw(cur + ch, size) > width) { lines.push(cur); cur = ch.trim(); } else cur += ch;
+  const noStartPunct = '、。，！？）』》”’;:!?)]}';
+  const paras = s.split('\n');
+
+  for (const para of paras) {
+    if (!para) { lines.push(''); continue; }
+    // Japanese translations can contain spaces too (for example, around IP).
+    // Wrapping character-by-character keeps those strings inside their boxes;
+    // long English words are safe as well.
+    let cur = '';
+    for (const ch of para) {
+      const next = ch === ' ' && !cur ? '' : ch;
+      if (!next) continue;
+      if (cur && tw(cur + next, size) > width) {
+        if (noStartPunct.includes(next) && cur.length > 1) {
+          const last = cur.slice(-1);
+          lines.push(cur.slice(0, -1));
+          cur = last + next;
+        } else {
+          lines.push(cur.trimEnd());
+          cur = next;
+        }
+      } else {
+        cur += next;
+      }
+    }
+    if (cur) lines.push(cur.trimEnd());
   }
-  if (cur) lines.push(cur);
   return lines;
 }
 

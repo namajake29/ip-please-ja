@@ -16,12 +16,13 @@
   }
   @media (pointer: fine) { canvas { cursor: none; } }
   .ui { position: fixed; top: 6px; right: 8px; display: flex; gap: 6px; z-index: 2; }
-  .ui button {
+  .ui button, .ui select {
     font: 12px system-ui, sans-serif; color: #968f87; background: rgba(22, 19, 19, 0.7);
     border: 1px solid #4a4440; border-radius: 3px; padding: 3px 8px; cursor: pointer;
   }
-  .ui button:hover { color: #e4dfd4; }
-  @media (max-height: 500px) { .ui { top: 2px; right: 2px; opacity: 0.55; } .ui button { font-size: 10px; padding: 1px 5px; } }
+  .ui button:hover, .ui select:hover { color: #e4dfd4; }
+  .ui select option { background: #161313; color: #e4dfd4; }
+  @media (max-height: 500px) { .ui { top: 2px; right: 2px; opacity: 0.55; } .ui button, .ui select { font-size: 10px; padding: 1px 5px; } }
   #rotate {
     display: none; position: fixed; inset: 0; z-index: 3; background: rgba(22, 19, 19, 0.92);
     color: #e89c74; font-size: 16px; text-align: center; align-items: center; justify-content: center;
@@ -35,16 +36,18 @@
 <body>
 <canvas id="game" width="640" height="360" aria-label="IP, PLEASE 游戏画面"></canvas>
 <div class="ui">
+  <select id="lang-select" aria-label="Language"></select>
   <button id="mute" type="button">声音：开</button>
   <button id="full" type="button">全屏</button>
 </div>
 <div id="rotate" class="show">
-  <div>把手机横过来玩</div>
-  <small>竖屏也能玩，但字会很小</small>
-  <button type="button" onclick="this.parentNode.classList.remove('show')" style="margin-top:8px;padding:6px 14px">先竖着玩</button>
+  <div id="rotate-title">把手机横过来玩</div>
+  <small id="rotate-sub">竖屏也能玩，但字会很小</small>
+  <button id="rotate-btn" type="button" onclick="this.parentNode.classList.remove('show')" style="margin-top:8px;padding:6px 14px">先竖着玩</button>
 </div>
 <noscript>这个游戏需要开启 JavaScript。</noscript>
 <script src="assets.js"></script>
+<script src="i18n.js"></script>
 <script src="gfx.js"></script>
 <script src="sfx.js"></script>
 <script src="docs.js"></script>
@@ -54,6 +57,48 @@
 <script src="screens.js"></script>
 <script src="main.js"></script>
 <script>
+  function updateHtmlTexts() {
+    const t = window.I18N.t;
+    const muteBtn = document.getElementById('mute');
+    const fullBtn = document.getElementById('full');
+    const rTitle = document.getElementById('rotate-title');
+    const rSub = document.getElementById('rotate-sub');
+    const rBtn = document.getElementById('rotate-btn');
+    if (muteBtn) muteBtn.textContent = SFX.muted ? t('ui.soundOff', {}, '声音：关') : t('ui.soundOn', {}, '声音：开');
+    if (fullBtn) fullBtn.textContent = t('ui.fullscreen', {}, '全屏');
+    if (rTitle) rTitle.textContent = t('ui.rotateNotice', {}, '把手机横过来玩');
+    if (rSub) rSub.textContent = t('ui.rotateSub', {}, '竖屏也能玩，但字会很小');
+    if (rBtn) rBtn.textContent = t('ui.playAnyway', {}, '先竖着玩');
+  }
+
+  const langSelect = document.getElementById('lang-select');
+  function populateLangSelect() {
+    langSelect.innerHTML = '';
+    const langs = window.I18N.getLanguages();
+    const cur = window.I18N.getLanguage();
+    for (const [code, name] of Object.entries(langs)) {
+      if (code === 'template') continue;
+      const opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = name;
+      if (code === cur) opt.selected = true;
+      langSelect.appendChild(opt);
+    }
+  }
+
+  langSelect.addEventListener('change', async (ev) => {
+    await window.I18N.setLanguage(ev.target.value);
+    updateHtmlTexts();
+  });
+
+  window.onLanguageChange = (lang) => {
+    populateLangSelect();
+    updateHtmlTexts();
+  };
+
+  populateLangSelect();
+  updateHtmlTexts();
+
   document.getElementById('mute').addEventListener('click', () => toggleMute());
   const fullBtn = document.getElementById('full');
   const root = document.documentElement;
