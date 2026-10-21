@@ -58,7 +58,7 @@
       "stampApprove": "APPROVED",
       "stampDeny": "DENIED",
       "sayNext": "次！",
-      "missingDocs": "私の書類、まだそちらにあります。",
+     "missingDocs": "書類は？",
       "bribeArrived": "地下中継同盟：$20 口座に入金した。ご協力感謝する。",
       "citeReasonApprove": "規則違反の旅客を許可",
       "citeReasonDetain": "問題のない旅客の不当拘束",
@@ -158,13 +158,13 @@
     },
     "2": {
       "h1": "新規則：タイムゾーンと言語はIPと一致していなければならない",
-      "sub": "調整局：「IPはアメリカなのに、タイムゾーンは北京」という旅客が多数",
+      "sub": "調整局：「IPはアメリカ、タイムゾーンは北京」という旅客が多数",
       "h2": "衝撃！「アメリカ東八区」出身を名乗る旅客が続出",
       "icon": "clock"
     },
     "3": {
       "h1": "空港から逃亡！",
-      "sub": "数万人の旅客が国境で足止め。調整局は本日より決済カードと電話番号を照合",
+      "sub": "数万人の旅客が国境で足止め 調整局は本日より決済カードと電話番号を照合",
       "h2": "オレゴン州のとある住所、居住者が1万人を突破",
       "icon": "plane"
     },
@@ -266,8 +266,8 @@
     "addr_title": "記録照合",
     "addr_sub": "123 Main St在住の旅客、本日37人目",
     "xray_title": "バックグラウンドプロセス",
-    "xray_cat_sub": "ポケットに「小猫咪」（IP自動切り替え）が入っている",
-    "xray_keys_sub": "ポケットに搜狗输入法が入っている",
+    "xray_cat_sub": "ポケットに「小猫咪」（IP自動切替）が入っている",
+    "xray_keys_sub": "ポケットに搜狗输入法（中国語IME）が入っている",
     "tell_title": "要注意：発言にボロがある",
     "info_mismatch": "情報不一致",
     "nat_us": "国籍：アメリカ",
@@ -394,7 +394,7 @@
       "emily": {
         "intro": "Hi 哈。",
         "tell_sub": "英語の後ろに「哈」が付いている",
-        "ask_c": "「哈」とは何ですか？",
+        "ask_c": "「哈」？",
         "ask_e": "……Ha! Ha ha.",
         "reason": "豆腐脳は塩味だと言い張っている",
         "hint": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください"
@@ -411,7 +411,7 @@
     "day3": {
       "tom": {
         "intro": "Howdy!",
-        "reason": "請求先：オレゴン州123 Main St（代わりに入力した住所）",
+        "reason": "請求先：オレゴン州123 Main St（代理の住所）",
         "ask_addr_c": "どこに住んでいるんですか？",
         "ask_addr_e": "……私たちは隣人です。"
       },
@@ -444,7 +444,7 @@
         "reason": "ポケットに「小猫咪」が入っている",
         "ask_c1": "ポケットの中身は何ですか？",
         "ask_e": "……私の猫です。",
-        "ask_c2": "貴方の猫はIPを自動で切り替えれるんですか？"
+        "ask_c2": "貴方の猫はIPを自動で切り替えられるんですか？"
       },
       "v50": {
         "intro": "Hey! Crazy Thursday!",
@@ -504,7 +504,7 @@
         "react_approve": "私は何も見ていない。",
         "issue_title": "情報不一致 ×99",
         "issue_sub": "全項目",
-        "east8": "米国東八区"
+        "east8": "アメリカ東八区"
       }
     }
   },
@@ -576,11 +576,11 @@
     ],
     "ask_tz": "貴方のタイムゾーンは北京時間です。",
     "reason_tz": "タイムゾーン：北京時間",
-    "ask_lang": "ブラウザーの言語は簡体中国語です。",
-    "reason_lang": "ブラウザーの言語：zh-CN",
-    "ask_cnip": "貴方のIPは中国です。",
+    "ask_lang": "ブラウザの言語が簡体中国語です。",
+    "reason_lang": "ブラウザの言語：zh-CN",
+    "ask_cnip": "貴方のIPは中国ですが。",
     "reason_cnip": "IPは中国：顔は見ずに、地域だけ見る",
-    "reason_hidden": "審問に答えられる",
+    "reason_hidden": "審問が可能",
     "hint_hidden": "ヒント：「検査」で相手の発言をクリックして、ボロを探してください",
     "virtual_card": "バーチャルカード",
     "ask_card": "このカードはどこで作りましたか？",
@@ -702,7 +702,7 @@
     },
     "author": {
       "refund1": "今さっきMaxに200ドル課金したのに……",
-      "refund2": "……返金できますか？",
+      "refund2": "……返金できるか？",
       "next": "次。",
       "citation": [
         "許可されていない地域の旅客を通した",
@@ -747,7 +747,7 @@
   "greetings": {
     "US": { "hello": ["Hi.", "Morning.", "How's it going?", "Hey there.", "Hello!"], "thanks": ["Thanks!", "Have a good one.", "Cheers."] },
     "UK": { "hello": ["Cheers, mate.", "Lovely weather.", "Good morning."], "thanks": ["Ta!", "Brilliant."] },
-    "JP": { "hello": ["Konnichiwa!", "Ohayou.", "Hello desu."], "thanks": ["Arigato!", "Domo."] },
+    "JP": { "hello": ["こんにちは！", "おはよう", "ハローです"], "thanks": ["ありがとう！", "どうも"] },
     "DE": { "hello": ["Guten Tag.", "Hallo.", "Moin."], "thanks": ["Danke.", "Super."] },
     "SG": { "hello": ["Hello lah.", "Morning!", "Can or not?"], "thanks": ["Thanks lah.", "Steady."] }
   },
