@@ -79,8 +79,8 @@ python -m http.server
 
   **憲法第12条：地域だけ見て、顔は見ず。**
 
-- オリジナルの`ip-please`：ctnyanya 氏
-- 本改変版の改変・翻訳：`namajake29`
+- オリジナルのip-please：ctnyanya 氏
+- 本改変版の改変・翻訳：namajake29
 - グラフィック、音楽、効果音はすべて Claude Code がプログラムによって生成。
 - コードは [MITライセンス](LICENSE) で公開。
 - ピクセルフォント：[Fusion Pixel Font（縫合ピクセルフォント）](https://github.com/TakWolf/fusion-pixel-font)。ライセンスは SIL Open Font License 1.1（`OFL-fusion-pixel.txt` を参照）。
